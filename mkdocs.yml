@@ -6,7 +6,7 @@ nav:
     - Lab 001: 'lab001.md'
 
 theme:
-    name: bootstrap4
+    name: material
 
 plugins:
 #  - search
