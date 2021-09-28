@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
-## Commands
+## Agenda
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### Presentations
+* Presentation 1
+* Presentation 2
 
-## Project layout
+### Labs
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+* Lab 001
+* Lab 002
+* Lab 003
+* Lab 004
+* Lab 005
+* Lab 006
+* Lab 007
+* Lab 008
+* Lab 009
+* Lab 010

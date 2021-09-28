@@ -1,1 +1,14 @@
 site_name: My Docs
+edit_uri: edit/main/docs
+
+nav:
+    - Home: 'index.md'
+    - Lab 001: 'lab001.md'
+
+theme:
+    name: bootstrap4
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
