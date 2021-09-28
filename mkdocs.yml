@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
 edit_uri: edit/main/docs
 
 nav:
@@ -9,6 +9,6 @@ theme:
     name: bootstrap4
 
 plugins:
-  - search
+#  - search
   - print-site:
       add_to_navigation: true
