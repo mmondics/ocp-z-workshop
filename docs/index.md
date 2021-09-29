@@ -5,12 +5,13 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 ## Agenda
 
 ### Presentations
+
 * Presentation 1
 * Presentation 2
 
 ### Labs
 
-* [Lab 001](lab001.md)
+* [Lab 001 - Exploring the OpenShift Console](lab001.md)
 * Lab 002
 * Lab 003
 * Lab 004
