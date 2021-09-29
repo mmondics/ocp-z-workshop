@@ -34,3 +34,6 @@ plugins:
 #      strict: true
   - print-site:
       add_to_navigation: true
+
+markdown_extensions:
+  - admonition
