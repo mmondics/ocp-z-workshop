@@ -5,16 +5,20 @@ edit_uri: edit/main/docs
 
 nav:
     - Home: 'index.md'
-    - Lab 001: 'lab001.md'
-    - Lab 002: 'lab002.md'
-    - Lab 003: 'lab003.md'
-    - Lab 004: 'lab004.md'
-    - Lab 005: 'lab005.md'
-    - Lab 006: 'lab006.md'
-    - Lab 007: 'lab007.md'
-    - Lab 008: 'lab008.md'
-    - Lab 009: 'lab009.md'
-    - Lab 010: 'lab010.md'
+    - Presentations:
+      - Presentation 1: presentations/presentation1.pdf
+      - Presentation 2: presentations/presentation2.pdf
+    - Labs: 
+      - Lab 001: 'lab001.md'
+      - Lab 002: 'lab002.md'
+      - Lab 003: 'lab003.md'
+      - Lab 004: 'lab004.md'
+      - Lab 005: 'lab005.md'
+      - Lab 006: 'lab006.md'
+      - Lab 007: 'lab007.md'
+      - Lab 008: 'lab008.md'
+      - Lab 009: 'lab009.md'
+      - Lab 010: 'lab010.md'
 
 theme: 
   name: material
