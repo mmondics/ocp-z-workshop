@@ -12,6 +12,10 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 | Connect to environment as a group           | 10-15 minutes      |
 | **Hands-on, self-paced labs**           | Remainder of day      |
 
+!!! note
+    The lab environments will be available the day following the workshop.
+    
+    For example, If the workshop is on a Thursday, the environments will be available until 5PM EST Friday.
 
 ### Presentations
 
