@@ -10,7 +10,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 ### Labs
 
-* Lab 001
+* (Lab 001)[lab001.md]
 * Lab 002
 * Lab 003
 * Lab 004
