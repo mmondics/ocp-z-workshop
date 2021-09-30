@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-developer-perspective" class="md-skip">
+        <a href="#deploy-from-the-developer-catalog" class="md-skip">
           Skip to content
         </a>
       
@@ -438,8 +438,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab001-6.md" class="md-nav__link">
+      <a href="../lab001-6/" class="md-nav__link">
         View Workload from the Administrator Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-7/" class="md-nav__link">
+        Cleaning Up
       </a>
     </li>
   
@@ -458,10 +472,141 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Lab 002
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 002" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 002
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../lab002/" class="md-nav__link">
-        Lab 002
+      <a href="../lab002-1/" class="md-nav__link">
+        Introduction
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-2/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-3/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-4/" class="md-nav__link">
+        Deploy Container Image from the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-5/" class="md-nav__link">
+        Open a Remote Shell Session into the MongoDB Pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-6/" class="md-nav__link">
+        Working with Pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-7/" class="md-nav__link">
+        Administrative CLI Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-8/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -634,7 +779,7 @@
                   </a>
                 
                 
-                <h1 id="the-developer-perspective">The Developer Perspective</h1>
+                <h1 id="deploy-from-the-developer-catalog">Deploy from the Developer Catalog</h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Work in Progress</p>
@@ -681,12 +826,48 @@
 <p><img alt="running-pods.png" src="../images/running-pods.png" /></p>
 </li>
 <li>
-<p><em>Click the icon for the rails-postgresql-example application</em>. This will bring up a window on the right side of the screen with information about your DeploymentConfig. <strong>Click the Details tab</strong> if it is not already selected.</p>
+<p><strong>Click the icon for the rails-postgresql-example application</strong>. This will bring up a window on the right side of the screen with information about your DeploymentConfig. <strong>Click the Details tab</strong> if it is not already selected.</p>
 <p><img alt="rails-details.png" src="../images/rails-details.png" /></p>
 <p>Here you’ll see information about your DeploymentConfig. Notice that many of the fields such as Labels, Update Strategy, and more have been populated with default values. These can be modified.</p>
 </li>
 <li>
-<p>Click the Actions dropdown.</p>
+<p><strong>Click the Actions dropdown</strong>.</p>
+<p><img alt="actions-dropdown.png" src="../images/actions-dropdown.png" /></p>
+<p>Many application configurations can be modified from this menu, along with other tasks such as starting or pausing a rollout, or deleting the deployment configuration.</p>
+</li>
+<li>
+<p><strong>Click the up arrow</strong> next to the blue circle.</p>
+<p><img alt="scaling-up.png" src="../images/scaling-up.png" /></p>
+<p>This scales your application from one pod to two pods. </p>
+<p><img alt="scaled-up.png" src="../images/scaled-up.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a simple demonstration of horizontal scaling with Kubernetes. You now have two instances of your pod running in the OpenShift cluster. Traffic to the Rails application will now be distributed to each pod, and if for some reason a pod is lost, that traffic will be redistributed to the remaining pods until a Kubernetes starts another. If a whole compute node is lost, Kubernetes will move the pods to different compute nodes.</p>
+<p>OpenShift and Kubernetes also support autoscaling of pods based on CPU or memory consumption, but that is outside the scope of this lab.  </p>
+</div>
+</li>
+<li>
+<p><strong>Click the Resources tab</strong>.</p>
+<p><img alt="resources-tab.png" src="../images/resources-tab.png" /></p>
+<p>Notice the two pods associated with your Rails application. On this page, you’ll see more information about your pods, any build configurations currently running or completed, and the services/ports associated with the pod.</p>
+</li>
+<li>
+<p><strong>Click the route address a the bottom of the resources tab</strong>.</p>
+<details><summary>Expand for a Tip</summary><p>You could also access this route by clicking on the external link icon associated with your Rails pod on the Topology view.</p>
+<p><img alt="external-link.png" src="../images/external-link.png" /></p>
+</details>
+<p><img alt="rails-dashboard.png" src="../images/rails-dashboard.png" /></p>
+<p>If you see the page above, your Rails application is up and running. You just deployed a Ruby on Rails application from source code residing in GitHub, and connected it to a PostgreSQL container deployed from a container image pulled from quay.io into OpenShift running on an IBM Z server.</p>
+<p>Feel free to read through the Rails application homepage to learn more about what this application can do.</p>
+</li>
+<li>
+<p><strong>Add <code>/articles</code> to the end of the Rails homepage URL</strong>.</p>
+<p>This will result in a URL like the following:</p>
+<p><a href="http://rails-postgresql-example-userNN-project.apps.atsocppa.dmz/articles">http://rails-postgresql-example-userNN-project.apps.atsocppa.dmz/articles</a></p>
+<p>Where <code>NN</code> is your user number.</p>
+<p><img alt="listing-articles.png" src="../images/listing-articles.png" /></p>
+<p>You are now interacting with the blogging application that’s shipped with the Rails source code. If you create a new article, the contents for the Title and Body are stored in the PostgreSQL database in the other pod that makes up this application.</p>
+<p>In the next section you will navigate back to the Administrator perspective to see the overview of your project with a workload running.</p>
 </li>
 </ol>
                 
@@ -724,13 +905,13 @@
       
       
         
-        <a href="../lab002/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 002" rel="next">
+        <a href="../lab001-6/" class="md-footer__link md-footer__link--next" aria-label="Next: View Workload from the Administrator Perspective" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lab 002
+              View Workload from the Administrator Perspective
             </div>
           </div>
           <div class="md-footer__button md-icon">

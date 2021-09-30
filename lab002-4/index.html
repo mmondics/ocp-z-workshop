@@ -9,19 +9,21 @@
       
       
       
-      <link rel="icon" href="/ocp-cloudpak-workshop/images/openshift-logo.png">
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab002-4/">
+      
+      <link rel="icon" href="../images/openshift-logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>Deploy Container Image from the CLI - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
-      <link rel="stylesheet" href="/ocp-cloudpak-workshop/assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
       
         
-        <link rel="stylesheet" href="/ocp-cloudpak-workshop/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,9 +38,9 @@
     
     
     
-      <link rel="stylesheet" href="/ocp-cloudpak-workshop/css/print-site.css">
+      <link rel="stylesheet" href="../css/print-site.css">
     
-      <link rel="stylesheet" href="/ocp-cloudpak-workshop/css/print-site-material.css">
+      <link rel="stylesheet" href="../css/print-site-material.css">
     
     
       
@@ -57,12 +59,17 @@
     <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("/ocp-cloudpak-workshop/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#deploy-container-image-from-the-cli" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -73,9 +80,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/ocp-cloudpak-workshop/." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-header__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-header__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
       
-  <img src="/ocp-cloudpak-workshop/images/openshift-logo.png" alt="logo">
+  <img src="../images/openshift-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -91,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Deploy Container Image from the CLI
             
           </span>
         </div>
@@ -172,9 +179,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/ocp-cloudpak-workshop/." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-nav__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-nav__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
       
-  <img src="/ocp-cloudpak-workshop/images/openshift-logo.png" alt="logo">
+  <img src="../images/openshift-logo.png" alt="logo">
 
     </a>
     Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
@@ -203,7 +210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Home
       </a>
     </li>
@@ -218,7 +225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab-assignments/" class="md-nav__link">
+      <a href="../lab-assignments/" class="md-nav__link">
         Lab Assignments
       </a>
     </li>
@@ -259,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/presentations/presentation1.pdf" class="md-nav__link">
+      <a href="../presentations/presentation1.pdf" class="md-nav__link">
         Presentation 1
       </a>
     </li>
@@ -273,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/presentations/presentation2.pdf" class="md-nav__link">
+      <a href="../presentations/presentation2.pdf" class="md-nav__link">
         Presentation 2
       </a>
     </li>
@@ -293,12 +300,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -347,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-1/" class="md-nav__link">
+      <a href="../lab001-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -361,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-2/" class="md-nav__link">
+      <a href="../lab001-2/" class="md-nav__link">
         Connect to OCP
       </a>
     </li>
@@ -375,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-3/" class="md-nav__link">
+      <a href="../lab001-3/" class="md-nav__link">
         The Administrator Persepctive
       </a>
     </li>
@@ -389,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-4/" class="md-nav__link">
+      <a href="../lab001-4/" class="md-nav__link">
         The Developer Perspective
       </a>
     </li>
@@ -403,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-5/" class="md-nav__link">
+      <a href="../lab001-5/" class="md-nav__link">
         Deploy from the Developer Catalog
       </a>
     </li>
@@ -417,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-6/" class="md-nav__link">
+      <a href="../lab001-6/" class="md-nav__link">
         View Workload from the Administrator Perspective
       </a>
     </li>
@@ -431,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab001-7/" class="md-nav__link">
+      <a href="../lab001-7/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -450,12 +459,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -478,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-1/" class="md-nav__link">
+      <a href="../lab002-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -492,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-2/" class="md-nav__link">
+      <a href="../lab002-2/" class="md-nav__link">
         Connect to the Linux Guest Server
       </a>
     </li>
@@ -506,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-3/" class="md-nav__link">
+      <a href="../lab002-3/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
     </li>
@@ -518,11 +529,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Deploy Container Image from the CLI
       </a>
+      
     </li>
   
 
@@ -534,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-5/" class="md-nav__link">
+      <a href="../lab002-5/" class="md-nav__link">
         Open a Remote Shell Session into the MongoDB Pod
       </a>
     </li>
@@ -548,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-6/" class="md-nav__link">
+      <a href="../lab002-6/" class="md-nav__link">
         Working with Pods
       </a>
     </li>
@@ -562,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-7/" class="md-nav__link">
+      <a href="../lab002-7/" class="md-nav__link">
         Administrative CLI Commands
       </a>
     </li>
@@ -576,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab002-8/" class="md-nav__link">
+      <a href="../lab002-8/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -597,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab003/" class="md-nav__link">
+      <a href="../lab003/" class="md-nav__link">
         Lab 003
       </a>
     </li>
@@ -611,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab004/" class="md-nav__link">
+      <a href="../lab004/" class="md-nav__link">
         Lab 004
       </a>
     </li>
@@ -625,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab005/" class="md-nav__link">
+      <a href="../lab005/" class="md-nav__link">
         Lab 005
       </a>
     </li>
@@ -639,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab006/" class="md-nav__link">
+      <a href="../lab006/" class="md-nav__link">
         Lab 006
       </a>
     </li>
@@ -653,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab007/" class="md-nav__link">
+      <a href="../lab007/" class="md-nav__link">
         Lab 007
       </a>
     </li>
@@ -667,7 +688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab008/" class="md-nav__link">
+      <a href="../lab008/" class="md-nav__link">
         Lab 008
       </a>
     </li>
@@ -681,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab009/" class="md-nav__link">
+      <a href="../lab009/" class="md-nav__link">
         Lab 009
       </a>
     </li>
@@ -695,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/lab010/" class="md-nav__link">
+      <a href="../lab010/" class="md-nav__link">
         Lab 010
       </a>
     </li>
@@ -717,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ocp-cloudpak-workshop/print_page/" class="md-nav__link">
+      <a href="../print_page/" class="md-nav__link">
         Print Site
       </a>
     </li>
@@ -731,11 +752,43 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab002-4.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="deploy-container-image-from-the-cli">Deploy Container Image from the CLI</h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work In Progress</p>
+</div>
+                
+              
+              
+                
+
 
               
             </article>
@@ -746,6 +799,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lab002-3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log into OpenShift Using the CLI" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Log into OpenShift Using the CLI
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lab002-5/" class="md-footer__link md-footer__link--next" aria-label="Next: Open a Remote Shell Session into the MongoDB Pod" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Open a Remote Shell Session into the MongoDB Pod
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -768,12 +856,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/ocp-cloudpak-workshop/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/ocp-cloudpak-workshop/assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
-      <script src="/ocp-cloudpak-workshop/assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
       
-        <script src="/ocp-cloudpak-workshop/js/print-site.js"></script>
+        <script src="../js/print-site.js"></script>
       
     
   </body>
