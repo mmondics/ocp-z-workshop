@@ -14,22 +14,23 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 !!! note
     The lab environments will be available the day following the workshop.
-    
+
     For example, If the workshop is on a Thursday, the environments will be available until 5PM EST Friday.
 
 ### Presentations
 
-* [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentation1.pdf)
-* [Presentation 2 - Technical Deep Dive, Installation & Configuration, Lessons Learned](presentation2.pdf)
+* [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentations/presentation1.pdf)
+* [Presentation 2 - Technical Deep Dive, Installation & Configuration, Lessons Learned](presentations/presentation2.pdf)
 
 ### Labs
 
-The labs are designed so that you can pick and choose you would like to complete. The labs *are not* designed for you to get through them all in one day.
+!!! Note
+    The labs are designed so that you can pick and choose you would like to complete. The labs *are not* designed for you to get through them all in one day.
 
-Labs are non-sequential and have no dependencies on one another.
+    Labs are non-sequential and have no dependencies on one another.
 
-* [Lab 001 - Exploring the OpenShift Console](lab001.md)
-* [Lab 002 - Using the OpenShift Command Line (oc)](lab002.md)
+* [Lab 001 - Exploring the OpenShift Console](lab001-1.md)
+* [Lab 002 - Using the OpenShift Command Line (oc)](lab002-1.md)
 * [Lab 003 - Using the z/OS Cloud Broker with OCP](lab003.md)
 * [Lab 004 - Deploying an Application from Source Code](lab004.md)
 * [Lab 005 - Monitoring, Metering, and Metrics with OCP](lab005.md)

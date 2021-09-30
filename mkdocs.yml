@@ -5,11 +5,18 @@ edit_uri: edit/main/docs
 
 nav:
     - Home: 'index.md'
+    - Lab Assignments: 'lab-assignments.md'
     - Presentations:
       - Presentation 1: presentations/presentation1.pdf
       - Presentation 2: presentations/presentation2.pdf
     - Labs: 
-      - Lab 001: 'lab001.md'
+      - Lab 001: 
+        - Introduction: 'lab001-1.md'
+        - Connect to OCP: 'lab001-2.md'
+        - The Administrator Persepctive: 'lab001-3.md'
+        - The Developer Perspective: 'lab001-4.md'
+        - Deploy from the Developer Catalog: 'lab001-5.md'
+        - View Workload from the Administrator Perspective: 'lab001-6.md'
       - Lab 002: 'lab002.md'
       - Lab 003: 'lab003.md'
       - Lab 004: 'lab004.md'
@@ -37,3 +44,4 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
