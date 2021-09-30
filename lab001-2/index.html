@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab009/">
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab001-2/">
       
       <link rel="icon" href="../images/openshift-logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Lab 009 - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>Connect to OCP - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-010-openshift-service-mesh" class="md-skip">
+        <a href="#connect-to-ocp-and-authenticate" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 009
+              Connect to OCP
             
           </span>
         </div>
@@ -328,12 +328,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -368,11 +370,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../lab001-2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Connect to OCP
       </a>
+      
     </li>
   
 
@@ -543,21 +555,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lab009/" class="md-nav__link">
         Lab 009
       </a>
-      
     </li>
   
 
@@ -627,13 +629,50 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab009.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab001-2.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="lab-010-openshift-service-mesh">Lab 010 - OpenShift Service Mesh</h1>
-<p>Work In Progress</p>
+                <h1 id="connect-to-ocp-and-authenticate">Connect to OCP and Authenticate</h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work in Progress</p>
+</div>
+<ol>
+<li>
+<p>In your virtual machine desktop, <strong>open a Chrome web browser</strong>.</p>
+</li>
+<li>
+<p>In the browser, <strong>navigate to the OpenShift on IBM Z console</strong> at the following address: <a href="https://console-openshift-console.apps.atsocppa.dmz/">https://console-openshift-console.apps.atsocppa.dmz/</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will receive a security challenge if the cluster has not yet been accessed from your browser. This is due to the default SSL certificate being “self-signed” and not yet recognized.</p>
+<p>Accept the challenge to continue by <strong>clicking Advanced</strong> and then <strong>clicking Proceed to console-openshift-console.apps.atsocppa.dmz (unsafe)</strong>.</p>
+<p>You will likely need to do this twice due to how OpenShift reroutes Oauth requests. </p>
+</div>
+<details><summary>Expand for screenshot</summary><p><img alt="security-accept.png" src="../images/security-accept.png" />
+<img alt="security-accept-2.png" src="../images/security-accept-2.png" /></p>
+</details>
+<p>You will now see the OpenShift console login page.</p>
+<p><img alt="openshift-console-login" src="../images/openshift-console-login.png" /></p>
+</li>
+<li>
+<p>Log in with the OpenShift credentials provided to you on the <a href="../lab-assignments/">Lab Assignments</a> page.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Your OpenShift credentials will be something like the following:</p>
+<ul>
+<li>
+<p>Username: userNN (where NN is your user number)</p>
+</li>
+<li>
+<p>Password: p@ssw0rd</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
                 
               
               
@@ -653,7 +692,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lab008/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 008" rel="prev">
+        <a href="../lab001-1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -662,20 +701,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Lab 008
+              Introduction
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lab010/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 010" rel="next">
+        <a href="../lab001-3/" class="md-footer__link md-footer__link--next" aria-label="Next: The Administrator Persepctive" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lab 010
+              The Administrator Persepctive
             </div>
           </div>
           <div class="md-footer__button md-icon">

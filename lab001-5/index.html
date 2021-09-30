@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab009/">
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab001-5/">
       
       <link rel="icon" href="../images/openshift-logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Lab 009 - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>Deploy from the Developer Catalog - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-010-openshift-service-mesh" class="md-skip">
+        <a href="#the-developer-perspective" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 009
+              Deploy from the Developer Catalog
             
           </span>
         </div>
@@ -328,12 +328,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -410,11 +412,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../lab001-5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Deploy from the Developer Catalog
       </a>
+      
     </li>
   
 
@@ -543,21 +555,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lab009/" class="md-nav__link">
         Lab 009
       </a>
-      
     </li>
   
 
@@ -627,13 +629,66 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab009.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab001-5.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="lab-010-openshift-service-mesh">Lab 010 - OpenShift Service Mesh</h1>
-<p>Work In Progress</p>
+                <h1 id="the-developer-perspective">The Developer Perspective</h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work in Progress</p>
+</div>
+<p>In this section, you will be building a sample application from a template. The template will create two pods:</p>
+<ul>
+<li>
+<p>A Ruby on Rails blogging application from source code in GitHub</p>
+</li>
+<li>
+<p>A PostgreSQL database from a container image</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>A <em>container image</em> holds a set of software that is ready to run, while a <em>container</em> is a running instance of a container image. Images can be hosted in registries, such as the OpenShift internal registry, the Red Hat registry, Docker Hub, or a private registry of your own.</p>
+</div>
+<ol>
+<li>
+<p><strong>Click the From Catalog option</strong> from the Add page.</p>
+<p>This brings up the OpenShift Developer catalog containing all types of applications you can deploy including Operators, Helm Charts, Templates, and more.</p>
+</li>
+<li>
+<p><strong>Find and click the Rails + PostgreSQL (Ephemeral) tile</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can make this easier on yourself by searching for <em>Rails + PostgreSQL (Ephemeral</em>) in the search bar.</p>
+</div>
+<p><img alt="rails-tile.png" src="../images/rails-tile.png" /></p>
+</li>
+<li>
+<p><strong>Click Instantiate Template</strong> on the next screen that appears.</p>
+<p>You are brought to a page full of configurable parameters that you can edit if so desired. Notice that all of the required fields on this page automatically populate. You can read through all of the options, but there is no need to edit any of them.</p>
+</li>
+<li>
+<p><strong>Click the Create button</strong> at the bottom of the page.</p>
+<p>You will now be taken to the topology view, where you will see two icons – one for each of the two workload pods that the template will create. If you don’t see the icons right away, you may need to refresh your browser window.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The Ruby on Rails application will take a few minutes to fully deploy, while the PostgreSQL application will deploy in just a few seconds. The reason for this difference is that the Ruby application is being built (containerized) from Ruby source code located in the GitHub repository located here: <a href="https://github.com/sclorg/rails-ex.git">https://github.com/sclorg/rails-ex.git</a> into a container image, and then deployed. If you would like to watch the steps that OpenShift is taking to build the containerized application, <strong>click the circle labeled rails-postgresql-example, click the Resources tab, and click View Logs in the Builds section</strong>.</p>
+<p>The PostgreSQL application, on the other hand, is deployed from a pre-built container image hosted in quay.io, so it takes much less time to start up.</p>
+</div>
+<p>You will know that both applications are successfully deployed and running when each has a solid blue circle.</p>
+<p><img alt="running-pods.png" src="../images/running-pods.png" /></p>
+</li>
+<li>
+<p><em>Click the icon for the rails-postgresql-example application</em>. This will bring up a window on the right side of the screen with information about your DeploymentConfig. <strong>Click the Details tab</strong> if it is not already selected.</p>
+<p><img alt="rails-details.png" src="../images/rails-details.png" /></p>
+<p>Here you’ll see information about your DeploymentConfig. Notice that many of the fields such as Labels, Update Strategy, and more have been populated with default values. These can be modified.</p>
+</li>
+<li>
+<p>Click the Actions dropdown.</p>
+</li>
+</ol>
                 
               
               
@@ -653,7 +708,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lab008/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 008" rel="prev">
+        <a href="../lab001-4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Developer Perspective" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -662,20 +717,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Lab 008
+              The Developer Perspective
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lab010/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 010" rel="next">
+        <a href="../lab002/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 002" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lab 010
+              Lab 002
             </div>
           </div>
           <div class="md-footer__button md-icon">

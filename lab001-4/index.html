@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab009/">
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab001-4/">
       
       <link rel="icon" href="../images/openshift-logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Lab 009 - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>The Developer Perspective - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-010-openshift-service-mesh" class="md-skip">
+        <a href="#the-developer-perspective" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab 009
+              The Developer Perspective
             
           </span>
         </div>
@@ -328,12 +328,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -396,11 +398,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../lab001-4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         The Developer Perspective
       </a>
+      
     </li>
   
 
@@ -543,21 +555,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lab009/" class="md-nav__link">
         Lab 009
       </a>
-      
     </li>
   
 
@@ -627,13 +629,79 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab009.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab001-4.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="lab-010-openshift-service-mesh">Lab 010 - OpenShift Service Mesh</h1>
-<p>Work In Progress</p>
+                <h1 id="the-developer-perspective">The Developer Perspective</h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work in Progress</p>
+</div>
+<ol>
+<li>
+<p>In the left-side Menu, <strong>click the Administrator dropdown, and select Developer</strong>.</p>
+<p><img alt="developer-perspective.png" src="../images/developer-perspective.png" /></p>
+<p>The <em>Developer</em> perspective provides views and workflows specific to developer use cases, while hiding many of the cluster management options typically used by administrators. This perspective provides developers with a streamlined view of the options they typically use.</p>
+<p><img alt="developer-menu.png" src="../images/developer-menu.png" /></p>
+<ul>
+<li>
+<p><em>+Add</em>: Clicking on this will open a prompt letting you add a workload to your current project.</p>
+</li>
+<li>
+<p><em>Topology</em>: Displays all of the deployed workloads in the currently selected project.</p>
+</li>
+<li>
+<p><em>Monitoring</em>: Lets you view the monitoring dashboard for just this project.</p>
+</li>
+<li>
+<p><em>Search</em>: Used to search for any type of API resource present in this project, provided you have access to that resource type.</p>
+</li>
+<li>
+<p><em>Builds</em>: This will let you view or create Build Configurations in the currently selected project.</p>
+</li>
+<li>
+<p><em>Pipelines</em>: View and create Pipelines – Tekton-based CI/CD processes and objects.</p>
+</li>
+<li>
+<p><em>Helm</em>: Displays the Helm releases in this project, or prompts you to install one from the catalog if none are present.</p>
+</li>
+<li>
+<p><em>Project</em>: Takes you to your project overview page, the project inventory, events, utilization, and more.</p>
+</li>
+<li>
+<p><em>Config Maps</em>: Displays Config Maps for your project, which store non-confidential data in key-value pairs.</p>
+</li>
+<li>
+<p><em>Secrets</em>: Displays Secrets for your project. Used to store sensitive, confidential data in key-value pairs, tokens, or passwords.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Switching to the Developer perspective takes you to the <em>Topology</em> view. If no workloads are deployed in the selected project, options to deploy a workload are displayed.</p>
+<ol>
+<li>
+<p>If this isn't the case, <strong>click the +Add button in the menu</strong>.</p>
+<p><img alt="add-workload-notes.png" src="../images/add-workload-notes.png" /></p>
+<details><summary>Expand to learn about Deployment Methods</summary><p>There are multiple methods of deploying workloads from the OpenShift web browser.</p>
+<ul>
+<li><em>Samples</em>: Red Hat provides sample applications in various languages. Use these to see what a pre-made application running in OpenShift can look like.</li>
+<li><em>From Git</em>: Use this option to import an existing codebase in a Git repository to create, build, and deploy an application.</li>
+<li><em>From Devfile</em>: Similar to From Git, use this option to import a Devfile from your Git repository to build and deploy an application.</li>
+<li><em>Container Image</em>: Use existing images from an image stream or registry to deploy it.</li>
+<li><em>From Catalog</em>: Explore the Developer Catalog to select the required applications, services, or source to image builders and add it to your project.</li>
+<li><em>From Dockerfile</em>: Import a dockerfile from your Git repository to build and deploy an application.</li>
+<li><em>YAML</em>: Use the editor to add YAML or JSON definitions to create and modify resources.</li>
+<li><em>Database</em>: Filters the Developer Catalog to display only the databases it contains.</li>
+<li><em>Operator Backed</em>: Deploy applications that are managed by Operators. Many of these will come from the OperatorHub.</li>
+<li><em>Helm Chart</em>: Deploy applications defined by Helm Charts, which provide simple installations, upgrades, rollbacks, and generally reduced complexity.</li>
+<li><em>Pipeline</em>: Create a Tekton-based Pipeline to automate application creation and delivery using OpenShift’s built-in CI/CD capabilities.</li>
+</ul>
+</details>
+<p>In the next section, you will deploy an application from the OpenShift Developer Catalog.</p>
+</li>
+</ol>
                 
               
               
@@ -653,7 +721,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lab008/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab 008" rel="prev">
+        <a href="../lab001-3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Administrator Persepctive" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -662,20 +730,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Lab 008
+              The Administrator Persepctive
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lab010/" class="md-footer__link md-footer__link--next" aria-label="Next: Lab 010" rel="next">
+        <a href="../lab001-5/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy from the Developer Catalog" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Lab 010
+              Deploy from the Developer Catalog
             </div>
           </div>
           <div class="md-footer__button md-icon">
