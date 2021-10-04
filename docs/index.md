@@ -31,14 +31,14 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 * [Lab 001 - Exploring the OpenShift Console](lab001-1.md)
 * [Lab 002 - Using the OpenShift Command Line (oc)](lab002-1.md)
-* [Lab 003 - Using the z/OS Cloud Broker with OCP](lab003.md)
-* [Lab 004 - Deploying an Application from Source Code](lab004.md)
-* [Lab 005 - Monitoring, Metering, and Metrics with OCP](lab005.md)
-* [Lab 006 - Using Persistent Storage - MongoDB and NodeJS](lab006.md)
-* [Lab 007 - Deploying an Application with the Open Liberty Operator](lab007.md)
-* [Lab 008 - Deploying an Application with Quarkus Red Hat Runtime](lab008.md)
-* [Lab 009 - Using OpenShift Pipelines](lab009.md)
-* [Lab 010 - OpenShift Service Mesh](lab010.md)
+* [Lab 003 - Using the z/OS Cloud Broker with OCP](lab003-1.md)
+* [Lab 004 - Deploying an Application from Source Code](lab004-1.md)
+* [Lab 005 - Monitoring, Metering, and Metrics with OCP](lab005-1.md)
+* [Lab 006 - Using Persistent Storage - MongoDB and NodeJS](lab006-1.md)
+* [Lab 007 - Deploying an Application with the Open Liberty Operator](lab007-1.md)
+* [Lab 008 - Deploying an Application with Quarkus Red Hat Runtime](lab008-1.md)
+* [Lab 009 - Using OpenShift Pipelines](lab009-1.md)
+* [Lab 010 - OpenShift Service Mesh](lab010-1.md)
 
 ## Workshop Owners
 

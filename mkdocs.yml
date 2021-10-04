@@ -20,21 +20,31 @@ nav:
         - Cleaning Up: 'lab001-7.md'
       - Lab 002: 
         - Introduction: 'lab002-1.md'
-        - Connect to the Linux Guest Server: 'lab002-2.md'
-        - Log into OpenShift Using the CLI: 'lab002-3.md'
+        - Log into OpenShift Using the CLI: 'lab002-2.md'
+        - Overview of the OpenShift CLI: 'lab002-3.md'
         - Deploy Container Image from the CLI: 'lab002-4.md'
         - Open a Remote Shell Session into the MongoDB Pod: 'lab002-5.md'
         - Working with Pods: 'lab002-6.md'
         - Administrative CLI Commands: 'lab002-7.md'
         - Cleaning Up: 'lab002-8.md'
-      - Lab 003: 'lab003.md'
-      - Lab 004: 'lab004.md'
-      - Lab 005: 'lab005.md'
-      - Lab 006: 'lab006.md'
-      - Lab 007: 'lab007.md'
-      - Lab 008: 'lab008.md'
-      - Lab 009: 'lab009.md'
-      - Lab 010: 'lab010.md'
+      - Lab 003: 
+        - Introduction: 'lab003-1.md'
+        - Connect to OCP: 'lab003-2.md'
+        - Deploy Liberty for z/OS Using the z/OS Cloud Broker: 'lab003-3.md'
+        - Stop and Restart Liberty for z/OS from OCP: 'lab003-4.md'
+        - Cleaning Up: 'lab003-5.md'
+      - Lab 004:
+        - Source-to-Image (S2I) Overview: 'lab004-1.md'
+        - Exploring GitHub and the Example Health Source Code: 'lab004-2.md'
+        - Connect to OCP and Authenticate: 'lab004-3.md'
+        - Edit the Source Code and Push an Update: 'lab004-4.md'
+        - Cleaning Up: 'lab004-5.md'
+      - Lab 005: 'lab005-1.md'
+      - Lab 006: 'lab006-1.md'
+      - Lab 007: 'lab007-1.md'
+      - Lab 008: 'lab008-1.md'
+      - Lab 009: 'lab009-1.md'
+      - Lab 010: 'lab010-1.md'
 
 theme: 
   name: material
@@ -53,4 +63,25 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - codehilite
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - attr_list
+  - toc:
+      permalink: true
