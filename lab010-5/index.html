@@ -1,0 +1,1966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab010-5/">
+      
+      <link rel="icon" href="../images/openshift-logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Deploying an Application on the Service Mesh - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploying-an-application-on-the-service-mesh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-header__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+      
+  <img src="../images/openshift-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deploying an Application on the Service Mesh
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/mmondics/ocp-cloudpak-workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-nav__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+      
+  <img src="../images/openshift-logo.png" alt="logo">
+
+    </a>
+    Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mmondics/ocp-cloudpak-workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-assignments/" class="md-nav__link">
+        Lab Assignments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Presentations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presentations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Presentations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations/presentation1.pdf" class="md-nav__link">
+        Presentation 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations/presentation2.pdf" class="md-nav__link">
+        Presentation 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Labs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Labs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Lab 001
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 001" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 001
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-3/" class="md-nav__link">
+        The Administrator Persepctive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-4/" class="md-nav__link">
+        The Developer Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-5/" class="md-nav__link">
+        Deploy from the Developer Catalog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-6/" class="md-nav__link">
+        View Workload from the Administrator Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Lab 002
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 002" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 002
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-2/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-3/" class="md-nav__link">
+        Overview of the OpenShift CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-4/" class="md-nav__link">
+        Deploy Container Image from the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-5/" class="md-nav__link">
+        Open a Remote Shell Session into the MongoDB Pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-6/" class="md-nav__link">
+        Working with Pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-7/" class="md-nav__link">
+        Administrative CLI Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-8/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Lab 003
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 003" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 003
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-3/" class="md-nav__link">
+        Deploy Liberty for z/OS Using the z/OS Cloud Broker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-4/" class="md-nav__link">
+        Stop and Restart Liberty for z/OS from OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Lab 004
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 004" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 004
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-1/" class="md-nav__link">
+        Source-to-Image (S2I) Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-2/" class="md-nav__link">
+        Exploring GitHub and the Example Health Source Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-3/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-4/" class="md-nav__link">
+        Edit the Source Code and Push an Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Lab 005
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 005" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 005
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-1/" class="md-nav__link">
+        Overview of OpenShift Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-3/" class="md-nav__link">
+        Using OpenShift Metrics (Prometheus)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-4/" class="md-nav__link">
+        Using the In-Browser Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-5/" class="md-nav__link">
+        Connect to Grafana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-6/" class="md-nav__link">
+        Using Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-7/" class="md-nav__link">
+        Using OpenShift Alerts (Alertmanager)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Lab 006
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 006" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 006
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-1/" class="md-nav__link">
+        Overview of Persistent Storage and Application Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-3/" class="md-nav__link">
+        Create a PersistentVolumeClaim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-4/" class="md-nav__link">
+        Deploy MongoDB from Container Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-5/" class="md-nav__link">
+        Deploy Node.js Application from Dockerfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-6/" class="md-nav__link">
+        Interacting with MongoDB from Node.js Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Lab 007
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 007" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 007
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-1/" class="md-nav__link">
+        Overview of the Open Liberty Operator and Sample Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-2/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-3/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-4/" class="md-nav__link">
+        Using the Open Liberty Operator to Install an Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-5/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-6/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8">
+          Lab 008
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 008" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 008
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-1/" class="md-nav__link">
+        Overview of the Quarkus Red Hat Runtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-2/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-3/" class="md-nav__link">
+        Creating and Reviewing the Quarkus Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-4/" class="md-nav__link">
+        Configure the Application for OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-5/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-6/" class="md-nav__link">
+        Deploy the Application onto OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9">
+          Lab 009
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 009" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 009
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-1/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-2/" class="md-nav__link">
+        Cloning the GitHub Repository and Viewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-3/" class="md-nav__link">
+        Understanding and Deploying Tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-4/" class="md-nav__link">
+        Understanding and Deploying Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-5/" class="md-nav__link">
+        Running the Pipeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-6/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10">
+          Lab 010
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 010" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 010
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-1/" class="md-nav__link">
+        Overview of the OpenShift Service Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-2/" class="md-nav__link">
+        OpenShift Service Mesh Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-3/" class="md-nav__link">
+        Connect to OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-4/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Deploying an Application on the Service Mesh
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-6/" class="md-nav__link">
+        Understanding and Deploying a Service Mesh Gateway and Virtual Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-7/" class="md-nav__link">
+        Traffic Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-8/" class="md-nav__link">
+        Application Observability with Kiali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-9/" class="md-nav__link">
+        Distributed Tracing with Jaeger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-10/" class="md-nav__link">
+        Wrap Up & Clean Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        Print Site
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab010-5.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="deploying-an-application-on-the-service-mesh">Deploying an Application on the Service Mesh<a class="headerlink" href="#deploying-an-application-on-the-service-mesh" title="Permanent link">&para;</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work In Progress</p>
+</div>
+<p>The first thing we will do is deploy our application - <em>Bookinfo</em>. <a href="https://istio.io/latest/docs/examples/bookinfo/">Bookinfo</a> is a sample application provided by Istio, the upstream project from which OpenShift Service Mesh is built.</p>
+<p>The application displays information about a book, similar to a single catalog entry of an online bookstore. Displayed on the page is a description of the book, book details (ISBN, number of pages, and so on), and a few book reviews.</p>
+<p>The Bookinfo application is broken into four separate microservices:</p>
+<ul>
+<li>
+<p><em>productpage</em>. The productpage microservice calls the details and reviews microservices to populate the page.</p>
+</li>
+<li>
+<p><em>details</em>. The details microservice contains book information.</p>
+</li>
+<li>
+<p><em>reviews</em>. The reviews microservice contains book reviews. It also calls the ratings microservice.</p>
+</li>
+<li>
+<p><em>ratings</em>. The ratings microservice contains book ranking information that accompanies a book review.</p>
+</li>
+</ul>
+<p>There are 3 versions of the reviews microservice:</p>
+<ul>
+<li>
+<p>Version <em>v1</em> doesn’t call the ratings service.</p>
+</li>
+<li>
+<p>Version <em>v2</em> calls the ratings service and displays each rating as 1 to 5 black stars.</p>
+</li>
+<li>
+<p>Version <em>v3</em> calls the ratings service and displays each rating as 1 to 5 red stars.</p>
+</li>
+</ul>
+<p>The end-to-end architecture of the application is shown below.</p>
+<p><img alt="bookinfo-arch" src="../images/bookinfo-arch.png" /></p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>This application is <em>polyglot</em>, i.e., the microservices are written in different languages. It’s worth noting that these microservices have no dependencies on the Istio or OSSM, but make an interesting Service Mesh example, particularly because of the multitude of microservices, languages and versions for the reviews microservice.</p>
+</div>
+<p>To run Bookinfo on the Service Mesh requires <em>no changes to the application itself</em>. You simply need to run the application in a Service Mesh-enabled environment, with Envoy sidecars injected alongside each microservice.</p>
+<p>Our OpenShift environment is Service Mesh enabled. OSSM is already installed in our OpenShift cluster and is configured to watch for Service Mesh-enabled deployments to appear in your project, userNN-project. The Service Mesh knows which project to watch through an instance of the Istio Service Mesh Member Roll custom resource. Your userNN ID is not able to access this custom resource, but it is displayed below for your reference.</p>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc describe ServiceMeshMemberRoll/default
+Name:         default
+Namespace:    istio-system
+Labels:       &lt;none&gt;
+Annotations:  &lt;none&gt;
+API Version:  maistra.io/v1
+Kind:         ServiceMeshMemberRoll
+Spec:
+Members:
+    user01-project
+    user02-project
+    user03-project
+    user04-project
+    user05-project
+Status:
+Annotations:
+    Configured Member Count:  <span class="m">5</span>/5
+Conditions:
+    Last Transition Time:  <span class="m">2021</span>-06-28T19:04:47Z
+    Message:               All namespaces have been configured successfully
+    Reason:                Configured
+    Status:                True
+    Type:                  Ready
+Configured Members:
+    user01-project
+    user02-project
+    user03-project
+    user04-project
+    user05-project
+Mesh Generation:          <span class="m">1</span>
+Mesh Reconciled Version:  <span class="m">2</span>.0.6-2.el8-1
+Observed Generation:      <span class="m">6</span>
+Pending Members:
+Events:  &lt;none&gt;
+</code></pre></div>
+</details>
+<details class="note" open="open"><summary>Note</summary><p>The screenshot above has been trimmed down for brevity. User projects up to user30-project are configured.</p>
+</details>
+<p>This custom resource will watch each member project and automatically inject Envoy sidecars when a deployment is created with the annotation <code>sidecar.istio.io/inject: "true"</code>.</p>
+<p>The deployments contained in the GitHub repository you pulled already have this annotation configured.</p>
+<ol>
+<li>
+<p><strong>From the Istio-s390x directory, view the application deployments with the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat platform/kube/bookinfo.yaml
+</code></pre></div>
+<p>You will find that this YAML file contains a Service, a ServiceAccount, and a Deployment for each of the microservices described previously. Find a section of the YAML file that has kind: Deployment, and you will see the <code>sidecar.istio.io/inject: "true"</code> annotation in its spec section.</p>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+    name: details-v1
+    labels:
+        app: details
+        version: v1
+    spec:
+    replicas: <span class="m">1</span>
+    selector:
+        matchLabels:
+        app: details
+        version: v1
+    template:
+        metadata:
+        annotations:
+            sidecar.istio.io/inject: <span class="s2">&quot;true&quot;</span>
+        labels:
+            app: details
+            version: v1
+        spec:
+        serviceAccountName: bookinfo-details
+        containers:
+        - name: details
+            image: quay.io/mmondics/examples-bookinfo-details-v1:1.16.2
+            imagePullPolicy: IfNotPresent
+            ports:
+            - containerPort: <span class="m">9080</span>
+</code></pre></div>
+</details>
+<p>Once created, this YAML file will set up the entire Bookinfo application for you and the Envoy proxy sidecars will be automatically injected for the Istio control plane to interact with.</p>
+</li>
+<li>
+<p><strong>Create the application by running the following command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc create -f platform/kube/bookinfo.yaml
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc create -f platform/kube/bookinfo.yaml
+    oc create -f platform/kube/bookinfo.yaml 
+    service/details created
+    serviceaccount/bookinfo-details created
+    deployment.apps/details-v1 created
+    service/ratings created
+    serviceaccount/bookinfo-ratings created
+    deployment.apps/ratings-v1 created
+    service/reviews created
+    serviceaccount/bookinfo-reviews created
+    deployment.apps/reviews-v1 created
+    deployment.apps/reviews-v2 created
+    deployment.apps/reviews-v3 created
+    service/productpage created
+    serviceaccount/bookinfo-productpage created
+    deployment.apps/productpage-v1 created
+</code></pre></div>
+<p>Although not yet accessible, all of the application components should be up and running within a few seconds.</p>
+</details>
+</li>
+<li>
+<p><strong>Check that your four services were created with</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get services
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc get services
+    NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>    AGE
+    details       ClusterIP   <span class="m">172</span>.30.237.245   &lt;none&gt;        <span class="m">9080</span>/TCP   10s
+    productpage   ClusterIP   <span class="m">172</span>.30.73.57     &lt;none&gt;        <span class="m">9080</span>/TCP   10s
+    ratings       ClusterIP   <span class="m">172</span>.30.241.30    &lt;none&gt;        <span class="m">9080</span>/TCP   10s
+    reviews       ClusterIP   <span class="m">172</span>.30.34.195    &lt;none&gt;        <span class="m">9080</span>/TCP   10s
+</code></pre></div>
+</details>
+</li>
+<li>
+<p><strong>And check that your six pods have been created with</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get pods
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc get services
+    NAME                              READY   STATUS    RESTARTS   AGE
+    details-v1-78cb8b797f-ndqdz       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
+    productpage-v1-568ddd75bf-rmqtf   <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
+    ratings-v1-768dc65999-q5dft       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
+    reviews-v1-6cf69f46c9-wbtqm       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
+    reviews-v2-64fd74bbd7-hx4rd       <span class="m">2</span>/2     Running   <span class="m">0</span>          46s
+    reviews-v3-8cb65c475-wr22r        <span class="m">2</span>/2     Running   <span class="m">0</span>          46s
+</code></pre></div>
+</details>
+<p>Each pod should have a <em>STATUS</em>: Running and should show <em>Ready</em>: 2/2. The 2/2 indicates that the pod includes two containers, and both are ready. In our case, each pod has one container for its application, and one container for the Envoy proxy, or sidecar.</p>
+<details class="note"><summary>Optional</summary><p>You can list the containers in your productpage pod with the command:</p>
+<div class="highlight"><pre><span></span><code>oc get pod productpage-v1-xxxxx -o <span class="nv">jsonpath</span><span class="o">={</span>.spec.containers<span class="o">[</span>*<span class="o">]</span>.name<span class="o">}</span>
+</code></pre></div>
+<p>(where xxxxx is your randomly generated string of characters returned by oc get pods)</p>
+<div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc get pod productpage-v1-78797f -o <span class="nv">jsonpath</span><span class="o">={</span>.spec.containers<span class="o">[</span>*<span class="o">]</span>.name<span class="o">}</span>
+productpage istio-proxyuser01@lab061:~/istio-s390x$
+</code></pre></div>
+<p>Your two container names will be printed at the beginning of the next line - productpage, and Istio-proxy.</p>
+</details>
+<p>productpage is the end user’s primary ingress into the Bookinfo application. This is the microservice that will pull the data from the ratings, reviews, and details microservices and display them when requested by a user.</p>
+</li>
+<li>
+<p><strong>Check that the productpage microservice is running correctly by issuing the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>oc get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>oc get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
+    &lt;title&gt;Simple Bookstore App&lt;/title&gt;
+</code></pre></div>
+</details>
+<p>If you see <code>&lt;title&gt;Simple Bookstore App&lt;/title&gt;</code> returned, your Bookinfo application is working correctly, yet still inaccessible.</p>
+</li>
+</ol>
+<p>In the next section, we will create a Gateway to provide ingress into the Service Mesh application.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lab010-4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cloning the GitHub Repository and Reviewing its Contents" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Cloning the GitHub Repository and Reviewing its Contents
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lab010-6/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding and Deploying a Service Mesh Gateway and Virtual Service" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Understanding and Deploying a Service Mesh Gateway and Virtual Service
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

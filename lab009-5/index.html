@@ -1,0 +1,2024 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab009-5/">
+      
+      <link rel="icon" href="../images/openshift-logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Running the Pipeline - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#running-the-pipeline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-header__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+      
+  <img src="../images/openshift-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running the Pipeline
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/mmondics/ocp-cloudpak-workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-nav__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+      
+  <img src="../images/openshift-logo.png" alt="logo">
+
+    </a>
+    Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mmondics/ocp-cloudpak-workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-assignments/" class="md-nav__link">
+        Lab Assignments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Presentations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presentations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Presentations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations/presentation1.pdf" class="md-nav__link">
+        Presentation 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentations/presentation2.pdf" class="md-nav__link">
+        Presentation 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Labs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Labs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Lab 001
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 001" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 001
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-3/" class="md-nav__link">
+        The Administrator Persepctive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-4/" class="md-nav__link">
+        The Developer Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-5/" class="md-nav__link">
+        Deploy from the Developer Catalog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-6/" class="md-nav__link">
+        View Workload from the Administrator Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab001-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Lab 002
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 002" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 002
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-2/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-3/" class="md-nav__link">
+        Overview of the OpenShift CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-4/" class="md-nav__link">
+        Deploy Container Image from the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-5/" class="md-nav__link">
+        Open a Remote Shell Session into the MongoDB Pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-6/" class="md-nav__link">
+        Working with Pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-7/" class="md-nav__link">
+        Administrative CLI Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab002-8/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Lab 003
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 003" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 003
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-3/" class="md-nav__link">
+        Deploy Liberty for z/OS Using the z/OS Cloud Broker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-4/" class="md-nav__link">
+        Stop and Restart Liberty for z/OS from OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab003-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Lab 004
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 004" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 004
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-1/" class="md-nav__link">
+        Source-to-Image (S2I) Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-2/" class="md-nav__link">
+        Exploring GitHub and the Example Health Source Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-3/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-4/" class="md-nav__link">
+        Edit the Source Code and Push an Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab004-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Lab 005
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 005" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 005
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-1/" class="md-nav__link">
+        Overview of OpenShift Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-3/" class="md-nav__link">
+        Using OpenShift Metrics (Prometheus)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-4/" class="md-nav__link">
+        Using the In-Browser Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-5/" class="md-nav__link">
+        Connect to Grafana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-6/" class="md-nav__link">
+        Using Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab005-7/" class="md-nav__link">
+        Using OpenShift Alerts (Alertmanager)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Lab 006
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 006" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 006
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-1/" class="md-nav__link">
+        Overview of Persistent Storage and Application Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-3/" class="md-nav__link">
+        Create a PersistentVolumeClaim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-4/" class="md-nav__link">
+        Deploy MongoDB from Container Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-5/" class="md-nav__link">
+        Deploy Node.js Application from Dockerfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-6/" class="md-nav__link">
+        Interacting with MongoDB from Node.js Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab006-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          Lab 007
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 007" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 007
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-1/" class="md-nav__link">
+        Overview of the Open Liberty Operator and Sample Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-2/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-3/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-4/" class="md-nav__link">
+        Using the Open Liberty Operator to Install an Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-5/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-6/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8">
+          Lab 008
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 008" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 008
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-1/" class="md-nav__link">
+        Overview of the Quarkus Red Hat Runtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-2/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-3/" class="md-nav__link">
+        Creating and Reviewing the Quarkus Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-4/" class="md-nav__link">
+        Configure the Application for OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-5/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-6/" class="md-nav__link">
+        Deploy the Application onto OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab008-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9">
+          Lab 009
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 009" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 009
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-1/" class="md-nav__link">
+        Connect to the Linux Guest Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-2/" class="md-nav__link">
+        Cloning the GitHub Repository and Viewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-3/" class="md-nav__link">
+        Understanding and Deploying Tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-4/" class="md-nav__link">
+        Understanding and Deploying Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Running the Pipeline
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Running the Pipeline
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-backend-application-through-the-cli" class="md-nav__link">
+    Creating the Backend Application through the CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-frontend-application-through-the-console" class="md-nav__link">
+    Creating the Frontend Application through the Console
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-6/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab009-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10">
+          Lab 010
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lab 010" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Lab 010
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-1/" class="md-nav__link">
+        Overview of the OpenShift Service Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-2/" class="md-nav__link">
+        OpenShift Service Mesh Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-3/" class="md-nav__link">
+        Connect to OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-4/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-5/" class="md-nav__link">
+        Deploying an Application on the Service Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-6/" class="md-nav__link">
+        Understanding and Deploying a Service Mesh Gateway and Virtual Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-7/" class="md-nav__link">
+        Traffic Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-8/" class="md-nav__link">
+        Application Observability with Kiali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-9/" class="md-nav__link">
+        Distributed Tracing with Jaeger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab010-10/" class="md-nav__link">
+        Wrap Up & Clean Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        Print Site
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-backend-application-through-the-cli" class="md-nav__link">
+    Creating the Backend Application through the CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-frontend-application-through-the-console" class="md-nav__link">
+    Creating the Frontend Application through the Console
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab009-5.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="running-the-pipeline">Running the Pipeline<a class="headerlink" href="#running-the-pipeline" title="Permanent link">&para;</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Work In Progress</p>
+</div>
+<p>Let’s use this Pipeline to create an application. To demonstrate the re-usability of OpenShift Pipelines, we will be creating both a frontend and a backend with the same Pipeline you created in the previous step.</p>
+<p>We’ll also demonstrate the flexibility provided by OpenShift Pipelines that lets you use them from either the web console or the command line.</p>
+<h2 id="creating-the-backend-application-through-the-cli">Creating the Backend Application through the CLI<a class="headerlink" href="#creating-the-backend-application-through-the-cli" title="Permanent link">&para;</a></h2>
+<p>Let’s create the backend application with the Tekton CLI in your terminal.</p>
+<p>Now that you have all of the building blocks in place, you can start the Pipeline with the following command. The command will run the Pipeline and pass in parameters to:</p>
+<ul>
+<li>
+<p>Use the shared workspace and the PersistentVolumeClaim you created</p>
+</li>
+<li>
+<p>Create the deployment named vote-api</p>
+</li>
+<li>
+<p>Build a container image from the source code at the given GitHub repository</p>
+</li>
+<li>
+<p>Push that container image into the OpenShift internal registry and tag it for your project</p>
+</li>
+<li>
+<p>Show the log so you can follow its progress
+ Note that the forward slash  simply breaks the command into multiple lines for readability.</p>
+</li>
+<li>
+<p><strong>Run the following command</strong>:</p>
+<div class="highlight"><pre><span></span><code>tkn pipeline start build-and-deploy <span class="se">\</span>
+ -w <span class="nv">name</span><span class="o">=</span>shared-workspace,claimName<span class="o">=</span>source-pvc <span class="se">\</span>
+ -p deployment-name<span class="o">=</span>vote-api <span class="se">\</span>
+ -p git-url<span class="o">=</span>https://github.com/mmondics/pipelines-vote-api.git <span class="se">\</span>
+ -p <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/userNN-project/pipelines-vote-api <span class="se">\ </span>
+ --showlog
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure you change the one instance of <code>NN</code> to your team number in the command above.</p>
+</div>
+<details class="example"><summary>Expand for Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn pipeline start build-and-deploy <span class="se">\</span>
+&gt; -w <span class="nv">name</span><span class="o">=</span>shared-workspace,claimName<span class="o">=</span>source-pvc <span class="se">\</span>
+&gt; -p deployment-name<span class="o">=</span>vote-api <span class="se">\</span>
+&gt; -p git-url<span class="o">=</span>https://github.com/mmondics/vote-api.git <span class="se">\</span>
+&gt; -p <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/userNN-project/vote-api <span class="se">\</span>
+&gt; --showlog
+PipelineRun started: build-and-deploy-run-75zqv
+Waiting <span class="k">for</span> logs to be available...
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nv">CHECKOUT_DIR</span><span class="o">=</span>/workspace/output/
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="o">[[</span> <span class="nb">true</span> <span class="o">==</span> <span class="se">\t\r\u\e</span> <span class="o">]]</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + cleandir
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="o">[[</span> -d /workspace/output/ <span class="o">]]</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + rm -rf /workspace/output//Dockerfile /workspace/output//LICENSE /workspace/output//README.md /workspace/output//go.mod /workspace/output//go.sum /workspace/output//k8s /workspace/output//main.go /workspace/output//vendor
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + rm -rf /workspace/output//.git /workspace/output//.gitignore
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + rm -rf <span class="s1">&#39;/workspace/output//..?*&#39;</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">test</span> -z <span class="s1">&#39;&#39;</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">test</span> -z <span class="s1">&#39;&#39;</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">test</span> -z <span class="s1">&#39;&#39;</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + /ko-app/git-init -url https://github.com/mmondics/vote-api.git -revision master -refspec <span class="s1">&#39;&#39;</span> -path /workspace/output/ -sslVerify<span class="o">=</span><span class="nb">true</span> -submodules<span class="o">=</span><span class="nb">true</span> -depth <span class="m">1</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> <span class="o">{</span><span class="s2">&quot;level&quot;</span>:<span class="s2">&quot;info&quot;</span>,<span class="s2">&quot;ts&quot;</span>:1616101272.5251348,<span class="s2">&quot;caller&quot;</span>:<span class="s2">&quot;git/git.go:165&quot;</span>,<span class="s2">&quot;msg&quot;</span>:<span class="s2">&quot;Successfully cloned https://github.com/mmondics/vote-api.git @ a08f579f6135293358b9423a3370e725ae1380cc (grafted, HEAD, origin/master) in path /workspace/output/&quot;</span><span class="o">}</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> <span class="o">{</span><span class="s2">&quot;level&quot;</span>:<span class="s2">&quot;info&quot;</span>,<span class="s2">&quot;ts&quot;</span>:1616101272.6701891,<span class="s2">&quot;caller&quot;</span>:<span class="s2">&quot;git/git.go:203&quot;</span>,<span class="s2">&quot;msg&quot;</span>:<span class="s2">&quot;Successfully initialized and updated submodules in path /workspace/output/&quot;</span><span class="o">}</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">cd</span> /workspace/output/
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> ++ git rev-parse HEAD
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nv">RESULT_SHA</span><span class="o">=</span>a08f579f6135293358b9423a3370e725ae1380cc
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nv">EXIT_CODE</span><span class="o">=</span><span class="m">0</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="s1">&#39;[&#39;</span> <span class="m">0</span> <span class="s1">&#39;!=&#39;</span> <span class="m">0</span> <span class="s1">&#39;]&#39;</span>
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">echo</span> -n a08f579f6135293358b9423a3370e725ae1380cc
+<span class="o">[</span>fetch-respository : clone<span class="o">]</span> + <span class="nb">echo</span> -n https://github.com/mmondics/vote-api.git
+
+<span class="o">[</span>build-image : build<span class="o">]</span> + buildah --storage-driver<span class="o">=</span>vfs bud --format<span class="o">=</span>oci --tls-verify<span class="o">=</span><span class="nb">false</span> --no-cache -f ./Dockerfile -t image-registry.openshift-image-registry.svc:5000/user00-project/vote-api .
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">1</span>: FROM image-registry.openshift-image-registry.svc:5000/openshift/golang:latest AS builder
+<span class="o">[</span>build-image : build<span class="o">]</span> Getting image <span class="nb">source</span> signatures
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying blob sha256:ff637d5a66cba4903fc7d9343b0f9dbb4e1bf8ada19bd3934ea0edfb85dc4
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying blob sha256:f7fb0662b957bcb1b5007f9b5502af4da4c13e17b7bc2eff4f02c3e5ec08e
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying blob sha256:35aab756d1a095511ab75eeca5aa77a37fa62a258f3fa5bcfb37ad604e369
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying blob sha256:7cc70ce0e0ee7fe5f8ea22894ad8c2f962f1dfdd00d05de91a32181c89179
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying blob sha256:73986f838dc404255946f6aa282b0aeabc420faa4f21b572e1de735498edf
+<span class="o">[</span>build-image : build<span class="o">]</span> Copying config sha256:9e8f033b036bdb224dc931cfcaaf532da6a6ae7d779e8a09c52eed12305
+<span class="o">[</span>build-image : build<span class="o">]</span> Writing manifest to image destination
+<span class="o">[</span>build-image : build<span class="o">]</span> Storing signatures
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">2</span>: WORKDIR /build
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">3</span>: ADD . /build/
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">4</span>: RUN <span class="nb">export</span> <span class="nv">GARCH</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="k">if</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">GARCH</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&quot;s390x&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span> <span class="nb">export</span> <span class="nv">GARCH</span><span class="o">=</span><span class="s2">&quot;s390x&quot;</span><span class="p">;</span> <span class="k">fi</span> <span class="o">&amp;&amp;</span> <span class="nv">GOOS</span><span class="o">=</span>linux <span class="nv">GOARCH</span><span class="o">=</span><span class="si">${</span><span class="nv">GARCH</span><span class="si">}</span> <span class="nv">CGO_ENABLED</span><span class="o">=</span><span class="m">0</span> go build -mod<span class="o">=</span>vendor -o api-server 
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">5</span>: FROM scratch
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">6</span>: WORKDIR /app
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">7</span>: COPY --from<span class="o">=</span>builder /build/api-server /app/api-server
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">8</span>: CMD <span class="o">[</span> <span class="s2">&quot;/app/api-server&quot;</span> <span class="o">]</span>
+<span class="o">[</span>build-image : build<span class="o">]</span> STEP <span class="m">9</span>: COMMIT image-registry.openshift-image-registry.svc:5000/user00-project/vote-api
+<span class="o">[</span>build-image : build<span class="o">]</span> --&gt; 36faca61f94
+<span class="o">[</span>build-image : build<span class="o">]</span> 36faca61f941af886128abd8792753095eaac7c1041084e222f426243ed50ecc
+
+<span class="o">[</span>build-image : push<span class="o">]</span> + buildah --storage-driver<span class="o">=</span>vfs push --tls-verify<span class="o">=</span><span class="nb">false</span> --digestfile /workspace/source/image-digest image-registry.openshift-image-registry.svc:5000/user00-project/vote-api docker://image-registry.openshift-image-registry.svc:5000/user00-project/vote-api
+<span class="o">[</span>build-image : push<span class="o">]</span> + buildah --storage-driver<span class="o">=</span>vfs push --tls-verify<span class="o">=</span><span class="nb">false</span> --digestfile /workspace/source/image-digest image-registry.openshift-image-registry.svc:5000/user00-project/vote-api docker://image-registry.openshift-image-registry.svc:5000/user00-project/vote-api
+<span class="o">[</span>build-image : push<span class="o">]</span> Getting image <span class="nb">source</span> signatures
+<span class="o">[</span>build-image : push<span class="o">]</span> Copying blob sha256:9eda1116f7414b98e397f94cc650fd50890c2d97fa47925e02b83df7726119
+<span class="o">[</span>build-image : push<span class="o">]</span> Copying config sha256:36faca61f941af886128abd8792753095eaac7c1041084e222f426243ed5
+<span class="o">[</span>build-image : push<span class="o">]</span> Writing manifest to image destination
+<span class="o">[</span>build-image : push<span class="o">]</span> Storing signatures
+
+<span class="o">[</span>build-image : digest-to-results<span class="o">]</span> + cat /workspace/source/image-digest
+<span class="o">[</span>build-image : digest-to-results<span class="o">]</span> + tee /tekton/results/IMAGE_DIGEST
+<span class="o">[</span>build-image : digest-to-results<span class="o">]</span> sha256:a7d730f92530c2f10891c55ba86a44e4fcc907436831c99733779ffb0d0fe8
+
+<span class="o">[</span>apply-manifests : apply<span class="o">]</span> Applying manifests <span class="k">in</span> k8s directory
+<span class="o">[</span>apply-manifests : apply<span class="o">]</span> deployment.apps <span class="s2">&quot;vote-api&quot;</span> created
+<span class="o">[</span>apply-manifests : apply<span class="o">]</span> service <span class="s2">&quot;vote-api&quot;</span> created
+<span class="o">[</span>apply-manifests : apply<span class="o">]</span> -----------------------------------
+
+<span class="o">[</span>update-deployment : patch<span class="o">]</span> deployment.apps <span class="s2">&quot;vote-api&quot;</span> patched
+</code></pre></div>
+</details>
+<p>If you see the final <code>deployment.apps “vote-api” patched</code> line, your PipelineRun was successful and your backend application is now deployed in OpenShift.</p>
+</li>
+<li>
+<p>Look at your running application Pod by issuing the command:</p>
+<div class="highlight"><pre><span></span><code>oc get pod
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ oc get pod
+NAME                                                           READY   STATUS      RESTARTS   AGE
+build-and-deploy-run-sgtc7-apply-manifests-9p6mv-pod-95jhw     <span class="m">0</span>/1     Completed   <span class="m">0</span>          9m52s
+build-and-deploy-run-sgtc7-build-image-6kh6n-pod-pkvgx         <span class="m">0</span>/3     Completed   <span class="m">0</span>          12m
+build-and-deploy-run-sgtc7-fetch-repository-flxfx-pod-p6nzh    <span class="m">0</span>/1     Completed   <span class="m">0</span>          13m
+build-and-deploy-run-sgtc7-update-deployment-hgxrz-pod-htqpf   <span class="m">0</span>/1     Completed   <span class="m">0</span>          9m33s
+vote-api-6765569bfb-v4jlh                                      <span class="m">1</span>/1     Running     <span class="m">0</span>          9m20s
+</code></pre></div>
+</details>
+<p>You should see one <em>running</em> Pod and four <em>completed</em> Pods. The running Pod is your application that the Pipeline pulled from GitHub, containerized, pushed into the internal OpenShift repository, and started. The completed Pods were created to complete the Tasks defined in the Pipeline, and each is made up of one container per step in the Task.</p>
+<p>Looking at the READY column, you can see that most of the Pods have one container, with the exception of the build-image Pod that has three.</p>
+</li>
+<li>
+<p>The Tekton CLI also provides a way to check your Pipelines and PipelineRuns by running:</p>
+<div class="highlight"><pre><span></span><code>tkn pipeline ls
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn pipeline ls
+NAME               AGE             LAST RUN                     STARTED         DURATION    STATUS
+build-and-deploy   <span class="m">4</span> minutes ago   build-and-deploy-run-2q5fp   <span class="m">4</span> minutes ago   <span class="m">3</span> minutes   Succeeded
+</code></pre></div>
+</details>
+</li>
+</ul>
+<p>Since we have successfully run the Pipeline in the CLI, let’s trigger a run from the console in the next section.</p>
+<h2 id="creating-the-frontend-application-through-the-console">Creating the Frontend Application through the Console<a class="headerlink" href="#creating-the-frontend-application-through-the-console" title="Permanent link">&para;</a></h2>
+<p>Let’s create the frontend portion of our application by running the Pipeline from the OpenShift console.</p>
+<ol>
+<li>
+<p><strong>If you’ve closed out of the OpenShift console in your web browser, go back to <a href="https://console-openshift-console.apps.atsocppa.dmz/">https://console-openshift-console.apps.atsocppa.dmz/</a></strong></p>
+</li>
+<li>
+<p><strong>Navigate to the Developer Perspective -&gt; Pipelines -&gt; and select your userNN Project</strong>.</p>
+<p><img alt="build-and-deploy-2" src="../images/build-and-deploy-2.png" /></p>
+<p>The main Pipelines page displays the same information returned from the <code>tkn pipeline ls</code> command.</p>
+</li>
+<li>
+<p><strong>Click your build-and-deploy Pipeline and then click the Actions -&gt; Start button</strong>.</p>
+<p><img alt="start-pipeline" src="../images/start-pipeline.png" /></p>
+<p>This will open a new window that prompts you for the parameters with which to start your second PipelineRun. This window is the GUI equivalent to the multi-line <code>tkn pipeline start</code> command that we entered in the CLI PipelineRun.</p>
+</li>
+<li>
+<p><strong>Enter the following parameters</strong>:</p>
+<ul>
+<li>
+<p>deployment name: <code>vote-ui</code></p>
+</li>
+<li>
+<p>git-url: <code>https://github.com/mmondics/pipelines-vote-ui.git</code></p>
+</li>
+<li>
+<p>git-revision: <code>master</code></p>
+</li>
+<li>
+<p>IMAGE: <code>image-registry.openshift-image-registry.svc:5000/userNN-project/vote-ui</code></p>
+</li>
+<li>
+<p>shared-workspace: <code>PVC</code> -&gt; <code>source-pvc</code></p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure you change the one instance of <code>NN</code> in the IMAGE field to your user number.</p>
+</div>
+</li>
+<li>
+<p><strong>Then click start</strong>.</p>
+<p><img alt="start-pipeline-ui" src="../images/start-pipeline-ui.png" /></p>
+<p>You will be taken to the page for your PipelineRun and shown the graphical representation of the running Pipeline.</p>
+<p><img alt="pipeline-running" src="../images/pipeline-running.png" /></p>
+</li>
+<li>
+<p><strong>Click the logs tab</strong> to follow what’s happening in more detail like you saw in the CLI.</p>
+<p><img alt="pipeline-logs" src="../images/pipeline-running.png" /></p>
+</li>
+</ol>
+<p>When you see the PipelineRun has Succeeded and the <code>deployment.apps “vote-ui” has been patched</code>, your frontend application is also up and running.</p>
+<p>With both your backend and frontend applications are running, in the next section we’ll access it in a browser.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lab009-4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding and Deploying Pipelines" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Understanding and Deploying Pipelines
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lab009-6/" class="md-footer__link md-footer__link--next" aria-label="Next: Access the Application in a Browser" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Access the Application in a Browser
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
