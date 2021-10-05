@@ -20,6 +20,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 ### Presentations
 
 * [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentations/presentation1.pdf)
+
 * [Presentation 2 - Technical Deep Dive, Installation & Configuration, Lessons Learned](presentations/presentation2.pdf)
 
 ### Labs
@@ -30,14 +31,23 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
     Labs are non-sequential and have no dependencies on one another.
 
 * [Lab 001 - Exploring the OpenShift Console](lab001-1.md)
+
 * [Lab 002 - Using the OpenShift Command Line (oc)](lab002-1.md)
+
 * [Lab 003 - Using the z/OS Cloud Broker with OCP](lab003-1.md)
+
 * [Lab 004 - Deploying an Application from Source Code](lab004-1.md)
+
 * [Lab 005 - Monitoring, Metering, and Metrics with OCP](lab005-1.md)
+
 * [Lab 006 - Using Persistent Storage - MongoDB and NodeJS](lab006-1.md)
+
 * [Lab 007 - Deploying an Application with the Open Liberty Operator](lab007-1.md)
+
 * [Lab 008 - Deploying an Application with Quarkus Red Hat Runtime](lab008-1.md)
+
 * [Lab 009 - Using OpenShift Pipelines](lab009-1.md)
+
 * [Lab 010 - OpenShift Service Mesh](lab010-1.md)
 
 ## Workshop Owners
