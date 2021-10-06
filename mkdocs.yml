@@ -57,21 +57,21 @@ nav:
         - Cleaning Up: 'lab006-7.md'
       - Lab 007:
         - Overview of the Open Liberty Operator and Sample Application: 'lab007-1.md'
-        - Connect to the Linux Guest Server: 'lab007-2.md'
+        - Log into OpenShift Using the CLI: 'lab007-2.md'
         - Cloning the GitHub Repository and Reviewing its Contents: 'lab007-3.md'
         - Using the Open Liberty Operator to Install an Application: 'lab007-4.md'
         - Access the Application in a Browser: 'lab007-5.md'
         - Cleaning Up: 'lab007-6.md'
       - Lab 008:
         - Overview of the Quarkus Red Hat Runtime: 'lab008-1.md'
-        - Connect to the Linux Guest Server: 'lab008-2.md'
+        - Log into OpenShift Using the CLI: 'lab008-2.md'
         - Creating and Reviewing the Quarkus Project: 'lab008-3.md'
         - Configure the Application for OpenShift: 'lab008-4.md'
         - Log into OpenShift Using the CLI: 'lab008-5.md'
         - Deploy the Application onto OpenShift: 'lab008-6.md'
         - Cleaning Up: 'lab008-7.md'
       - Lab 009:
-        - Connect to the Linux Guest Server: 'lab009-1.md'
+        - Log into OpenShift Using the CLI: 'lab009-1.md'
         - Cloning the GitHub Repository and Viewing its Contents: 'lab009-2.md'
         - Understanding and Deploying Tasks: 'lab009-3.md'
         - Understanding and Deploying Pipelines: 'lab009-4.md'
@@ -81,7 +81,7 @@ nav:
       - Lab 010:
         - Overview of the OpenShift Service Mesh: 'lab010-1.md'
         - OpenShift Service Mesh Architecture: 'lab010-2.md'
-        - Connect to OpenShift Using the CLI: 'lab010-3.md'
+        - Log into OpenShift Using the CLI: 'lab010-3.md'
         - Cloning the GitHub Repository and Reviewing its Contents: 'lab010-4.md'
         - Deploying an Application on the Service Mesh: 'lab010-5.md'
         - Understanding and Deploying a Service Mesh Gateway and Virtual Service: 'lab010-6.md'
