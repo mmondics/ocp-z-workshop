@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1232,7 +1232,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1349,7 +1349,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1510,7 +1510,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="understanding-and-deploying-a-service-mesh-gateway-and-virtualservice">Understanding and Deploying a Service Mesh Gateway and VirtualService<a class="headerlink" href="#understanding-and-deploying-a-service-mesh-gateway-and-virtualservice" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>Gateways are used to manage inbound and outbound traffic for your mesh, letting you specify which traffic you want to enter or leave the mesh. Gateway configurations are applied to standalone Envoy proxies that are running at the edge of the mesh, rather than sidecar Envoy proxies running alongside your service workloads.</p>
 <p><img alt="gateway-arch" src="../images/gateway-arch.png" /></p>
 <p>Unlike other mechanisms for controlling traffic entering your systems, such as the Kubernetes Ingress APIs, Istio gateways let you use the full power and flexibility of Istio’s traffic routing. You can do this because Istio’s Gateway resource just lets you configure layer 4-6 load balancing properties such as ports to expose, TLS settings, and so on. Then instead of adding application-layer traffic routing (L7) to the same API resource, you bind a regular Istio virtual service to the gateway. This lets you basically manage gateway traffic like any other data plane traffic in an Istio mesh.</p>
@@ -1702,48 +1698,47 @@
 <p>You will find a YAML file for a Gateway and VirtualService in your terminal session. <strong>From the istio-s390x directory, view the YAML file with the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>cat networking/bookinfo-gateway.yaml
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ cat networking/bookinfo-gateway.yaml 
-    apiVersion: networking.istio.io/v1alpha3
-    kind: Gateway
-    metadata:
-    name: bookinfo-gateway
-    spec:
-    selector:
-        istio: ingressgateway <span class="c1"># use default controller</span>
-    servers:
-    - port:
-        number: <span class="m">80</span>
-        name: http
-        protocol: HTTP
-        hosts:
-        - <span class="s2">&quot;userNN-project.istio.apps.atsocpd2.dmz&quot;</span>
-    ---
-    apiVersion: networking.istio.io/v1alpha3
-    kind: VirtualService
-    metadata:
-    name: bookinfo
-    spec:
-    hosts:
-    - <span class="s2">&quot;userNN-project.istio.apps.atsocpd2.dmz&quot;</span>
-    gateways:
-    - bookinfo-gateway
-    http:
-    - match:
-        - uri:
-            exact: /productpage
-        - uri:
-            prefix: /static
-        - uri:
-            exact: /login
-        - uri:
-            exact: /logout
-        - uri:
-            prefix: /api/v1/products
-        route:
-        - destination:
-            host: productpage
-            port:
-            number: <span class="m">9080</span>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span>
+    <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Gateway</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bookinfo-gateway</span>
+    <span class="nt">spec</span><span class="p">:</span>
+    <span class="nt">selector</span><span class="p">:</span>
+        <span class="nt">istio</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ingressgateway</span> <span class="c1"># use default controller</span>
+    <span class="nt">servers</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">port</span><span class="p">:</span>
+        <span class="nt">number</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
+        <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">HTTP</span>
+        <span class="nt">hosts</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&quot;userNN-project.istio.apps.atsocpd2.dmz&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">---</span>
+    <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span>
+    <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
+    <span class="nt">metadata</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bookinfo</span>
+    <span class="nt">spec</span><span class="p">:</span>
+    <span class="nt">hosts</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;userNN-project.istio.apps.atsocpd2.dmz&quot;</span>
+    <span class="nt">gateways</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">bookinfo-gateway</span>
+    <span class="nt">http</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">match</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span>
+            <span class="nt">exact</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/productpage</span>
+        <span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span>
+            <span class="nt">prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/static</span>
+        <span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span>
+            <span class="nt">exact</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/login</span>
+        <span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span>
+            <span class="nt">exact</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/logout</span>
+        <span class="p p-Indicator">-</span> <span class="nt">uri</span><span class="p">:</span>
+            <span class="nt">prefix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/api/v1/products</span>
+        <span class="nt">route</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
+            <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">productpage</span>
+            <span class="nt">port</span><span class="p">:</span>
+            <span class="nt">number</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">9080</span>
 </code></pre></div>
 </details>
 <p>You will notice that there are a few instances of userNN in the YAML file that must be edited to match your user number. You can quickly change these by entering the following command.</p>

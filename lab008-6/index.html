@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1234,7 +1234,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,14 +1688,10 @@
                 
                 
                 <h1 id="deploy-the-application-onto-openshift">Deploy the Application onto OpenShift<a class="headerlink" href="#deploy-the-application-onto-openshift" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>Let’s now take our local application and use the Quarkus extension we just added to build and deploy a containerized application onto OpenShift.</p>
 <ol>
 <li>
-<p>In the openshift-quickstart directory, run the command:</p>
+<p><strong>In the openshift-quickstart directory, run the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>./mvnw clean package <span class="se">\</span>
 -Dquarkus.kubernetes.deploy<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
 -Dquarkus.kubernetes-client.trust-certs<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
@@ -1706,26 +1702,26 @@
 <p class="admonition-title">Information</p>
 <p>This command may take a few minutes to complete.</p>
 </div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-quickstart$ ./mvnw clean package \
-    -Dquarkus.kubernetes.deploy=true \
-    -Dquarkus.kubernetes-client.trust-certs=true \
-    -Dquarkus.openshift.expose=true
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] -------------------&lt; org.acme:openshift-quickstart &gt;--------------------
-[INFO] Building openshift-quickstart 1.0.0-SNAPSHOT
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-quickstart$ ./mvnw clean package <span class="se">\</span>
+    -Dquarkus.kubernetes.deploy<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -Dquarkus.kubernetes-client.trust-certs<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -Dquarkus.openshift.expose<span class="o">=</span><span class="nb">true</span>
+<span class="o">[</span>INFO<span class="o">]</span> Scanning <span class="k">for</span> projects...
+<span class="o">[</span>INFO<span class="o">]</span> 
+<span class="o">[</span>INFO<span class="o">]</span> -------------------&lt; org.acme:openshift-quickstart &gt;--------------------
+<span class="o">[</span>INFO<span class="o">]</span> Building openshift-quickstart <span class="m">1</span>.0.0-SNAPSHOT
+<span class="o">[</span>INFO<span class="o">]</span> --------------------------------<span class="o">[</span> jar <span class="o">]</span>---------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> 
 ...omitted...
 
-[INFO] [io.quarkus.kubernetes.deployment.KubernetesDeployer] The deployed application can be accessed at: http://openshift-quickstart-user01-project.apps.atsocppa.dmz
-[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 94655ms
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  03:19 min
-[INFO] Finished at: 2021-03-09T12:12:14-05:00
-[INFO] ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>io.quarkus.kubernetes.deployment.KubernetesDeployer<span class="o">]</span> The deployed application can be accessed at: http://openshift-quickstart-user01-project.apps.atsocppa.dmz
+<span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>io.quarkus.deployment.QuarkusAugmentor<span class="o">]</span> Quarkus augmentation completed <span class="k">in</span> 94655ms
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> BUILD SUCCESS
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> Total time:  <span class="m">03</span>:19 min
+<span class="o">[</span>INFO<span class="o">]</span> Finished at: <span class="m">2021</span>-03-09T12:12:14-05:00
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
 </code></pre></div>
 </details>
 <p>The aforementioned command builds a jar file locally, connects to the OpenShift cluster you previously logged into, triggers a container image build, pushes that container image into the OpenShift internal registry, generates OpenShift/Kubernetes resources including a Service, Route, DeploymentConfig, and your running application pod.</p>
@@ -1767,7 +1763,7 @@ route.route.openshift.io/openshift-quickstart  openshift-quickstart-user01-proje
 <p>If you have one running pod, your application has successfully deployed and is accessible at the route.</p>
 </li>
 <li>
-<p>In a web browser, navigate to your route:</p>
+<p><strong>In a web browser, navigate to your route</strong>:</p>
 <details class="hint"><summary>Hint</summary><p>It will be <a href="http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/">http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/</a> where NN is your user number.</p>
 </details>
 <p><img alt="quarkus-main" src="../images/quarkus-main.png" /></p>
@@ -1775,7 +1771,7 @@ route.route.openshift.io/openshift-quickstart  openshift-quickstart-user01-proje
 <p>Earlier we looked at the GreetingResource.java REST endpoint and its return of “hello” in the command line. We can do the same thing in the web browser.</p>
 </li>
 <li>
-<p>Add <code>/greeting</code> to the end of your route.</p>
+<p><strong>Add <code>/greeting</code> to the end of your route</strong>.</p>
 <details class="hint"><summary>Hint</summary><p><a href="http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/greeting">http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/greeting</a> where NN is your user number.</p>
 </details>
 <p><img alt="hello" src="../images/hello.png" /></p>

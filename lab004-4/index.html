@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,17 +1688,13 @@
                 
                 
                 <h1 id="edit-the-source-code-and-push-an-update">Edit the Source Code and Push an Update<a class="headerlink" href="#edit-the-source-code-and-push-an-update" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <ol>
 <li>
 <p><strong>Switch to the Developer Perspective</strong>, if not already on it.</p>
 <p><img alt="developer-perspective" src="../images/developer-perspective.png" /></p>
 </li>
 <li>
-<p><strong>Change into your userNN-project</strong> if not already in it</p>
+<p><strong>Change into your userNN-project</strong> if not already in it.</p>
 <p><img alt="userNN-project" src="../images/userNN-project.png" /></p>
 </li>
 <li>
@@ -1711,7 +1707,7 @@
 </li>
 <li>
 <p><strong>In the Git Repo URL field, enter the URL of your forked repository</strong>.</p>
-<p>It will look something like: <a href="https://github.com/YOUR_GITHUB_USERNAME">https://github.com/YOUR_GITHUB_USERNAME</a>/node-s2i-openshift&gt;</p>
+<p>It will look something like: <a href="https://github.com/YOUR_GITHUB_USERNAME/node-s2i-openshift">https://github.com/YOUR_GITHUB_USERNAME/node-s2i-openshift</a></p>
 <p><img alt="import-from-git" src="../images/import-from-git.png" /></p>
 </li>
 <li>
@@ -1738,7 +1734,7 @@
 <p><img alt="node-panel" src="../images/node-panel.png" /></p>
 <details class="note" open="open"><summary>Note</summary><p>Feel free to click on the <em>View Logs</em> hyperlink to watch everything that the build is creating. When complete, the log will display <code>Push Successful</code>, and you can return to the Topology page by clicking the link on the left side of the page.</p>
 </details>
-<p>If you clicked off of the Node.js application Resources tab, click on the circular icon again, then click on the Resources tab</p>
+<p>If you clicked off of the Node.js application Resources tab, click on the circular icon again, then click on the Resources tab.</p>
 </li>
 <li>
 <p><strong>Click the Route URL</strong> – beginning with http://</p>
@@ -1754,13 +1750,11 @@
 </ul>
 <p><img alt="example-health-patient" src="../images/example-health-patient.png" /></p>
 <p>All of the data in this application is simulated to look similar to the health records of an insurance company. Feel free to explore the application and notice the multiple tabs it contains.</p>
-</li>
-</ol>
 <p>The JavaScript code you looked at in your forked GitHub repository was containerized by OpenShift’s S2I function and deployed onto the OpenShift cluster.</p>
 <p>Now that your application is running in a container in OpenShift, let’s see how an application developer can make a change to the source code, and then push the update to the running application.</p>
 <p>We’ll make a simple change in a few lines of text to demonstrate. As we see in the Example Health application, there is a section with Personal Information.</p>
 <p><img alt="personal-info" src="../images/personal-info.png" /></p>
-<ol>
+</li>
 <li>
 <p><strong>In your forked GitHub repository, navigate to the source code again</strong>:</p>
 </li>
@@ -1785,7 +1779,7 @@
 <p><img alt="edited-gh" src="../images/edited-gh.png" /></p>
 </li>
 <li>
-<p>Click Commit Changes at the bottom of the page.</p>
+<p><strong>Click Commit Changes</strong> at the bottom of the page.</p>
 </li>
 </ol>
 <p>You just edited the source code, but you still need to push the update to the running application.</p>

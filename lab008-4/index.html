@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1234,7 +1234,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,16 +1688,13 @@
                 
                 
                 <h1 id="configure-the-application-for-openshift">Configure the Application for OpenShift<a class="headerlink" href="#configure-the-application-for-openshift" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>One of the great things about Quarkus is the plethora of <em>extensions</em> it provides out of the box. Quarkus extensions are comparable to Maven dependencies that allow for much easier use and integration into 3<sup>rd</sup> party projects.</p>
 <p>We will be using the <em>Quarkus OpenShift extension</em>. The OpenShift extension is actually a wrapper that brings together the <a href="https://quarkus.io/guides/deploying-to-kubernetes">kubernetes</a> and <a href="https://quarkus.io/guides/container-image#s2i">container-image-s2i</a> extensions with defaults specific to OpenShift.</p>
 <ol>
 <li>
 <p><strong>In your terminal session, add the OpenShift extension to you application with the command</strong>:</p>
-<p><strong><code>./mvnw quarkus:add-extension -Dextensions="openshift"</code></strong></p>
+<div class="highlight"><pre><span></span><code>./mvnw quarkus:add-extension -Dextensions<span class="o">=</span><span class="s2">&quot;openshift&quot;</span>
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-quickstart$ ./mvnw quarkus:add-extension -Dextensions<span class="o">=</span><span class="s2">&quot;openshift&quot;</span>
 <span class="o">[</span>INFO<span class="o">]</span> Scanning <span class="k">for</span> projects...
 <span class="o">[</span>INFO<span class="o">]</span> 

@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1232,7 +1232,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1351,7 +1351,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1557,7 +1557,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1747,28 +1747,16 @@
                 
                 
                 <h1 id="running-the-pipeline">Running the Pipeline<a class="headerlink" href="#running-the-pipeline" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>Let’s use this Pipeline to create an application. To demonstrate the re-usability of OpenShift Pipelines, we will be creating both a frontend and a backend with the same Pipeline you created in the previous step.</p>
 <p>We’ll also demonstrate the flexibility provided by OpenShift Pipelines that lets you use them from either the web console or the command line.</p>
 <h2 id="creating-the-backend-application-through-the-cli">Creating the Backend Application through the CLI<a class="headerlink" href="#creating-the-backend-application-through-the-cli" title="Permanent link">&para;</a></h2>
 <p>Let’s create the backend application with the Tekton CLI in your terminal.</p>
 <p>Now that you have all of the building blocks in place, you can start the Pipeline with the following command. The command will run the Pipeline and pass in parameters to:</p>
 <ul>
-<li>
-<p>Use the shared workspace and the PersistentVolumeClaim you created</p>
-</li>
-<li>
-<p>Create the deployment named vote-api</p>
-</li>
-<li>
-<p>Build a container image from the source code at the given GitHub repository</p>
-</li>
-<li>
-<p>Push that container image into the OpenShift internal registry and tag it for your project</p>
-</li>
+<li>Use the shared workspace and the PersistentVolumeClaim you created</li>
+<li>Create the deployment named vote-api</li>
+<li>Build a container image from the source code at the given GitHub repository</li>
+<li>Push that container image into the OpenShift internal registry and tag it for your project</li>
 <li>
 <p>Show the log so you can follow its progress
  Note that the forward slash  simply breaks the command into multiple lines for readability.</p>
@@ -1860,7 +1848,7 @@ Waiting <span class="k">for</span> logs to be available...
 <p>If you see the final <code>deployment.apps “vote-api” patched</code> line, your PipelineRun was successful and your backend application is now deployed in OpenShift.</p>
 </li>
 <li>
-<p>Look at your running application Pod by issuing the command:</p>
+<p><strong>Look at your running application Pod by issuing the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>oc get pod
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ oc get pod
@@ -1876,7 +1864,7 @@ vote-api-6765569bfb-v4jlh                                      <span class="m">1
 <p>Looking at the READY column, you can see that most of the Pods have one container, with the exception of the build-image Pod that has three.</p>
 </li>
 <li>
-<p>The Tekton CLI also provides a way to check your Pipelines and PipelineRuns by running:</p>
+<p><strong>The Tekton CLI also provides a way to check your Pipelines and PipelineRuns by running</strong>:</p>
 <div class="highlight"><pre><span></span><code>tkn pipeline ls
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn pipeline ls
@@ -1906,21 +1894,11 @@ build-and-deploy   <span class="m">4</span> minutes ago   build-and-deploy-run-2
 <li>
 <p><strong>Enter the following parameters</strong>:</p>
 <ul>
-<li>
-<p>deployment name: <code>vote-ui</code></p>
-</li>
-<li>
-<p>git-url: <code>https://github.com/mmondics/pipelines-vote-ui.git</code></p>
-</li>
-<li>
-<p>git-revision: <code>master</code></p>
-</li>
-<li>
-<p>IMAGE: <code>image-registry.openshift-image-registry.svc:5000/userNN-project/vote-ui</code></p>
-</li>
-<li>
-<p>shared-workspace: <code>PVC</code> -&gt; <code>source-pvc</code></p>
-</li>
+<li>deployment name: <code>vote-ui</code></li>
+<li>git-url: <code>https://github.com/mmondics/pipelines-vote-ui.git</code></li>
+<li>git-revision: <code>master</code></li>
+<li>IMAGE: <code>image-registry.openshift-image-registry.svc:5000/userNN-project/vote-ui</code></li>
+<li>shared-workspace: <code>PVC</code> -&gt; <code>source-pvc</code></li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>

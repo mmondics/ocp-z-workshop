@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="deploy-from-the-developer-catalog">Deploy from the Developer Catalog<a class="headerlink" href="#deploy-from-the-developer-catalog" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work in Progress</p>
-</div>
 <p>In this section, you will be building a sample application from a template. The template will create two pods:</p>
 <ul>
 <li>
@@ -1712,7 +1708,7 @@
 <p><strong>Find and click the Rails + PostgreSQL (Ephemeral) tile</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can make this easier on yourself by searching for <em>Rails + PostgreSQL (Ephemeral</em>) in the search bar.</p>
+<p>You can search for <em>Rails + PostgreSQL (Ephemeral</em>) in the search bar.</p>
 </div>
 <p><img alt="rails-tile.png" src="../images/rails-tile.png" /></p>
 </li>
@@ -1723,16 +1719,17 @@
 <li>
 <p><strong>Click the Create button</strong> at the bottom of the page.</p>
 <p>You will now be taken to the topology view, where you will see two icons – one for each of the two workload pods that the template will create. If you don’t see the icons right away, you may need to refresh your browser window.</p>
-<p>??+ Info
-    The Ruby on Rails application will take a few minutes to fully deploy, while the PostgreSQL application will deploy in just a few seconds. The reason for this difference is that the Ruby application is being built (containerized) from Ruby source code located in the GitHub repository located here: <a href="https://github.com/sclorg/rails-ex.git">https://github.com/sclorg/rails-ex.git</a> into a container image, and then deployed. If you would like to watch the steps that OpenShift is taking to build the containerized application, <strong>click the circle labeled rails-postgresql-example, click the Resources tab, and click View Logs in the Builds section</strong>.</p>
-<div class="codehilite"><pre><span></span><code>The PostgreSQL application, on the other hand, is deployed from a pre-built container image hosted in quay.io, so it takes much less time to start up.
-</code></pre></div>
-
-<p>You will know that both applications are successfully deployed and running when each has a solid blue circle.</p>
+<details class="info" open="open"><summary>Info</summary><p>The Ruby on Rails application will take a few minutes to fully deploy, while the PostgreSQL application will deploy in just a few seconds. The reason for this difference is that the Ruby application is being built (containerized) from Ruby source code located in the GitHub repository located here: <a href="https://github.com/sclorg/rails-ex.git">https://github.com/sclorg/rails-ex.git</a> into a container image, and then deployed. If you would like to watch the steps that OpenShift is taking to build the containerized application, <strong>click the circle labeled rails-postgresql-example, click the Resources tab, and click View Logs in the Builds section</strong>.</p>
+<p>The PostgreSQL application, on the other hand, is deployed from a pre-built container image hosted in quay.io, so it takes much less time to start up.</p>
+</details>
+<p>You will know that both applications are successfully deployed and running when each icon has a solid blue circle.</p>
 <p><img alt="running-pods.png" src="../images/running-pods.png" /></p>
 </li>
 <li>
-<p><strong>Click the icon for the rails-postgresql-example application</strong>. This will bring up a window on the right side of the screen with information about your DeploymentConfig. <strong>Click the Details tab</strong> if it is not already selected.</p>
+<p><strong>Click the icon for the rails-postgresql-example application</strong>. This will bring up a window on the right side of the screen with information about your DeploymentConfig.</p>
+</li>
+<li>
+<p><strong>Click the Details tab</strong> if it is not already selected.</p>
 <p><img alt="rails-details.png" src="../images/rails-details.png" /></p>
 <p>Here you’ll see information about your DeploymentConfig. Notice that many of the fields such as Labels, Update Strategy, and more have been populated with default values. These can be modified.</p>
 </li>

@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="open-a-remote-shell-session-into-the-mongodb-pod">Open a Remote Shell Session into the MongoDB Pod<a class="headerlink" href="#open-a-remote-shell-session-into-the-mongodb-pod" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>OpenShift provides <em>Remote Shell</em> capabilities from both the command line and from the web console.</p>
 <p>With the <code>oc rsh</code> command, you can issue commands as if you are inside the container and perform local operations like monitoring, debugging, and using CLI commands specific to what is running in the container.</p>
 <details class="information" open="open"><summary>Information</summary><p>For example, if you open a remote shell session into a MySQL container, you can count the number of records in the database by invoking the mysql command, then using the prompt to type in the SELECT command. You can also use commands like ps(1) and ls(1) for validation.</p>
@@ -1700,7 +1696,9 @@
 <ol>
 <li>
 <p><strong>Enter the following command</strong> to rsh into the container:</p>
-<p><strong><code>oc rsh mongodb-1-XXXXX</code></strong> where <code>XXXXX</code> is your unique string of 5 characters</p>
+<div class="highlight"><pre><span></span><code>oc rsh mongodb-1-XXXXX
+</code></pre></div>
+<p>Where <code>XXXXX</code> is your unique string of 5 characters</p>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc rsh mongodb-1-r8dpw
 $ 
 </code></pre></div>
@@ -1712,14 +1710,16 @@ $
 </div>
 </li>
 <li>
-<p>In the remote session, <strong>issue the command <code>mongo</code></strong></p>
+<p>In the remote session, <strong>issue the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>mongo
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>$ mongo
 MongoDB shell version v4.2.5
-connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb
-Implicit session: session { &quot;id&quot; : UUID(&quot;2320e01b-168e-41d0-a132-af0c9243d29c&quot;) }
-MongoDB server version: 4.2.5
+connecting to: mongodb://127.0.0.1:27017/?compressors<span class="o">=</span>disabled<span class="p">&amp;</span><span class="nv">gssapiServiceName</span><span class="o">=</span>mongodb
+Implicit session: session <span class="o">{</span> <span class="s2">&quot;id&quot;</span> : UUID<span class="o">(</span><span class="s2">&quot;2320e01b-168e-41d0-a132-af0c9243d29c&quot;</span><span class="o">)</span> <span class="o">}</span>
+MongoDB server version: <span class="m">4</span>.2.5
 Welcome to the MongoDB shell.
-For interactive help, type &quot;help&quot;.
+For interactive help, <span class="nb">type</span> <span class="s2">&quot;help&quot;</span>.
 For more comprehensive documentation, see
     http://docs.mongodb.org/
 Questions? Try the support group
@@ -1729,11 +1729,15 @@ Questions? Try the support group
 <p><code>mongo</code> is the shell command for MongoDB. Issuing the <code>mongo</code> command without any options or flags connects you to a MongoDB instance running on your localhost with port 27017. If you see this message, MongoDB is up and running in the container.</p>
 </li>
 <li>
-<p><strong>Exit the MongoDB shell by entering the command <code>exit</code></strong></p>
+<p><strong>Exit the MongoDB shell by entering the command</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
 </li>
 <li>
-<p><strong>Exit the remote shell session by entering <code>exit</code> once again.</strong></p>
-<p>You should be back in the <code>userNN@lab061</code> command line. </p>
+<p><strong>Exit the remote shell session by entering, once again</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
+<p>You should be back in the <code>userNN@lab061</code> command line.</p>
 </li>
 </ol>
                 

@@ -1117,7 +1117,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,14 +1688,11 @@
                 
                 
                 <h1 id="using-the-open-liberty-operator-to-install-an-application">Using the Open Liberty Operator to Install an Application<a class="headerlink" href="#using-the-open-liberty-operator-to-install-an-application" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <ol>
 <li>
 <p><strong>Edit the environment variables file to match your user number (NN)</strong>.</p>
-<p><strong><code>sed -i 's/NN/YOUR_USER_NUMBER/g' env</code></strong></p>
+<div class="highlight"><pre><span></span><code>sed -i <span class="s1">&#39;s/NN/YOUR_USER_NUMBER/g&#39;</span> env
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure that you replace YOUR_USER_NUMBER in the command above.</p>
@@ -1707,7 +1704,9 @@
 <p>Before running this script, take a look at the steps it will go through.</p>
 </li>
 <li>
-<p><strong>View the script contents using the command <code>cat 1-build.sh</code></strong></p>
+<p><strong>View the script contents using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat <span class="m">1</span>-build.sh
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">unset</span> KUBECONFIG
@@ -1742,27 +1741,19 @@ podman push --tls-verify<span class="o">=</span><span class="nb">false</span> <s
 </details>
 <p>This shell script:</p>
 <ul>
-<li>
-<p>Logs you into the OpenShift cluster.</p>
-</li>
-<li>
-<p>Logs you into the OpenShift cluster’s internal image registry.</p>
-</li>
-<li>
-<p>Switches to your project, if not currently working in it.</p>
-</li>
-<li>
-<p>Builds the container image using the Dockerfile contained in your working directory.</p>
-</li>
-<li>
-<p>Pushes the new container image from step 4 to the cluster’s internal image registry.</p>
-</li>
+<li>Logs you into the OpenShift cluster.</li>
+<li>Logs you into the OpenShift cluster’s internal image registry.</li>
+<li>Switches to your project, if not currently working in it.</li>
+<li>Builds the container image using the Dockerfile contained in your working directory.</li>
+<li>Pushes the new container image from step 4 to the cluster’s internal image registry.</li>
 </ul>
 <details class="note" open="open"><summary>Note</summary><p>Note that you are welcome to enter each command manually and individually, but the scripting is there to minimize the opportunity for typos and other errors. If you do enter each command manually, make sure to replace each variable in BLUE with the actual value itself. Also, notice that the forward slash  simply breaks a single command into multiple lines.</p>
 </details>
 </li>
 <li>
-<p>You might notice that the <code>Dockerfile</code> is doing the brunt of the work in this script to build the container image itself. <strong>Take a look at this too, using the command <code>cat Dockerfile</code></strong>.</p>
+<p>You might notice that the <code>Dockerfile</code> is doing the brunt of the work in this script to build the container image itself. <strong>Take a look at this too, using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat Dockerfile
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">quay.io/mmondics/open-liberty:latest</span>
 <span class="k">COPY</span> --chown<span class="o">=</span><span class="m">1001</span>:0 modresorts-1.0.war /config/dropins
 <span class="k">COPY</span> --chown<span class="o">=</span><span class="m">1001</span>:0 server.xml /config/
@@ -1772,7 +1763,9 @@ podman push --tls-verify<span class="o">=</span><span class="nb">false</span> <s
 <p>Back in the <code>ol-app-install</code> working directory, you can now run the script that brings all of these pieces together.</p>
 </li>
 <li>
-<p><strong>Run the script using the command <code>./1-build.sh</code></strong></p>
+<p><strong>Run the script using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>./1-build.sh
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ ./1-build.sh
 Logging into Openshift
 Login successful.
@@ -1806,7 +1799,9 @@ user01@lab061:~/openliberty-operator-ocpz/ol-app-install$
 <p>Your container image is now built and pushed into OpenShift’s internal registry.</p>
 </li>
 <li>
-<p><strong>View your new image in the registry using the command <code>podman images</code></strong></p>
+<p><strong>View your new image in the registry using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>podman images
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ podman images
 REPOSITORY                                                                                 TAG     IMAGE ID       CREATED          SIZE
 default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-modernization  v1.0.0  5970fc63cb46   <span class="m">16</span> seconds ago   <span class="m">472</span> MB
@@ -1817,14 +1812,18 @@ default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-mode
 </li>
 <li>
 <p><strong>Edit the custom resource file using the command</strong>:</p>
-<p><strong><code>sed -i 's/NN/YOUR_USER_NUMBER/g' app-mod-withroute_cr.yaml</code></strong></p>
+<div class="highlight"><pre><span></span><code>sed -i <span class="s1">&#39;s/NN/YOUR_USER_NUMBER/g&#39;</span> app-mod-withroute_cr.yaml
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure that you replace YOUR_USER_NUMBER in the command above.</p>
 </div>
 </li>
 <li>
-<p><strong>Run the command <code>cat app-mod-withroute_cr.yaml</code> that the two instances of <code>NN</code> were properly replaced with your user number</strong>.</p>
+<p><strong>Run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat app-mod-withroute_cr.yaml
+</code></pre></div>
+<p>And make sure that the two instances of <code>NN</code> were properly replaced with your user number.</p>
 <details class="information"><summary>Expand for More Information</summary><p>What exactly is this YAML file?</p>
 <p>A <em>Custom Resource Definition (CRD)</em> object defines a new, unique object in the cluster and lets the Kubernetes API server handle its entire lifecycle. <em>Custom Resource (CR)</em> objects are created from CRDs that have been added to the cluster by a cluster administrator, allowing all cluster users to add the new resource type into projects.</p>
 <p>So in this case, a CRD was created ahead of time of the kind: OpenLibertyApplication, and you are creating a CR from that CRD. </p>
@@ -1832,7 +1831,9 @@ default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-mode
 <p>With the modified app-mod-withroute_cr.yaml file, you’re ready to run the second script, <code>2-deploy.sh</code>. Before running it, take a look at what all it will do.</p>
 </li>
 <li>
-<p><strong>Run the command cat <code>2-deploy.sh</code></strong>.</p>
+<p><strong>Run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat <span class="m">2</span>-deploy.sh
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">unset</span> KUBECONFIG
@@ -1851,16 +1852,14 @@ oc -n <span class="nv">$OPENSHIFT_PROJECT</span> create -f app-mod-withroute_cr.
 </details>
 <p>This shell script:</p>
 <ul>
-<li>
-<p>Logs you into the OpenShift cluster.</p>
-</li>
-<li>
-<p>Creates an object from the Custom Resource (CR) YAML file you just edited.</p>
-</li>
+<li>Logs you into the OpenShift cluster.</li>
+<li>Creates an object from the Custom Resource (CR) YAML file you just edited.</li>
 </ul>
 </li>
 <li>
-<p><strong>Run this shell script with the command <code>./2-deploy.sh</code></strong></p>
+<p><strong>Run this shell script with the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>./2-deploy.sh
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ ./2-deploy.sh
 Logging into Openshift
 Login successful.
@@ -1875,7 +1874,9 @@ openlibertyapplication.openliberty.io/appmod created
 <p>Your Custom Resource named <code>appmod</code> of kind <code>OpenLibertyApplication</code> has been <code>created</code> in your project, <code>userNN-project</code>.  The creation of this CR resulted in the Open Liberty Operator deploying a pod, deployment, replicaset, and a service that is exposed as a route.</p>
 </li>
 <li>
-<p><strong>View all of the created objects using the command <code>oc get all</code></strong></p>
+<p><strong>View all of the created objects using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get all
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ oc get all
 NAME                          READY   STATUS    RESTARTS   AGE
 pod/appmod-5959fb64b5-fqkvg   <span class="m">1</span>/1     Running   <span class="m">0</span>          16s

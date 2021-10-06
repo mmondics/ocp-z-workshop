@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1232,7 +1232,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1351,7 +1351,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,15 +1688,11 @@
                 
                 
                 <h1 id="understanding-and-deploying-tasks">Understanding and Deploying Tasks<a class="headerlink" href="#understanding-and-deploying-tasks" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>A <em>Task</em> defines a series of steps that run in a desired order and complete a set amount of build work. Every Task runs as a Pod on your OpenShift cluster with each step as its own container. Tasks have one single responsibility so they can be reused across different Pipelines or in multiple places within a single Pipeline.</p>
 <p>The repository you pulled includes the YAML files needed to create three Tasks. Let’s take a look at one of them.</p>
 <ol>
 <li>
-<p>From the openshift-pipelines-s390x directory, run the command:</p>
+<p><strong>From the openshift-pipelines-s390x directory, run the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>cat tasks/hello.yaml
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ cat tasks/hello.yaml
@@ -1716,7 +1712,7 @@ steps:
 <p>This file will create a Kubernetes Task object called hello that is made up of one step. That step has its own name, image, command, and args associated with it. As explained above, once created, this Task will create one Pod that includes one Container.</p>
 </li>
 <li>
-<p>Create the Task using the command</p>
+<p><strong>Create the Task using the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>oc create -f tasks/hello.yaml
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ oc create -f tasks/hello.yaml
@@ -1726,7 +1722,7 @@ task.tekton.dev/hello created
 <p>The Task is now created in your project and can be run using Tekton, the CI/CD tool that OpenShift Pipelines are based on.</p>
 </li>
 <li>
-<p>Run the hello task using the command</p>
+<p><strong>Run the <code>hello</code> task using the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>tkn task start --showlog hello
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn task start --showlog hello
@@ -1738,7 +1734,7 @@ Waiting <span class="k">for</span> logs to be available...
 <p>Running the <code>tkn task start</code> command created a new Kubernetes resource called a TaskRun. TaskRuns are automatically created for each Task that is run in a Pipeline, but as you can see, they can also be manually created by running a Task. This can be useful for debugging a single Task in a Pipeline.</p>
 </li>
 <li>
-<p>Your Pipeline will consist of three Tasks total. Create the remaining Tasks using the commands:</p>
+<p>Your Pipeline will consist of three Tasks total. <strong>Create the remaining Tasks using the commands</strong>:</p>
 <div class="highlight"><pre><span></span><code>oc create -f tasks/apply_manifest_task.yaml
 </code></pre></div>
 <p>and</p>
@@ -1752,7 +1748,7 @@ task.tekton.dev/update-deployment created
 </details>
 </li>
 <li>
-<p>You have now created three Tasks that will be plumbed together to create a Pipeline. To see them, run the command:</p>
+<p><strong>You have now created three Tasks that will be plumbed together to create a Pipeline. To see them, run the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>tkn task ls
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn task ls
@@ -1765,7 +1761,7 @@ update-deployment                 <span class="m">7</span> minutes ago
 <p>You will also need a <em>Workspace</em> in which your will run all of the Tasks associated with your Pipeline. This will be a shared space across each Task, TaskRun, Pipeline, and PipelineRun that you associate with the Workspace. With a Workspace, you can store Task inputs and outputs, share data among Tasks, use it as a mount point for credentials held in Secrets, create a cache of build artifacts that speed up jobs, and more.</p>
 </li>
 <li>
-<p>In our case, we will be using a PersistentVolumeClaim as our Workspace. Create the PVC using the command:</p>
+<p><strong>In our case, we will be using a PersistentVolumeClaim as our Workspace. Create the PVC using the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>oc create -f resources/persistent_volume_claim.yaml
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ oc create -f resources/persistent_volume_claim.yaml

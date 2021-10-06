@@ -1115,7 +1115,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1232,7 +1232,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1349,7 +1349,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1510,7 +1510,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,38 +1688,20 @@
                 
                 
                 <h1 id="deploying-an-application-on-the-service-mesh">Deploying an Application on the Service Mesh<a class="headerlink" href="#deploying-an-application-on-the-service-mesh" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>The first thing we will do is deploy our application - <em>Bookinfo</em>. <a href="https://istio.io/latest/docs/examples/bookinfo/">Bookinfo</a> is a sample application provided by Istio, the upstream project from which OpenShift Service Mesh is built.</p>
 <p>The application displays information about a book, similar to a single catalog entry of an online bookstore. Displayed on the page is a description of the book, book details (ISBN, number of pages, and so on), and a few book reviews.</p>
 <p>The Bookinfo application is broken into four separate microservices:</p>
 <ul>
-<li>
-<p><em>productpage</em>. The productpage microservice calls the details and reviews microservices to populate the page.</p>
-</li>
-<li>
-<p><em>details</em>. The details microservice contains book information.</p>
-</li>
-<li>
-<p><em>reviews</em>. The reviews microservice contains book reviews. It also calls the ratings microservice.</p>
-</li>
-<li>
-<p><em>ratings</em>. The ratings microservice contains book ranking information that accompanies a book review.</p>
-</li>
+<li><em>productpage</em>. The productpage microservice calls the details and reviews microservices to populate the page.</li>
+<li><em>details</em>. The details microservice contains book information.</li>
+<li><em>reviews</em>. The reviews microservice contains book reviews. It also calls the ratings microservice.</li>
+<li><em>ratings</em>. The ratings microservice contains book ranking information that accompanies a book review.</li>
 </ul>
 <p>There are 3 versions of the reviews microservice:</p>
 <ul>
-<li>
-<p>Version <em>v1</em> doesn’t call the ratings service.</p>
-</li>
-<li>
-<p>Version <em>v2</em> calls the ratings service and displays each rating as 1 to 5 black stars.</p>
-</li>
-<li>
-<p>Version <em>v3</em> calls the ratings service and displays each rating as 1 to 5 red stars.</p>
-</li>
+<li>Version <em>v1</em> doesn’t call the ratings service.</li>
+<li>Version <em>v2</em> calls the ratings service and displays each rating as 1 to 5 black stars.</li>
+<li>Version <em>v3</em> calls the ratings service and displays each rating as 1 to 5 red stars.</li>
 </ul>
 <p>The end-to-end architecture of the application is shown below.</p>
 <p><img alt="bookinfo-arch" src="../images/bookinfo-arch.png" /></p>

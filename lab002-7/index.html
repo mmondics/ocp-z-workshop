@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,30 +1688,28 @@
                 
                 
                 <h1 id="administrative-cli-commands">Administrative CLI Commands<a class="headerlink" href="#administrative-cli-commands" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work in Progress</p>
-</div>
 <p>If you’ve already completed <a href="../lab001-1/">Lab 001 – Exploring the OpenShift Console</a>, you’ll remember that there are both developer and administrator perspectives. The same is true in the OpenShift CLI. </p>
 <p>The <code>oc adm</code> command gives cluster administrators the ability to check logs, manage users, groups, policies, certificates, and many other tasks usually associated with administrative roles.</p>
 <ol>
 <li>
-<p>Issue the <code>oc adm --help</code> command to see all of the OpenShift administrator commands.</p>
+<p><strong>Issue the following command to see all of the OpenShift administrator commands</strong>.</p>
+<div class="highlight"><pre><span></span><code>oc adm --help
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc adm --help
 Administrative Commands
 
-Actions for administering an OpenShift cluster are exposed here.
+Actions <span class="k">for</span> administering an OpenShift cluster are exposed here.
 
 Usage:
-oc adm [flags]
+oc adm <span class="o">[</span>flags<span class="o">]</span>
 
 Cluster Management:
 upgrade                            Upgrade a cluster
 top                                Show usage statistics of resources on the server
-must-gather                        Launch a new instance of a pod for gathering debug information
+must-gather                        Launch a new instance of a pod <span class="k">for</span> gathering debug information
 
 Node Management:
-drain                              Drain node in preparation for maintenance
+drain                              Drain node <span class="k">in</span> preparation <span class="k">for</span> maintenance
 cordon                             Mark node as unschedulable
 uncordon                           Mark node as schedulable
 taint                              Update the taints on one or more nodes
@@ -1726,7 +1724,7 @@ pod-network                        Manage pod network
 
 Maintenance:
 prune                              Remove older versions of resources from the server
-migrate                            Migrate data in the cluster
+migrate                            Migrate data <span class="k">in</span> the cluster
 
 Configuration:
 create-kubeconfig                  Create a basic .kubeconfig file from client certs
@@ -1737,18 +1735,20 @@ create-error-template              Create an error page template
 
 Other Commands:
 build-chain                        Output the inputs and dependencies of your builds
-completion                         Output shell completion code for the specified shell (bash or zsh)
-config                             Change configuration files for the client
-verify-image-signature             Verify the image identity contained in the image signature
+completion                         Output shell completion code <span class="k">for</span> the specified shell <span class="o">(</span>bash or zsh<span class="o">)</span>
+config                             Change configuration files <span class="k">for</span> the client
+verify-image-signature             Verify the image identity contained <span class="k">in</span> the image signature
 </code></pre></div>
 </details>
 <details class="note" open="open"><summary>Note</summary><p>Your userNN credential has the privileges required to run some, but not all of these commands.</p>
 </details>
 </li>
 <li>
-<p><strong>Run the command <code>oc adm top pods</code></strong> to show see usage statistics for pods in your project.</p>
+<p><strong>Run the following administrative command to show see usage statistics for pods in your project</strong>.</p>
+<div class="highlight"><pre><span></span><code>oc adm top pods
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc adm top pods
-NAME            CPU(cores)   MEMORY(bytes)   
+NAME            CPU<span class="o">(</span>cores<span class="o">)</span>   MEMORY<span class="o">(</span>bytes<span class="o">)</span>   
 mongodb-1-5nmjn   3m           83Mi            
 mongodb-1-dh49x   3m           83Mi            
 mongodb-1-r8dpw   3m           85Mi

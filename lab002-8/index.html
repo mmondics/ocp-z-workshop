@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,30 +1688,31 @@
                 
                 
                 <h1 id="cleaning-up">Cleaning Up<a class="headerlink" href="#cleaning-up" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <ol>
 <li>
-<p><strong>Double check that you are in your own userNN-project by issuing the command <code>oc project</code></strong></p>
+<p><strong>Double check that you are in your own userNN-project by issuing the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc project
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc project
-Using project &quot;user01-project&quot; on server &quot;https://api.atsocppa.dmz:6443&quot;.
+Using project <span class="s2">&quot;user01-project&quot;</span> on server <span class="s2">&quot;https://api.atsocppa.dmz:6443&quot;</span>.
 </code></pre></div>
 </details>
-<ol>
-<li>Once you’re sure you’re in your own project, **issue the following command to delete all objects associated with your application labeled mongodb-ephemeral.  </li>
-</ol>
-<p><code>oc delete all --selector app=mongodb-ephemeral -o name</code>**</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc delete all --selector app=mongodb-ephemeral -o name
+</li>
+<li>
+<p><strong>Once you’re sure you’re in your own project, issue the following command to delete all objects associated with your application labeled mongodb-ephemeral</strong>.  </p>
+<div class="highlight"><pre><span></span><code>oc delete all --selector <span class="nv">app</span><span class="o">=</span>mongodb-ephemeral -o name
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc delete all --selector <span class="nv">app</span><span class="o">=</span>mongodb-ephemeral -o name
 replicationcontroller/mongodb-1
 service/mongodb
 deploymentconfig.apps.openshift.io/mongodb
 </code></pre></div>
 </details>
-<ol>
-<li>To check that all of your mongo application resources were deleted, <strong>run the command <code>oc get all</code></strong></li>
-</ol>
+</li>
+<li>
+<p><strong>Run the following command to check that all of your mongo application resources were deleted</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get all
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc get all
 No resources found.
 user00@lab061:~$
@@ -1719,15 +1720,17 @@ user00@lab061:~$
 </details>
 </li>
 <li>
-<p>(Optional) If there are leftover resources from other labs that you would like to delete, run the command <code>oc delete all --all</code>.</p>
+<p>(<strong><em>Optional</em></strong>) <strong>If there are leftover resources from other labs that you would like to delete, run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc delete all --all
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc delete all --all
-pod &quot;rails-postgresql-example-1-build&quot; deleted
-service &quot;postgresql&quot; deleted
-service &quot;rails-postgresql-example&quot; deleted
-buildconfig.build.openshift.io &quot;rails-postgresql-example&quot; deleted
-build.build.openshift.io &quot;rails-postgresql-example-1&quot; deleted
-imagestream.image.openshift.io &quot;rails-postgresql-example&quot; deleted
-route.route.openshift.io &quot;rails-postgresql-example&quot; deleted
+pod <span class="s2">&quot;rails-postgresql-example-1-build&quot;</span> deleted
+service <span class="s2">&quot;postgresql&quot;</span> deleted
+service <span class="s2">&quot;rails-postgresql-example&quot;</span> deleted
+buildconfig.build.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</span> deleted
+build.build.openshift.io <span class="s2">&quot;rails-postgresql-example-1&quot;</span> deleted
+imagestream.image.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</span> deleted
+route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</span> deleted
 </code></pre></div>
 </details>
 </li>

@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,15 +1688,12 @@
                 
                 
                 <h1 id="cleaning-up">Cleaning Up<a class="headerlink" href="#cleaning-up" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>There is no easy way to delete all of these objects from the OpenShift console. This is a much easier task in the OpenShift command line.</p>
 <ol>
 <li>
 <p>In the OpenShift CLI, <strong>make sure you are in your own project</strong> (i.e. userNN-project) <strong>and run the following command</strong>:</p>
-<p><code>oc delete all --selector app=node-s-2-i-openshift -o name</code></p>
+<div class="highlight"><pre><span></span><code>oc delete all --selector <span class="nv">app</span><span class="o">=</span>node-s-2-i-openshift -o name
+</code></pre></div>
 <details class="note" open="open"><summary>Note</summary><p>If you are not connected to the OpenShift command line, refer to Lab 002 – Using the OpenShift Command Line (<code>oc</code>).</p>
 </details>
 </li>

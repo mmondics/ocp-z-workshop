@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="using-openshifft-metrics-prometheus">Using OpenShifft Metrics (Prometheus)<a class="headerlink" href="#using-openshifft-metrics-prometheus" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>OpenShift provides a web interface to <em>Prometheus</em>, which enables you to run Prometheus Query Language (PromQL) queries and visualize the metrics on a plot. This functionality provides an extensive overview of the cluster state and helps to troubleshoot problems.</p>
 <ol>
 <li>
@@ -1707,7 +1703,8 @@
 </li>
 <li>
 <p><strong>Click the Insert Metric at Cursor dropdown and enter the following string in the new query bar</strong>:</p>
-<p><code>namespace:container_memory_usage_bytes:sum</code></p>
+<div class="highlight"><pre><span></span><code>namespace:container_memory_usage_bytes:sum
+</code></pre></div>
 <p><img alt="insert-metric-1" src="../images/insert-metric-1.png" /></p>
 </li>
 <li>
@@ -1730,11 +1727,12 @@
 </li>
 <li>
 <p><strong>Modify your query to the following</strong>:</p>
-<p><code>namespace:container_memory_usage_bytes:sum{namespace="userNN-project"}</code></p>
+<div class="highlight"><pre><span></span><code>namespace:container_memory_usage_bytes:sum{namespace=&quot;userNN-project&quot;}
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Make sure you change the one instance of <code>NN</code> to your user number.</p>
-<p>Also, notice that they are squiggly brackets {} in the query, not regular parentheses.</p>
+<p>Also, notice that they are squiggly brackets <code>{}</code> in the query, not regular parentheses.</p>
 </div>
 </li>
 <li>

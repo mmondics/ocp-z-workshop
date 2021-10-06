@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,20 +1688,11 @@
                 
                 
                 <h1 id="overview-of-the-openshift-cli">Overview of the OpenShift CLI<a class="headerlink" href="#overview-of-the-openshift-cli" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
-<p>The OpenShift command line <code>oc</code> is a command line tool that can be used to create applications and manage OpenShift projects. <code>oc</code> is ideal in situations where you:</p>
-<ul>
-<li>Work directly with project source code.</li>
-<li>Script OpenShift Container Platform operations.</li>
-<li>Are restricted by bandwidth resources and cannot use the web console.</li>
-</ul>
-<p>Furthermore, many people familiar with Linux and/or Kubernetes tend to find the <code>oc</code> command line an easier and more efficient method of performing tasks, rather than the web-based console.</p>
 <ol>
 <li>
-<p>In your terminal, <strong>enter the command: <code>oc --help</code></strong></p>
+<p>In your terminal, <strong>enter the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc --help
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc --help
 OpenShift Client
 
@@ -1728,10 +1719,12 @@ new-build       Create a new build configuration
 start-build     Start a new build
 </code></pre></div>
 </details>
-<p>The --help flag will display all of the available options the oc CLI.</p>
+<p>The <code>--help</code> flag will display all of the available options the oc CLI.</p>
 </li>
 <li>
-<p><strong>Enter the command <code>oc new-app --help</code></strong></p>
+<p><strong>Enter the following command</strong></p>
+<div class="highlight"><pre><span></span><code>oc new-app --help
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc new-app --help
 Create a new application by specifying source code, templates, and/or images
 

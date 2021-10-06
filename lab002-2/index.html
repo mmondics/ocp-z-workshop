@@ -1127,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="log-into-openshift-using-the-cli">Log into OpenShift Using the CLI<a class="headerlink" href="#log-into-openshift-using-the-cli" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>In this section, you will be connecting to a “Linux Guest” server which has a few things set up to make your life a little easier. Most notably, it has the OpenShift command line <code>oc</code> installed, so you don’t have to install it on your RHEL VM terminal.</p>
 <ol>
 <li>
@@ -1730,11 +1726,12 @@
 </li>
 <li>
 <p><strong>Paste this command back in your terminal session and press enter</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="sb">`</span>oc login --token<span class="o">=</span>&lt;YOUR_TOKEN_HERE&gt; --server<span class="o">=</span>https://api.atsocppa.dmz:6443<span class="sb">`</span>
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>If you’re prompted to use an insecure connection, type Y and hit enter.</p>
 </div>
-<p><strong><code>oc login --token=&lt;YOUR_TOKEN_HERE&gt; --server=https://api.atsocppa.dmz:6443</code></strong></p>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc login --token=uL3fHEPSGH3io0htdGRfAMAPIIY44BhwnGxCMA3dei4 --server=https://api.atsocppa.dmz:6443
 Logged into &quot;https://api.atsocppa.dmz:6443&quot; as &quot;user01&quot; using the token provided.
 
@@ -1744,7 +1741,7 @@ Using project &quot;user01-project&quot;.
 </code></pre></div>
 </details>
 <p>You are now logged into the cluster via the command line, and you are told which project you are using.</p>
-<p>If you’re in a project other than userNN-project, use the following command to move into it: <em>oc project userNN-project</em>, where NN is your user number.</p>
+<p>If you’re in a project other than userNN-project, use the following command to move into it: <code>oc project userNN-project</code>, where NN is your user number.</p>
 </li>
 </ol>
                 

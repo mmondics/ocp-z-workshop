@@ -1117,7 +1117,7 @@
   
     <li class="md-nav__item">
       <a href="../lab007-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1244,7 +1244,7 @@
   
     <li class="md-nav__item">
       <a href="../lab008-2/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1361,7 +1361,7 @@
   
     <li class="md-nav__item">
       <a href="../lab009-1/" class="md-nav__link">
-        Connect to the Linux Guest Server
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1520,7 +1520,7 @@
   
     <li class="md-nav__item">
       <a href="../lab010-3/" class="md-nav__link">
-        Connect to OpenShift Using the CLI
+        Log into OpenShift Using the CLI
       </a>
     </li>
   
@@ -1688,10 +1688,6 @@
                 
                 
                 <h1 id="cloning-the-github-repository-and-reviewing-its-contents">Cloning the GitHub Repository and Reviewing its Contents<a class="headerlink" href="#cloning-the-github-repository-and-reviewing-its-contents" title="Permanent link">&para;</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Work In Progress</p>
-</div>
 <p>In the terminal session, you should have been automatically placed in your home directory <code>/home/userNN</code> (where NN is your user number).</p>
 <ol>
 <li>
@@ -1702,36 +1698,47 @@
 </details>
 </li>
 <li>
-<p>If you are in any other directory, <strong>change into the correct home directory using the command <code>cd /home/userNN</code></strong> (where NN is your user number).</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ cd /home/user01
-user01@lab061:~$ pwd
+<p>If you are in any other directory, <strong>change into the correct home directory using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /home/userNN
+</code></pre></div>
+<p>Where <code>NN</code> is your user number.</p>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">cd</span> /home/user01
+user01@lab061:~$ <span class="nb">pwd</span>
 /home/user01
 </code></pre></div>
 </details>
 </li>
 <li>
 <p>In your home directory, <strong>clone the Open Liberty Operator repository using the command</strong>:</p>
-<p><strong><code>git clone https://github.com/mmondics/openliberty-operator-ocpz</code></strong></p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/mmondics/openliberty-operator-ocpz
+</code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ git clone https://github.com/mmondics/openliberty-operator-ocpz
-Cloning into &#39;openliberty-operator-ocpz&#39;...
-remote: Enumerating objects: 70, done.
-remote: Counting objects: 100% (70/70), done.
-remote: Compressing objects: 100% (68/68), done.
-remote: Total 70 (delta 30), reused 2 (delta 1), pack-reused 0
-Unpacking objects: 100% (70/70), done.
-Checking connectivity... done.
+Cloning into <span class="s1">&#39;openliberty-operator-ocpz&#39;</span>...
+remote: Enumerating objects: <span class="m">70</span>, <span class="k">done</span>.
+remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">70</span>/70<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">68</span>/68<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">70</span> <span class="o">(</span>delta <span class="m">30</span><span class="o">)</span>, reused <span class="m">2</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, pack-reused <span class="m">0</span>
+Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span class="m">70</span>/70<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
 </code></pre></div>
 </details>
 </li>
 <li>
-<p>This will create a new directory called <code>openliberty-operator-ocpz</code>. <strong>Change into this directory using the command <code>cd openliberty-operator-ocpz</code>, then list its contents using the command <code>ls -l</code></strong>.</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ cd openliberty-operator-ocpz
+<p>This will create a new directory called <code>openliberty-operator-ocpz</code>. <strong>Change into this directory using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> openliberty-operator-ocpz
+</code></pre></div>
+</li>
+<li>
+<p><strong>Then list its contents using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>ls -l
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">cd</span> openliberty-operator-ocpz
 user01@lab061:~/openliberty-operator-ocpz$ ls -l
-total 24
--rw-r--r-- 6 user01 users 4096 Sep  8 14:33 README.md
-drwxr-xr-x 6 user01 users 4096 Sep  8 14:33 admin-ol-operator-install
-drwxr-xr-x 6 user01 users 4096 Sep  8 14:33 images
-drwxr-xr-x 6 user01 users 4096 Sep  8 14:33 ol-app-install
+total <span class="m">24</span>
+-rw-r--r-- <span class="m">6</span> user01 users <span class="m">4096</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 README.md
+drwxr-xr-x <span class="m">6</span> user01 users <span class="m">4096</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 admin-ol-operator-install
+drwxr-xr-x <span class="m">6</span> user01 users <span class="m">4096</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 images
+drwxr-xr-x <span class="m">6</span> user01 users <span class="m">4096</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 ol-app-install
 </code></pre></div>
 </details>
 <details class="information"><summary>Expand for More Information</summary><p>If you navigate to the GitHub in a web browser (<a href="https://github.com/mmondics/openliberty-operator-ocpz">https://github.com/mmondics/openliberty-operator-ocpz</a>), you will notice that the sub-directories in your Linux session reflect the folders contained in the repository.</p>
@@ -1764,18 +1771,25 @@ drwxr-xr-x 6 user01 users 4096 Sep  8 14:33 ol-app-install
 </details>
 </li>
 <li>
-<p><strong>Change into the <code>ol-app-install</code> directory using the command <code>cd ol-app-install</code> and list its contents using the command <code>ls -l</code></strong></p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ cd ol-app-install
+<p><strong>Change into the <code>ol-app-install</code> directory using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ol-app-install
+</code></pre></div>
+</li>
+<li>
+<p><strong>List its contents using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>ls -l
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">cd</span> ol-app-install
 user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ ls -l
-total 8416
--rwxr--r—1 user01 users      845 Sep  8 14:33 1-build.sh
--rwxr--r—1 user01 users      367 Sep  8 14:33 2-deploy.sh
--rwxr--r—1 user01 users      612 Sep  8 14:33 3-cleanup.sh
--rwxr--r—1 user01 users      142 Sep  8 14:33 Dockerfile
--rwxr--r—1 user01 users      291 Sep  8 14:33 app-mod-withroute_cr.yaml
--rwxr--r—1 user01 users      636 Sep  8 14:33 env
--rwxr--r—1 user01 users   858364 Sep  8 14:33 modresorts-1.0.war
--rwxr--r—1 user01 users      687 Sep  8 14:33 server.xml
+total <span class="m">8416</span>
+-rwxr--r—1 user01 users      <span class="m">845</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 <span class="m">1</span>-build.sh
+-rwxr--r—1 user01 users      <span class="m">367</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 <span class="m">2</span>-deploy.sh
+-rwxr--r—1 user01 users      <span class="m">612</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 <span class="m">3</span>-cleanup.sh
+-rwxr--r—1 user01 users      <span class="m">142</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 Dockerfile
+-rwxr--r—1 user01 users      <span class="m">291</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 app-mod-withroute_cr.yaml
+-rwxr--r—1 user01 users      <span class="m">636</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 env
+-rwxr--r—1 user01 users   <span class="m">858364</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 modresorts-1.0.war
+-rwxr--r—1 user01 users      <span class="m">687</span> Sep  <span class="m">8</span> <span class="m">14</span>:33 server.xml
 </code></pre></div>
 </details>
 <p>This directory contains 8 files that you will use to install the Mod Resorts sample application.</p>
@@ -1788,35 +1802,35 @@ total 8416
 </thead>
 <tbody>
 <tr>
-<td>1-build.sh</td>
+<td><code>1-build.sh</code></td>
 <td>shell script that contains commands to log into the   OpenShift Cluster and the internal registry, create a new project, build the   container image and then push it into the registry.</td>
 </tr>
 <tr>
-<td>2-deploy.sh</td>
+<td><code>2-deploy.sh</code></td>
 <td>shell script that contains commands to create the   OpenLibertyApplication custom resource based off of the image build and   pushed by 1-build.sh.</td>
 </tr>
 <tr>
-<td>3-cleanup.sh</td>
+<td><code>3-cleanup.sh</code></td>
 <td>shell script that will clean up the OpenLibertyApplication   created by the previous scripts and delete the new project created by 1-build.sh.</td>
 </tr>
 <tr>
-<td>Dockerfile</td>
+<td><code>Dockerfile</code></td>
 <td>referenced by 1-build.sh to build the container image.</td>
 </tr>
 <tr>
-<td>app-mod-withroute_cr.yaml</td>
+<td><code>app-mod-withroute_cr.yaml</code></td>
 <td>referenced by 2-deploy.sh to create the   OpenLibertyApplication custom resource.</td>
 </tr>
 <tr>
-<td>env</td>
+<td><code>env</code></td>
 <td>environment variables sourced by the shell scripts for   various commands.</td>
 </tr>
 <tr>
-<td>modresorts-1.0.war</td>
+<td><code>modresorts-1.0.war</code></td>
 <td>a collection of JAR-files, JavaServer Pages, Java   Servlets, Java classes, etc… that together constitute the sample Mod Resorts   application.</td>
 </tr>
 <tr>
-<td>server.xml</td>
+<td><code>server.xml</code></td>
 <td>used in conjunction with the .war file to create the web   application.</td>
 </tr>
 </tbody>
@@ -1843,7 +1857,7 @@ total 8416
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lab007-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connect to the Linux Guest Server" rel="prev">
+        <a href="../lab007-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log into OpenShift Using the CLI" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1852,7 +1866,7 @@ total 8416
               <span class="md-footer__direction">
                 Previous
               </span>
-              Connect to the Linux Guest Server
+              Log into OpenShift Using the CLI
             </div>
           </div>
         </a>
