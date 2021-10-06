@@ -355,4 +355,9 @@
          <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://mmondics.github.io/ocp-cloudpak-workshop/prerequisites/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
