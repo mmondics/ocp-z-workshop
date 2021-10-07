@@ -16,7 +16,7 @@
     
     
       
-        <title>Log into OpenShift Using the CLI - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>Deploy the Application onto OpenShift - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-into-openshift-using-the-cli" class="md-skip">
+        <a href="#deploy-the-application-onto-openshift" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Log into OpenShift Using the CLI
+              Deploy the Application onto OpenShift
             
           </span>
         </div>
@@ -1300,7 +1300,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Log into OpenShift Using the CLI
+        Deploy the Application onto OpenShift
       </a>
       
     </li>
@@ -1315,20 +1315,6 @@
   
     <li class="md-nav__item">
       <a href="../lab008-6/" class="md-nav__link">
-        Deploy the Application onto OpenShift
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab008-7/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -1702,64 +1688,96 @@
                   </a>
                 
                 
-                <h1 id="log-into-openshift-using-the-cli">Log Into OpenShift Using the CLI<a class="headerlink" href="#log-into-openshift-using-the-cli" title="Permanent link">&para;</a></h1>
-<p>In this section, you will be connecting to a “Linux Guest” server which has a few things set up to make your life a little easier. Most notably, it has the OpenShift command line <code>oc</code> installed, so you don’t have to install it on your RHEL VM terminal.</p>
+                <h1 id="deploy-the-application-onto-openshift">Deploy the Application onto OpenShift<a class="headerlink" href="#deploy-the-application-onto-openshift" title="Permanent link">&para;</a></h1>
+<p>Let’s now take our local application and use the Quarkus extension we just added to build and deploy a containerized application onto OpenShift.</p>
 <ol>
 <li>
-<p><strong>Open a Terminal session</strong></p>
-</li>
-<li>
-<p><strong>ssh into the Linux Guest server</strong>:</p>
-<div class="highlight"><pre><span></span><code>ssh userNN@192.168.176.61
+<p><strong>In the openshift-quickstart directory, run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>./mvnw clean package <span class="se">\</span>
+-Dquarkus.kubernetes.deploy<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+-Dquarkus.kubernetes-client.trust-certs<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+-Dquarkus.openshift.expose<span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
-<p>Where <code>NN</code> is your user number.</p>
-</li>
-<li>
-<p>When prompted, <strong>enter your password: <code>p@ssw0rd</code> and hit enter</strong>.</p>
-<details class="example" open="open"><summary>Example Output</summary><p><img alt="ascii-wsc.png" src="../images/ascii-wsc.png" /></p>
-</details>
-</li>
-<li>
-<p>In Firefox, <strong>navigate to the following URL</strong> to request an API token:</p>
-<p><a href="https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request">https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request</a></p>
-</li>
-<li>
-<p><strong>Enter your OpenShift credentials when prompted</strong>.</p>
-<ul>
-<li>
-<p>Username: <code>userNN</code></p>
-</li>
-<li>
-<p>Password: <code>p@ssw0rd</code></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Click the “Display Token” hyperlink</strong>.</p>
-<p><img alt="display-token.png" src="../images/display-token.png" /></p>
-</li>
-<li>
-<p><strong>Copy the contents of the first text box</strong> beginning with “oc login” and ending with “6443”.</p>
-<p><img alt="oc-login-token.png" src="../images/oc-login-token.png" /></p>
-</li>
-<li>
-<p><strong>Paste this command back in your terminal session and press enter</strong>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If you’re prompted to use an insecure connection, type Y and hit enter.</p>
+<p>The <code>-Dquarkus</code> flags in this command are telling Maven to deploy the application into the Kubernetes (OpenShift) cluster, trust the certificates, and expose the application service as a route, eliminating the need to run an <code>oc expose svc</code> to make the service endpoint accessible outside of the cluster.</p>
+<div class="admonition information">
+<p class="admonition-title">Information</p>
+<p>This command may take a few minutes to complete.</p>
 </div>
-<div class="highlight"><pre><span></span><code>oc login --token<span class="o">=</span>&lt;YOUR_TOKEN_HERE&gt; --server<span class="o">=</span>https://api.atsocppa.dmz:6443
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc login --token<span class="o">=</span>uL3fHEPSGH3io0htdGRfAMAPIIY44BhwnGxCMA3dei4 --server<span class="o">=</span>https://api.atsocppa.dmz:6443
-Logged into <span class="s2">&quot;https://api.atsocppa.dmz:6443&quot;</span> as <span class="s2">&quot;user01&quot;</span> using the token provided.
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-quickstart$ ./mvnw clean package <span class="se">\</span>
+    -Dquarkus.kubernetes.deploy<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -Dquarkus.kubernetes-client.trust-certs<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -Dquarkus.openshift.expose<span class="o">=</span><span class="nb">true</span>
+<span class="o">[</span>INFO<span class="o">]</span> Scanning <span class="k">for</span> projects...
+<span class="o">[</span>INFO<span class="o">]</span> 
+<span class="o">[</span>INFO<span class="o">]</span> -------------------&lt; org.acme:openshift-quickstart &gt;--------------------
+<span class="o">[</span>INFO<span class="o">]</span> Building openshift-quickstart <span class="m">1</span>.0.0-SNAPSHOT
+<span class="o">[</span>INFO<span class="o">]</span> --------------------------------<span class="o">[</span> jar <span class="o">]</span>---------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> 
+...omitted...
 
-You have access to <span class="m">161</span> projects, the list has been suppressed. You can list all projects with <span class="s1">&#39;oc projects&#39;</span>
-
-Using project <span class="s2">&quot;user01-project&quot;</span>.
+<span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>io.quarkus.kubernetes.deployment.KubernetesDeployer<span class="o">]</span> The deployed application can be accessed at: http://openshift-quickstart-user01-project.apps.atsocppa.dmz
+<span class="o">[</span>INFO<span class="o">]</span> <span class="o">[</span>io.quarkus.deployment.QuarkusAugmentor<span class="o">]</span> Quarkus augmentation completed <span class="k">in</span> 94655ms
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> BUILD SUCCESS
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> Total time:  <span class="m">03</span>:19 min
+<span class="o">[</span>INFO<span class="o">]</span> Finished at: <span class="m">2021</span>-03-09T12:12:14-05:00
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
 </code></pre></div>
 </details>
-<p>You are now logged into the cluster via the command line, and you are told which project you are using.</p>
-<p>If you’re in a project other than userNN-project, use the following command to move into it: <em>oc project userNN-project</em>, where NN is your user number.</p>
+<p>The aforementioned command builds a jar file locally, connects to the OpenShift cluster you previously logged into, triggers a container image build, pushes that container image into the OpenShift internal registry, generates OpenShift/Kubernetes resources including a Service, Route, DeploymentConfig, and your running application pod.</p>
+</li>
+<li>
+<p><strong>View all of the created objects with the following command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get all
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061: ~/openshift-quickstart$ oc get all
+NAME                                READY   STATUS      RESTARTS   AGE
+pod/openshift-quickstart-1-build    <span class="m">0</span>/1     Completed   <span class="m">0</span>          9m10s
+pod/openshift-quickstart-1-deploy   <span class="m">0</span>/1     Completed   <span class="m">0</span>          8m13s
+pod/openshift-quickstart-1-ndp8h    <span class="m">1</span>/1     Running     <span class="m">0</span>          8m10s
+
+NAME                                           DESIRED   CURRENT   READY   AGE
+replicationcontroller/openshift-quickstart-1   <span class="m">1</span>         <span class="m">1</span>         <span class="m">1</span>       8m13s
+
+NAME                           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>    AGE
+service/openshift-quickstart   ClusterIP   <span class="m">172</span>.30.28.241   &lt;none&gt;        <span class="m">8080</span>/TCP   8m14s
+
+NAME                                                  REVISION   DESIRED   CURRENT   TRIGGERED BY
+deploymentconfig.apps.openshift.io/openshift-quickstart   <span class="m">1</span>          <span class="m">1</span>         <span class="m">1</span>         image<span class="o">(</span>openshift-quickstart:1.0-SNAPSHOT<span class="o">)</span>
+
+NAME                                                  TYPE     FROM     LATEST
+buildconfig.build.openshift.io/openshift-quickstart   Source   Binary   <span class="m">1</span>
+
+NAME                                              TYPE     FROM     STATUS     STARTED         DURATION
+build.build.openshift.io/openshift-quickstart-1   Source   Binary   Complete   <span class="m">9</span> minutes ago   55s
+
+NAME                    IMAGE REPOSITORY                                 TAGS                                      UPDATED
+imagestream.image.openshift.io/openjdk-11             default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/openjdk-11             <span class="m">1</span>.3,1.3-3,1.3-3.1591609340 + <span class="m">18</span> more...   <span class="m">9</span> minutes ago
+imagestream.image.openshift.io/openshift-quickstart   default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/openshift-quickstart   <span class="m">1</span>.0-SNAPSHOT                              <span class="m">8</span> minutes ago
+
+NAME           HOST/PORT                        PATH      SERVICES               PORT   TERMINATION  
+route.route.openshift.io/openshift-quickstart  openshift-quickstart-user01-project.apps.atsocppa.dmz   /      openshift-quickstart   <span class="m">8080</span>
+</code></pre></div>
+</details>
+<p>Each of these objects were created because of the <code>-Dquarkus.kubernetes.deploy=true</code> and <code>-Dquarkus.openshift.expose=true</code> flags provided in the previous command. There are many more OpenShift objects and object properties that can be created by passing different flags, such as liveliness probes, environment variables, secrets, persistent storage, and more.</p>
+<p>If you have one running pod, your application has successfully deployed and is accessible at the route.</p>
+</li>
+<li>
+<p><strong>In a web browser, navigate to your route</strong>:</p>
+<details class="hint"><summary>Hint</summary><p>It will be <a href="http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/">http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/</a> where NN is your user number.</p>
+</details>
+<p><img alt="quarkus-main" src="../images/quarkus-main.png" /></p>
+<p>Your Quarkus application is now deployed as a container in OpenShift.</p>
+<p>Earlier we looked at the GreetingResource.java REST endpoint and its return of “hello” in the command line. We can do the same thing in the web browser.</p>
+</li>
+<li>
+<p><strong>Add <code>/greeting</code> to the end of your route</strong>.</p>
+<details class="hint"><summary>Hint</summary><p><a href="http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/greeting">http://openshift-quickstart-userNN-project.apps.atsocppa.dmz/greeting</a> where NN is your user number.</p>
+</details>
+<p><img alt="hello" src="../images/hello.png" /></p>
+<p>In this lab, you have created a Quarkus application locally, containerized the application and deployed it onto an OpenShift cluster running on IBM Z, and accessed it from a public route.</p>
+<p>The speed, agility, and ease with which we’re able to edit and redeploy applications using the Quarkus runtime creates tremendous value in time savings, allowing developers and operations staff to minimize downtime and keep applications up to date. Further, the simplicity of integration using Quarkus extensions creates great opportunity for customization and implementations tailored to fit a variety of needs.</p>
 </li>
 </ol>
                 
@@ -1797,13 +1815,13 @@ Using project <span class="s2">&quot;user01-project&quot;</span>.
       
       
         
-        <a href="../lab008-6/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy the Application onto OpenShift" rel="next">
+        <a href="../lab008-6/" class="md-footer__link md-footer__link--next" aria-label="Next: Cleaning Up" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Deploy the Application onto OpenShift
+              Cleaning Up
             </div>
           </div>
           <div class="md-footer__button md-icon">

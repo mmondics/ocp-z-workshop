@@ -1293,20 +1293,6 @@
   
     <li class="md-nav__item">
       <a href="../lab008-5/" class="md-nav__link">
-        Log into OpenShift Using the CLI
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab008-6/" class="md-nav__link">
         Deploy the Application onto OpenShift
       </a>
     </li>
@@ -1320,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab008-7/" class="md-nav__link">
+      <a href="../lab008-6/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -4839,66 +4825,7 @@ file was created. This is a simple REST endpoint, returning “hello” to reque
 </details>
 <p>You will be using a few of these customizations when you deploy the application to OpenShift in the next step.</p>
 </li>
-</ol></section><section class="print-page" id="lab008-5"><h1 id="lab008-5-log-into-openshift-using-the-cli">Log Into OpenShift Using the CLI<a class="headerlink" href="#lab008-5-log-into-openshift-using-the-cli" title="Permanent link">&para;</a></h1>
-<p>In this section, you will be connecting to a “Linux Guest” server which has a few things set up to make your life a little easier. Most notably, it has the OpenShift command line <code>oc</code> installed, so you don’t have to install it on your RHEL VM terminal.</p>
-<ol>
-<li>
-<p><strong>Open a Terminal session</strong></p>
-</li>
-<li>
-<p><strong>ssh into the Linux Guest server</strong>:</p>
-<div class="highlight"><pre><span></span><code>ssh userNN@192.168.176.61
-</code></pre></div>
-<p>Where <code>NN</code> is your user number.</p>
-</li>
-<li>
-<p>When prompted, <strong>enter your password: <code>p@ssw0rd</code> and hit enter</strong>.</p>
-<details class="example" open="open"><summary>Example Output</summary><p><img alt="ascii-wsc.png" src="../images/ascii-wsc.png" /></p>
-</details>
-</li>
-<li>
-<p>In Firefox, <strong>navigate to the following URL</strong> to request an API token:</p>
-<p><a href="https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request">https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request</a></p>
-</li>
-<li>
-<p><strong>Enter your OpenShift credentials when prompted</strong>.</p>
-<ul>
-<li>
-<p>Username: <code>userNN</code></p>
-</li>
-<li>
-<p>Password: <code>p@ssw0rd</code></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Click the “Display Token” hyperlink</strong>.</p>
-<p><img alt="display-token.png" src="../images/display-token.png" /></p>
-</li>
-<li>
-<p><strong>Copy the contents of the first text box</strong> beginning with “oc login” and ending with “6443”.</p>
-<p><img alt="oc-login-token.png" src="../images/oc-login-token.png" /></p>
-</li>
-<li>
-<p><strong>Paste this command back in your terminal session and press enter</strong>.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If you’re prompted to use an insecure connection, type Y and hit enter.</p>
-</div>
-<div class="highlight"><pre><span></span><code>oc login --token<span class="o">=</span>&lt;YOUR_TOKEN_HERE&gt; --server<span class="o">=</span>https://api.atsocppa.dmz:6443
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc login --token<span class="o">=</span>uL3fHEPSGH3io0htdGRfAMAPIIY44BhwnGxCMA3dei4 --server<span class="o">=</span>https://api.atsocppa.dmz:6443
-Logged into <span class="s2">&quot;https://api.atsocppa.dmz:6443&quot;</span> as <span class="s2">&quot;user01&quot;</span> using the token provided.
-
-You have access to <span class="m">161</span> projects, the list has been suppressed. You can list all projects with <span class="s1">&#39;oc projects&#39;</span>
-
-Using project <span class="s2">&quot;user01-project&quot;</span>.
-</code></pre></div>
-</details>
-<p>You are now logged into the cluster via the command line, and you are told which project you are using.</p>
-<p>If you’re in a project other than userNN-project, use the following command to move into it: <em>oc project userNN-project</em>, where NN is your user number.</p>
-</li>
-</ol></section><section class="print-page" id="lab008-6"><h1 id="lab008-6-deploy-the-application-onto-openshift">Deploy the Application onto OpenShift<a class="headerlink" href="#lab008-6-deploy-the-application-onto-openshift" title="Permanent link">&para;</a></h1>
+</ol></section><section class="print-page" id="lab008-5"><h1 id="lab008-5-deploy-the-application-onto-openshift">Deploy the Application onto OpenShift<a class="headerlink" href="#lab008-5-deploy-the-application-onto-openshift" title="Permanent link">&para;</a></h1>
 <p>Let’s now take our local application and use the Quarkus extension we just added to build and deploy a containerized application onto OpenShift.</p>
 <ol>
 <li>
@@ -4989,7 +4916,7 @@ route.route.openshift.io/openshift-quickstart  openshift-quickstart-user01-proje
 <p>In this lab, you have created a Quarkus application locally, containerized the application and deployed it onto an OpenShift cluster running on IBM Z, and accessed it from a public route.</p>
 <p>The speed, agility, and ease with which we’re able to edit and redeploy applications using the Quarkus runtime creates tremendous value in time savings, allowing developers and operations staff to minimize downtime and keep applications up to date. Further, the simplicity of integration using Quarkus extensions creates great opportunity for customization and implementations tailored to fit a variety of needs.</p>
 </li>
-</ol></section><section class="print-page" id="lab008-7"><h1 id="lab008-7-cleaning-up">Cleaning Up<a class="headerlink" href="#lab008-7-cleaning-up" title="Permanent link">&para;</a></h1>
+</ol></section><section class="print-page" id="lab008-6"><h1 id="lab008-6-cleaning-up">Cleaning Up<a class="headerlink" href="#lab008-6-cleaning-up" title="Permanent link">&para;</a></h1>
 <ol>
 <li>
 <p><strong>Double check that you are in your own userNN-project by issuing the command</strong>:</p>
