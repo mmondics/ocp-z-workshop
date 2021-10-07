@@ -68,9 +68,8 @@ nav:
         - Log into OpenShift Using the CLI: 'lab008-2.md'
         - Creating and Reviewing the Quarkus Project: 'lab008-3.md'
         - Configure the Application for OpenShift: 'lab008-4.md'
-        - Log into OpenShift Using the CLI: 'lab008-5.md'
-        - Deploy the Application onto OpenShift: 'lab008-6.md'
-        - Cleaning Up: 'lab008-7.md'
+        - Deploy the Application onto OpenShift: 'lab008-5.md'
+        - Cleaning Up: 'lab008-6.md'
       - Lab 009:
         - Log into OpenShift Using the CLI: 'lab009-1.md'
         - Cloning the GitHub Repository and Viewing its Contents: 'lab009-2.md'
