@@ -4,6 +4,8 @@
 
 1. **Connect to the Workshop page** at: <https://techzone.ibm.com/my/workshops/student/7e7dbc5b5d49d29401150c592abcbdab>
 
+    :warning: **If you cannot access this page, please message an instructor and they will send you a direct link to a Virtual Machine** :warning:
+
 1. **Log in with your IBM ID**.
 
     This will provide you with a link to your workshop environment.
@@ -25,6 +27,9 @@
 1. **Log into the RHEL desktop** with the password: `p@ssw0rd`.
 
     ![rhel-login](images/rhel-login.png)
+
+    !!! Note ":warning: Important :warning:"
+        Each virtual machine has a 3 hour inactivity timer. If you exceed this timeout, you can restart the virtual machine, but this will log you off of the VPN. If this happens, reach out to an instructor and they will log back into the VPN for you.
 
 ## Connection Information for OpenShift Environment
 
