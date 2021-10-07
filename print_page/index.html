@@ -4862,7 +4862,7 @@ file was created. This is a simple REST endpoint, returning “hello” to reque
 <span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
 </code></pre></div>
 </details>
-<p>The aforementioned command builds a jar file locally, connects to the OpenShift cluster you previously logged into, triggers a container image build, pushes that container image into the OpenShift internal registry, generates OpenShift/Kubernetes resources including a Service, Route, DeploymentConfig, and your running application pod.</p>
+<p>The previous command builds a jar file locally, connects to the OpenShift cluster you previously logged into, triggers a container image build, pushes that container image into the OpenShift internal registry, generates OpenShift/Kubernetes resources including a Service, Route, DeploymentConfig, and your running application pod.</p>
 </li>
 <li>
 <p><strong>View all of the created objects with the following command</strong>:</p>
@@ -5324,29 +5324,38 @@ Password: p@ssw0rd</p>
 <p>In the next section you will trigger a PipelineRun to execute your Pipeline and the Tasks it contains.</p></section><section class="print-page" id="lab009-5"><h1 id="lab009-5-running-the-pipeline">Running the Pipeline<a class="headerlink" href="#lab009-5-running-the-pipeline" title="Permanent link">&para;</a></h1>
 <p>Let’s use this Pipeline to create an application. To demonstrate the re-usability of OpenShift Pipelines, we will be creating both a frontend and a backend with the same Pipeline you created in the previous step.</p>
 <p>We’ll also demonstrate the flexibility provided by OpenShift Pipelines that lets you use them from either the web console or the command line.</p>
-<h2 id="lab009-5-creating-the-backend-application-through-the-cli">Creating the Backend Application through the CLI<a class="headerlink" href="#lab009-5-creating-the-backend-application-through-the-cli" title="Permanent link">&para;</a></h2>
 <p>Let’s create the backend application with the Tekton CLI in your terminal.</p>
 <p>Now that you have all of the building blocks in place, you can start the Pipeline with the following command. The command will run the Pipeline and pass in parameters to:</p>
 <ul>
-<li>Use the shared workspace and the PersistentVolumeClaim you created</li>
-<li>Create the deployment named vote-api</li>
-<li>Build a container image from the source code at the given GitHub repository</li>
-<li>Push that container image into the OpenShift internal registry and tag it for your project</li>
+<li>
+<p>Use the shared workspace and the PersistentVolumeClaim you created</p>
+</li>
+<li>
+<p>Create the deployment named vote-api</p>
+</li>
+<li>
+<p>Build a container image from the source code at the given GitHub repository</p>
+</li>
+<li>
+<p>Push that container image into the OpenShift internal registry and tag it for your project</p>
+</li>
 <li>
 <p>Show the log so you can follow its progress
- Note that the forward slash  simply breaks the command into multiple lines for readability.</p>
+Note that the forward slash  simply breaks the command into multiple lines for readability.</p>
 </li>
+</ul>
+<h2 id="lab009-5-creating-the-backend-application-through-the-cli">Creating the Backend Application through the CLI<a class="headerlink" href="#lab009-5-creating-the-backend-application-through-the-cli" title="Permanent link">&para;</a></h2>
+<ol>
 <li>
 <p><strong>Run the following command</strong>:</p>
 <div class="highlight"><pre><span></span><code>tkn pipeline start build-and-deploy <span class="se">\</span>
  -w <span class="nv">name</span><span class="o">=</span>shared-workspace,claimName<span class="o">=</span>source-pvc <span class="se">\</span>
  -p deployment-name<span class="o">=</span>vote-api <span class="se">\</span>
  -p git-url<span class="o">=</span>https://github.com/mmondics/pipelines-vote-api.git <span class="se">\</span>
- -p <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/userNN-project/pipelines-vote-api <span class="se">\ </span>
- --showlog
+ -p <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/userNN-project/pipelines-vote-api --showlog 
 </code></pre></div>
 <div class="admonition important">
-<p class="admonition-title">Important</p>
+<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Important <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></p>
 <p>Make sure you change the one instance of <code>NN</code> to your team number in the command above.</p>
 </div>
 <details class="example"><summary>Expand for Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openshift-pipelines-s390x$ tkn pipeline start build-and-deploy <span class="se">\</span>
@@ -5448,7 +5457,7 @@ build-and-deploy   <span class="m">4</span> minutes ago   build-and-deploy-run-2
 </code></pre></div>
 </details>
 </li>
-</ul>
+</ol>
 <p>Since we have successfully run the Pipeline in the CLI, let’s trigger a run from the console in the next section.</p>
 <h2 id="lab009-5-creating-the-frontend-application-through-the-console">Creating the Frontend Application through the Console<a class="headerlink" href="#lab009-5-creating-the-frontend-application-through-the-console" title="Permanent link">&para;</a></h2>
 <p>Let’s create the frontend portion of our application by running the Pipeline from the OpenShift console.</p>
