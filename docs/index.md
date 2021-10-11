@@ -40,6 +40,10 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 * [Lab 009 - OpenShift Pipelines](lab009-1.md)
 * [Lab 010 - OpenShift Service Mesh](lab010-1.md)
 
+## Workshop Environment Architecture
+
+Please visit [this page](workshop-architecture.md) to see the architecture of the workshop's lab environment.
+
 ## Workshop Owners
 
 * [Matt Mondics](mailto:matt.mondics@ibm.com)

@@ -7,6 +7,7 @@ nav:
     - Home: 'index.md'
     - Prerequisites: 'prerequisites.md'
     - Lab Assignments: 'lab-assignments.md'
+    - Lab Architecture: 'workshop-architecture.md'
     - Presentations:
       - Presentation 1: presentations/presentation1.pdf
       - Presentation 2: presentations/presentation2.pdf
