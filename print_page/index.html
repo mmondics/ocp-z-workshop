@@ -1163,7 +1163,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 </li>
 <li>
 <p>In Firefox, <strong>navigate to the following URL</strong> to request an API token:</p>
-<p><a href="https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request">https://oauth-openshift.apps.atsocppa.dmz/oauth/token/request</a></p>
+<p><a href="https://oauth-openshift.apps.atsocpd1.dmz/oauth/token/request">https://oauth-openshift.apps.atsocpd1.dmz/oauth/token/request</a></p>
 </li>
 <li>
 <p><strong>Enter your OpenShift credentials when prompted</strong>.</p>
@@ -1186,14 +1186,14 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 </li>
 <li>
 <p><strong>Paste this command back in your terminal session and press enter</strong>.</p>
-<div class="highlight"><pre><span></span><code>oc login --token<span class="o">=</span>&lt;YOUR_TOKEN_HERE&gt; --server<span class="o">=</span>https://api.atsocppa.dmz:6443
+<div class="highlight"><pre><span></span><code>oc login --token<span class="o">=</span>&lt;YOUR_TOKEN_HERE&gt; --server<span class="o">=</span>https://api.atsocpd1.dmz:6443
 </code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>If you’re prompted to use an insecure connection, type Y and hit enter.</p>
 </div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc login --token=uL3fHEPSGH3io0htdGRfAMAPIIY44BhwnGxCMA3dei4 --server=https://api.atsocppa.dmz:6443
-Logged into &quot;https://api.atsocppa.dmz:6443&quot; as &quot;user01&quot; using the token provided.
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc login --token=uL3fHEPSGH3io0htdGRfAMAPIIY44BhwnGxCMA3dei4 --server=https://api.atsocpd1.dmz:6443
+Logged into &quot;https://api.atsocpd1.dmz:6443&quot; as &quot;user01&quot; using the token provided.
 
 You have access to 161 projects, the list has been suppressed. You can list all projects with &#39;oc projects&#39;
 
@@ -1345,7 +1345,7 @@ For more information about using this template, including OpenShift consideratio
 <div class="highlight"><pre><span></span><code>oc status
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc status
-In project user01-project on server https://api.atsocppa.dmz:6443
+In project user01-project on server https://api.atsocpd1.dmz:6443
 
 svc/mongodb - <span class="m">172</span>.30.94.118:27017
 dc/mongodb deploys istag/mongodb:latest 
@@ -1537,7 +1537,7 @@ Name:               mongodb-1-5nmjn
 Namespace:          user01-project
 Priority:           <span class="m">0</span>
 PriorityClassName:  &lt;none&gt;
-Node:               worker-0.atsocppa.dmz/192.168.176.175
+Node:               worker-0.atsocpd1.dmz/192.168.176.175
 Start Time:         Wed, <span class="m">15</span> Apr <span class="m">2020</span> <span class="m">13</span>:13:53 -0400
 Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
                     <span class="nv">deployment</span><span class="o">=</span>mongodb-1
@@ -1556,7 +1556,7 @@ Name:               mongodb-1-r8dpw
 Namespace:          user01-project
 Priority:           <span class="m">0</span>
 PriorityClassName:  &lt;none&gt;
-Node:               worker-2.atsocppa.dmz/192.168.176.177
+Node:               worker-2.atsocpd1.dmz/192.168.176.177
 Start Time:         Wed, <span class="m">15</span> Apr <span class="m">2020</span> <span class="m">12</span>:56:03 -0400
 Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
                     <span class="nv">deployment</span><span class="o">=</span>mongodb-1
@@ -1641,7 +1641,7 @@ mongodb-1-r8dpw   3m           85Mi
 <div class="highlight"><pre><span></span><code>oc project
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc project
-Using project <span class="s2">&quot;user01-project&quot;</span> on server <span class="s2">&quot;https://api.atsocppa.dmz:6443&quot;</span>.
+Using project <span class="s2">&quot;user01-project&quot;</span> on server <span class="s2">&quot;https://api.atsocpd1.dmz:6443&quot;</span>.
 </code></pre></div>
 </details>
 </li>
@@ -1984,9 +1984,9 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 <p>In your virtual machine desktop, <strong>open a Firefox web browser</strong>.</p>
 </li>
 <li>
-<p>In the browser, <strong>navigate to the OpenShift on IBM Z console</strong> at the following address: <a href="https://console-openshift-console.apps.atsocppa.dmz/">https://console-openshift-console.apps.atsocppa.dmz/</a>.</p>
+<p>In the browser, <strong>navigate to the OpenShift on IBM Z console</strong> at the following address: <a href="https://console-openshift-console.apps.atsocpd1.dmz/">https://console-openshift-console.apps.atsocpd1.dmz/</a>.</p>
 <details class="note" open="open"><summary>Note</summary><p>You will receive a security challenge if the cluster has not yet been accessed from your browser. This is due to the default SSL certificate being “self-signed” and not yet recognized.</p>
-<p>Accept the challenge to continue by <strong>clicking Advanced</strong> and then <strong>clicking Proceed to console-openshift-console.apps.atsocppa.dmz (unsafe)</strong>.</p>
+<p>Accept the challenge to continue by <strong>clicking Advanced</strong> and then <strong>clicking Proceed to console-openshift-console.apps.atsocpd1.dmz (unsafe)</strong>.</p>
 <p>You will likely need to do this twice due to how OpenShift reroutes Oauth requests. </p>
 </details>
 <details><summary>Expand for screenshot</summary><p><img alt="security-accept.png" src="../images/security-accept.png" />
