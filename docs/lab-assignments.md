@@ -6,8 +6,8 @@
 
 | Name | Virtual Machine URL | Virtual Machine Password | User Number | OpenShift Username | OpenShift Password |
 |---|---|---|---|---|---|
-| [Mondics](https://www.google.com){ .md-button } | `passw0rd` |  | 01 | user01 | p@ssw0rd |
-| [Novak](https://www.google.com){ .md-button .md-button--primary } |  |  | 02 | user02 | p@ssw0rd |
+| [TBD](https://www.google.com){ .md-button } | `passw0rd` |  | 01 | user01 | p@ssw0rd |
+| [TBD](https://www.google.com){ .md-button .md-button--primary } | `passw0rd` |  | 02 | user02 | p@ssw0rd |
 |  |  |  | 03 | user03 | p@ssw0rd |
 |  |  |  | 04 | user04 | p@ssw0rd |
 |  |  |  | 05 | user05 | p@ssw0rd |
