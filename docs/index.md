@@ -38,15 +38,10 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 * [Lab 003 - Using the z/OS Cloud Broker](lab003/lab003-1.md)
 * [Lab 004 - Deploying an Application from Source Code](lab004/lab004-1.md)
 
-<!---
-
 ### Ops with OpenShift on IBM Z
-
 
 * [Lab 006 - Using Persistent Storage - MongoDB and NodeJS](lab006/lab006-1.md)
 * [Lab 009 - OpenShift Pipelines](lab009/lab009-1.md)
-
---->
 
 <!---
 
