@@ -21,8 +21,8 @@
 | [racabral](https://cloud.skytap.com/vms/893a8debe4126f35534a14f494948209/desktops){ .md-button } |  `bd7z4gta`|  13 | user13 | p@ssw0rd |
 | [jack.billings](https://cloud.skytap.com/vms/0ca009fd245f9e61e8d9b0beaf3d2893/desktops){ .md-button .md-button--primary } | `02gmvqap` |  14 | user14 | p@ssw0rd |
 | [rwparece](https://cloud.skytap.com/vms/99170853ba89a4c78f1e0aefdf70c64d/desktops){ .md-button } | `21mqqwal` |  15 | user15 | p@ssw0rd |
-| [TBD](https://cloud.skytap.com/vms/8827875e4a75fa4c5c92f09c59daf380/desktops){ .md-button .md-button--primary } | `h3wsxxjm` |  16 | user16 | p@ssw0rd |
-| [TBD](https://cloud.skytap.com/vms/6a398ad901d217beaf08c26234475b23/desktops){ .md-button } | `8p3tbbx9` |  17 | user17 | p@ssw0rd |
+| [paras.baid](https://cloud.skytap.com/vms/8827875e4a75fa4c5c92f09c59daf380/desktops){ .md-button .md-button--primary } | `h3wsxxjm` |  16 | user16 | p@ssw0rd |
+| [diana.m.foltz](https://cloud.skytap.com/vms/6a398ad901d217beaf08c26234475b23/desktops){ .md-button } | `8p3tbbx9` |  17 | user17 | p@ssw0rd |
 | [TBD](https://cloud.skytap.com/vms/585ee557ecdcc246e00f857ec80d3108/desktops){ .md-button .md-button--primary } | `4sr5g9ic` |  18 | user18 | p@ssw0rd |
 | [TBD](https://cloud.skytap.com/vms/ca95114e6dbfe3e169a76396117e9b0f/desktops){ .md-button } | `1dd62qd1` |  19 | user19 | p@ssw0rd |
 | [TBD](https://cloud.skytap.com/vms/3ff8d7c37d82eed880a6a48803d5daab/desktops){ .md-button .md-button--primary } | `55riruoy` |  20 | user20 | p@ssw0rd |
@@ -51,4 +51,3 @@
 
     !!! Note ":warning: Important :warning:"
         Each virtual machine has a 3 hour inactivity timer. If you exceed this timeout, you can restart the virtual machine, but this will log you off of the VPN. If this happens, reach out to an instructor and they will log back into the VPN for you.
-
