@@ -14,4 +14,4 @@ Each OCP cluster is made up of 3 Control Planes and 3 Compute Nodes as shown in 
 
 All clusters are running on a single z/VM 7.1 instance on a single LPAR of an IBM z14 (again, not recommended outside of POC/demo).
 
-There are various other support servers running as Linux guests that you use during these labs. These are outside of the OCP cluster itself, but take care of tasks such as LDAP, NFS storage, and a server with the `oc` command line [installed](https://docs.openshift.com/container-platform/4.8/cli_reference/openshift_cli/getting-started-cli.html) that will let you connect to the three OpenShift clusters.
+There are various other support servers running as Linux guests that you use during these labs. These are outside of the OCP cluster itself, but take care of tasks such as LDAP, NFS storage, and a server with the `oc` command line [installed](https://docs.openshift.com/container-platform/4.9/cli_reference/openshift_cli/getting-started-cli.html) that will let you connect to the three OpenShift clusters.
