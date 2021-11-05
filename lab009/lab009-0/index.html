@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab002/lab002-6/">
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab009/lab009-0/">
       
       <link rel="icon" href="../../images/openshift-logo.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Working with Pods - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+        <title>Introduction to OpenShift Pipelines - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-pods" class="md-skip">
+        <a href="#lab-009-using-openshift-pipelines" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Pods
+              Introduction to OpenShift Pipelines
             
           </span>
         </div>
@@ -489,14 +489,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
       
       
       
@@ -519,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-1/" class="md-nav__link">
+      <a href="../../lab002/lab002-1/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -533,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-2/" class="md-nav__link">
+      <a href="../../lab002/lab002-2/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
     </li>
@@ -547,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-3/" class="md-nav__link">
+      <a href="../../lab002/lab002-3/" class="md-nav__link">
         Overview of the OpenShift CLI
       </a>
     </li>
@@ -561,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-4/" class="md-nav__link">
+      <a href="../../lab002/lab002-4/" class="md-nav__link">
         Deploy Container Image from the CLI
       </a>
     </li>
@@ -575,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-5/" class="md-nav__link">
+      <a href="../../lab002/lab002-5/" class="md-nav__link">
         Open a Remote Shell Session into the MongoDB Pod
       </a>
     </li>
@@ -587,21 +585,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-6/" class="md-nav__link">
         Working with Pods
       </a>
-      
     </li>
   
 
@@ -613,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-7/" class="md-nav__link">
+      <a href="../../lab002/lab002-7/" class="md-nav__link">
         Administrative CLI Commands
       </a>
     </li>
@@ -627,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lab002-8/" class="md-nav__link">
+      <a href="../../lab002/lab002-8/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -1348,12 +1336,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" checked>
       
       
       
@@ -1374,11 +1364,58 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../lab009/lab009-0/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to OpenShift Pipelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introduction to OpenShift Pipelines
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tekton" class="md-nav__link">
+    What is Tekton?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1390,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-1/" class="md-nav__link">
+      <a href="../lab009-1/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
     </li>
@@ -1404,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-2/" class="md-nav__link">
+      <a href="../lab009-2/" class="md-nav__link">
         Cloning the GitHub Repository and Viewing its Contents
       </a>
     </li>
@@ -1418,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-3/" class="md-nav__link">
+      <a href="../lab009-3/" class="md-nav__link">
         Understanding and Deploying Tasks
       </a>
     </li>
@@ -1432,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-4/" class="md-nav__link">
+      <a href="../lab009-4/" class="md-nav__link">
         Understanding and Deploying Pipelines
       </a>
     </li>
@@ -1446,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-5/" class="md-nav__link">
+      <a href="../lab009-5/" class="md-nav__link">
         Running the Pipeline
       </a>
     </li>
@@ -1460,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-6/" class="md-nav__link">
+      <a href="../lab009-6/" class="md-nav__link">
         Access the Application in a Browser
       </a>
     </li>
@@ -1474,7 +1511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lab009/lab009-7/" class="md-nav__link">
+      <a href="../lab009-7/" class="md-nav__link">
         Cleaning Up
       </a>
     </li>
@@ -1702,6 +1739,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    Key features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tekton" class="md-nav__link">
+    What is Tekton?
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1712,101 +1771,26 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab002/lab002-6.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab009/lab009-0.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="working-with-pods">Working with Pods<a class="headerlink" href="#working-with-pods" title="Permanent link">&para;</a></h1>
-<p>One of the main benefits of using containers and Kubernetes-based cloud platforms like OpenShift is the ability to <em>scale horizontally</em> – rapidly duplicating or deleting pods to meet a desired state.</p>
-<details class="information" open="open"><summary>Information</summary><p>One of the core concepts of Kubernetes is the <em>Declarative State</em>. Users <em>declare</em> what resources they want, and Kubernetes does whatever it can to make that happen. Scaling is one example of this.</p>
-</details>
-<p>Scaling essentially creates copies of the application in order to distribute traffic to multiple instances and/or compute nodes for high availability and load balancing.</p>
-<ol>
-<li>
-<p><strong>Enter the following command</strong> to get the name of your MongoDB deploymentconfig (dc)</p>
-<div class="highlight"><pre><span></span><code>oc get dc
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc get dc
-NAME    REVISION   DESIRED   CURRENT   TRIGGERED BY
-mongodb   <span class="m">1</span>          <span class="m">1</span>         <span class="m">1</span>         config,image<span class="o">(</span>mongodb:3.6<span class="o">)</span>
-</code></pre></div>
-</details>
-<p>Your deploymentconfig named <code>mongo</code> has a count desired = current = 1.</p>
-</li>
-<li>
-<p><strong>Scale the mongo deployment to 3 replicas</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc scale dc/mongodb --replicas<span class="o">=</span><span class="m">3</span>
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc scale dc/mongodb --replicas<span class="o">=</span><span class="m">3</span>
-deploymentconfig.apps.openshift.io/mongodb scaled
-</code></pre></div>
-</details>
-</li>
-<li>
-<p><strong>Enter the following command again</strong> to see the scaled application.</p>
-<div class="highlight"><pre><span></span><code>oc get dc
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc get dc
-NAME    REVISION   DESIRED   CURRENT   TRIGGERED BY
-mongodb   <span class="m">1</span>          <span class="m">3</span>         <span class="m">3</span>         config,image<span class="o">(</span>mongodb:3.6<span class="o">)</span>
-</code></pre></div>
-</details>
-<p>This output is telling you that OpenShift knows that you want three copies (pods) of MongoDB, and it is successfully meeting that declared state.</p>
-</li>
-<li>
-<p><strong>Enter the following command again to see your three pods</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc get pods
-</code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc get pods
-NAME             READY   STATUS      RESTARTS   AGE
-mongodb-1-5nmjn    <span class="m">1</span>/1     Running     <span class="m">0</span>          2m6s
-mongodb-1-deploy   <span class="m">0</span>/1     Completed   <span class="m">0</span>          20m
-mongodb-1-dh49x    <span class="m">1</span>/1     Running     <span class="m">0</span>          2m6s
-mongodb-1-r8dpw    <span class="m">1</span>/1     Running     <span class="m">0</span>          19m
-</code></pre></div>
-</details>
-<p>Two of the pods will have a shorter age than the original one – these are the two new pods that were just created when you scaled the application.</p>
-</li>
-<li>
-<p><strong>Dig into the pods a little bit further by entering the following command</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc describe pod/mongodb-1-XXXXX
-</code></pre></div>
-<p>Where <code>XXXXX</code> is one of your unique strings of characters.</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc describe pod/mongodb-1-5nmjn
-Name:               mongodb-1-5nmjn
-Namespace:          user01-project
-Priority:           <span class="m">0</span>
-PriorityClassName:  &lt;none&gt;
-Node:               worker-0.atsocppa.dmz/192.168.176.175
-Start Time:         Wed, <span class="m">15</span> Apr <span class="m">2020</span> <span class="m">13</span>:13:53 -0400
-Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
-                    <span class="nv">deployment</span><span class="o">=</span>mongodb-1
-                    <span class="nv">deploymentconfig</span><span class="o">=</span>mongodb
-</code></pre></div>
-</details>
-<p>This command gives you all kinds of information about your pod. Notice the <code>Node:</code> field that begins with <code>worker-#</code>.</p>
-</li>
-<li>
-<p><strong>Run the same command again, but on a different pod this time</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc describe pod/mongodb-1-YYYYY
-</code></pre></div>
-<p>Where <code>YYYYY</code> is one of your other unique strings of characters. Pick one different than the previous step.</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc describe pod/mongodb-1-r8dpw
-Name:               mongodb-1-r8dpw
-Namespace:          user01-project
-Priority:           <span class="m">0</span>
-PriorityClassName:  &lt;none&gt;
-Node:               worker-2.atsocppa.dmz/192.168.176.177
-Start Time:         Wed, <span class="m">15</span> Apr <span class="m">2020</span> <span class="m">12</span>:56:03 -0400
-Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
-                    <span class="nv">deployment</span><span class="o">=</span>mongodb-1
-                    <span class="nv">deploymentconfig</span><span class="o">=</span>mongodb
-</code></pre></div>
-</details>
-<p>It is likely (but not guaranteed) that this pod has been placed on a <em>different</em> compute node than the first pod you described. The reason for this is that you have three compute nodes in this OpenShift cluster, and Kubernetes balances the load for this application across multiple nodes.</p>
-</li>
-</ol>
+                <h1 id="lab-009-using-openshift-pipelines">Lab 009 - Using OpenShift Pipelines<a class="headerlink" href="#lab-009-using-openshift-pipelines" title="Permanent link">&para;</a></h1>
+<p><img alt="openshift-pipelines-graphic.svg" src="../../images/openshift-pipelines-graphic.svg" /></p>
+<p><strong>Red Hat OpenShift Pipelines</strong> is a cloud-native, continuous integration and continuous delivery (CI/CD) solution based on Kubernetes resources. It uses Tekton building blocks to automate deployments across multiple platforms by abstracting away the underlying implementation details. Tekton introduces a number of standard custom resource definitions (CRDs) for defining CI/CD pipelines that are portable across Kubernetes distributions.</p>
+<h2 id="key-features">Key features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Red Hat OpenShift Pipelines is a <em>serverless</em> CI/CD system that runs pipelines with all the required dependencies in <em>isolated containers</em>.</li>
+<li>Red Hat OpenShift Pipelines are designed for <em>decentralized</em> teams that work on microservice-based architecture.</li>
+<li>Red Hat OpenShift Pipelines use <em>standard CI/CD pipeline definitions</em> that are easy to extend and integrate with the existing Kubernetes tools, enabling you to scale on-demand.</li>
+<li>You can use Red Hat OpenShift Pipelines to build images with Kubernetes tools such as Source-to-Image (S2I), Buildah, Buildpacks, and Kaniko that are portable across any Kubernetes platform.</li>
+<li>You can use the OpenShift Container Platform Developer console to create Tekton resources, view logs of pipeline runs, and manage pipelines in your OpenShift Container Platform namespaces.</li>
+</ul>
+<h2 id="what-is-tekton">What is Tekton?<a class="headerlink" href="#what-is-tekton" title="Permanent link">&para;</a></h2>
+<p><img alt="Logo-tekton.svg" src="../../images/Logo-tekton.svg" /></p>
+<p><strong>Tekton</strong> is an <em>open source</em> project that provides a framework to create <em>cloud-native CI/CD pipelines</em> quickly. As a <em>Kubernetes-native</em> framework, Tekton makes it easier to deploy across multiple cloud providers or hybrid environments. By leveraging the Custom Resource Definitions (CRDs) in Kubernetes, Tekton uses the Kubernetes control plane to run pipeline tasks. By using standard industry specifications, Tekton will work well with existing CI/CD tools such as Jenkins, Jenkins X, Skaffold, Knative, and now OpenShift.</p>
+<p>Source of images and information on this page: <a href="https://cloud.redhat.com/learn/topics/ci-cd">https://cloud.redhat.com/learn/topics/ci-cd</a></p>
                 
               
               
@@ -1826,7 +1810,7 @@ Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../lab002-5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Open a Remote Shell Session into the MongoDB Pod" rel="prev">
+        <a href="../../lab008/lab008-6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cleaning Up" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1835,20 +1819,20 @@ Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
               <span class="md-footer__direction">
                 Previous
               </span>
-              Open a Remote Shell Session into the MongoDB Pod
+              Cleaning Up
             </div>
           </div>
         </a>
       
       
         
-        <a href="../lab002-7/" class="md-footer__link md-footer__link--next" aria-label="Next: Administrative CLI Commands" rel="next">
+        <a href="../lab009-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Log into OpenShift Using the CLI" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Administrative CLI Commands
+              Log into OpenShift Using the CLI
             </div>
           </div>
           <div class="md-footer__button md-icon">

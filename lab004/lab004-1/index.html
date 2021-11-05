@@ -1376,6 +1376,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../lab009/lab009-0/" class="md-nav__link">
+        Introduction to OpenShift Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../lab009/lab009-1/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
@@ -1709,6 +1723,8 @@
 <details class="note" open="open"><summary>Note</summary><p>We won’t be specifically covering these technologies in this lab, but you’ve probably heard of them. Docker is the most popular container runtime, and Kubernetes is the most popular container orchestrator. For the curious, OpenShift replaced Docker containers with CRI-O containers when moving from v3.11 to v4.1 (although Docker containers will still work in OpenShift 4.x).</p>
 </details>
 <p>However, not every developer wants (or needs) to learn these new technologies in order to take advantage of them. In fact, OpenShift enables developers with no container experience at all to simply provide their source code (written in Javascript, Python, Go, etc.) and let OpenShift build the container for them using its <strong><em>Source-to-Image (S2I) capability</em></strong>.</p>
+<p><img alt="s2i-diagram" src="../../images/s2i-diagram.png" /></p>
+<p>OpenShift's S2I capability allows developers to focus on developing their application and leaves the containerization process to OpenShift. Using the S2I tooling and Builder Images loaded into the OpenShift image registry, the developer does not need to create a Dockerfile, use any podman or docker commands, or do anything else that is usually required to make a container image out of application source code.</p>
                 
               
               

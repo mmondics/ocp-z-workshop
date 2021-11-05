@@ -1368,6 +1368,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../lab009/lab009-0/" class="md-nav__link">
+        Introduction to OpenShift Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../lab009/lab009-1/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
@@ -1881,7 +1895,7 @@
 </tr>
 <tr>
 <td>Connect to environment as a group</td>
-<td>10-15 minutes</td>
+<td>5-10 minutes</td>
 </tr>
 <tr>
 <td><strong>Hands-on, self-paced labs</strong></td>
@@ -1894,27 +1908,35 @@
 <p>The lab environments will be available the day following the workshop.</p>
 <p>For example, If the workshop is on a Thursday, the environments will be available until 5PM EST Friday.</p>
 </div>
-<h3 id="index-presentations">Presentations<a class="headerlink" href="#index-presentations" title="Permanent link">&para;</a></h3>
+<h2 id="index-presentations">Presentations<a class="headerlink" href="#index-presentations" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../presentations/presentation1.pdf">Presentation 1 - High Level Overview of Red Hat OpenShift &amp; IBM Cloud Paks on IBM Z</a></li>
 <li><a href="../presentations/presentation2.pdf">Presentation 2 - Technical Deep Dive, Installation &amp; Configuration, Lessons Learned</a></li>
 </ul>
+<h2 id="index-labs">Labs<a class="headerlink" href="#index-labs" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The labs are designed so that you can pick and choose which you would like to complete. The labs <em>are not</em> designed for you to get through them all in one day.</p>
 <p>Labs are non-sequential and have no dependencies on one another.</p>
 </div>
+<h3 id="index-introductory-labs">Introductory Labs<a class="headerlink" href="#index-introductory-labs" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="#lab001-lab001-1">Lab 001 - Exploring the OpenShift Console</a></li>
-<li><a href="#lab002-lab002-1">Lab 002 - Using the OpenShift Command Line (oc)</a></li>
-<li><a href="#lab003-lab003-1">Lab 003 - Using the z/OS Cloud Broker</a></li>
-<li><a href="#lab004-lab004-1">Lab 004 - Deploying an Application from Source Code</a></li>
-<li><a href="#lab005-lab005-1">Lab 005 - Monitoring, Metering, and Metrics</a></li>
-<li><a href="#lab006-lab006-1">Lab 006 - Using Persistent Storage - MongoDB and NodeJS</a></li>
-<li><a href="#lab007-lab007-1">Lab 007 - Deploying an Application with the Open Liberty Operator</a></li>
-<li><a href="#lab008-lab008-1">Lab 008 - Deploying an Application with Quarkus Red Hat Runtime</a></li>
-<li><a href="#lab009-lab009-1">Lab 009 - OpenShift Pipelines</a></li>
-<li><a href="#lab010-lab010-1">Lab 010 - OpenShift Service Mesh</a></li>
+<li><a href="#lab001-lab001-1">Exploring the OpenShift Console</a></li>
+<li><a href="#lab002-lab002-1">Using the OpenShift Command Line (oc)</a></li>
+</ul>
+<h3 id="index-openshift-capability-labs">OpenShift Capability Labs<a class="headerlink" href="#index-openshift-capability-labs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#lab004-lab004-1">Deploying an Application from Source Code</a></li>
+<li><a href="#lab009-lab009-0">OpenShift Pipelines</a></li>
+<li><a href="#lab010-lab010-1">OpenShift Service Mesh</a></li>
+<li><a href="#lab005-lab005-1">Monitoring, Metering, and Metrics</a></li>
+<li><a href="#lab006-lab006-1">Using Persistent Storage - MongoDB and NodeJS</a></li>
+</ul>
+<h3 id="index-extended-capability-labs">Extended Capability Labs<a class="headerlink" href="#index-extended-capability-labs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#lab003-lab003-1">Using the z/OS Cloud Broker</a></li>
+<li><a href="#lab007-lab007-1">Deploying an Application with the Open Liberty Operator</a></li>
+<li><a href="#lab008-lab008-1">Deploying an Application with Quarkus Red Hat Runtime</a></li>
 </ul>
 <h2 id="index-workshop-environment-architecture">Workshop Environment Architecture<a class="headerlink" href="#index-workshop-environment-architecture" title="Permanent link">&para;</a></h2>
 <p>Please visit <a href="#workshop-architecture">this page</a> to see the architecture of the workshop's lab environment.</p>
@@ -2190,7 +2212,9 @@
                         <section class="print-page" id="lab001-lab001-1"><h1 id="lab001-lab001-1-lab-001-exploring-the-openshift-console">Lab 001 - Exploring the OpenShift Console<a class="headerlink" href="#lab001-lab001-1-lab-001-exploring-the-openshift-console" title="Permanent link">&para;</a></h1>
 <p>The OpenShift Container Platform web console is a user interface accessible from a web browser.</p>
 <p>Developers can use the web console to <a href="https://docs.openshift.com/container-platform/4.8/web_console/odc-about-developer-perspective.html">visualize, browse, and manage the contents of projects</a>.</p>
+<p><img alt="openshift-console" src="../images/openshift-console.png" /></p>
 <p>Administrators can use the web console to monitor the status of the applications running on the cluster, <a href="https://docs.openshift.com/container-platform/4.8/web_console/using-dashboard-to-get-cluster-information.html">along with the cluster itself</a>.</p>
+<p><img alt="openshift-console-admin" src="../images/openshift-console-admin.png" /></p>
 <p><a href="https://docs.openshift.com/container-platform/4.8/web_console/configuring-web-console.html">The web console can be customized</a> to suit an organization's needs, and when you log into the web console, you will only see the cluster resources that are available to you as allowed by the OpenShift Role Based Access Control (RBAC).</p>
 <p>The web console runs as a group of pods on the control plane nodes in the <code>openshift-console</code> project, along with a service exposed as a route.</p></section><section class="print-page" id="lab001-lab001-2"><h1 id="lab001-lab001-2-connect-to-ocp-and-authenticate">Connect to OCP and Authenticate<a class="headerlink" href="#lab001-lab001-2-connect-to-ocp-and-authenticate" title="Permanent link">&para;</a></h1>
 <ol>
@@ -2210,7 +2234,7 @@
 <p><img alt="openshift-console-login" src="../images/openshift-console-login.png" /></p>
 </li>
 <li>
-<p>Log in with the OpenShift credentials provided to you on the <a href="#lab-assignments">Lab Assignments</a> page.</p>
+<p><strong>Log in with the OpenShift credentials</strong> provided to you on the <a href="#lab-assignments">Lab Assignments</a> page.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Your OpenShift credentials will be something like the following:</p>
@@ -2350,10 +2374,11 @@
 </details>
 </li>
 </ol>
-<p>Switching to the Developer perspective takes you to the <em>Topology</em> view. If no workloads are deployed in the selected project, options to deploy a workload are displayed.</p>
+<p>Switching to the Developer perspective takes you to the <em>Topology</em> view. If no workloads are deployed in the selected project, options to start building an application or visit the +Add page or are displayed.</p>
+<p>If you ended up on a page other than Topology, continue with step 1 below anyways.</p>
 <ol>
 <li>
-<p>If this isn't the case, <strong>click the +Add button in the menu</strong>.</p>
+<p><strong>Click the +Add button in the menu</strong>.</p>
 <p><img alt="add-workload-notes.png" src="../images/add-workload-notes.png" /></p>
 <details class="information"><summary>Expand to learn about Deployment Methods</summary><p>There are multiple methods of deploying workloads from the OpenShift web browser.</p>
 <ul>
@@ -2386,7 +2411,7 @@
 </details>
 <ol>
 <li>
-<p><strong>Click the From Catalog option</strong> from the Add page.</p>
+<p><strong>Click the All Services option in the Developer Catalog section</strong> on the +Add page.</p>
 <p>This brings up the OpenShift Developer catalog containing all types of applications you can deploy including Operators, Helm Charts, Templates, and more.</p>
 </li>
 <li>
@@ -2438,7 +2463,7 @@
 <p>Notice the two pods associated with your Rails application. On this page, you’ll see more information about your pods, any build configurations currently running or completed, and the services/ports associated with the pod.</p>
 </li>
 <li>
-<p><strong>Click the route address a the bottom of the resources tab</strong>.</p>
+<p><strong>Click the route address at the bottom of the resources tab</strong>.</p>
 <details><summary>Expand for a Tip</summary><p>You could also access this route by clicking on the external link icon associated with your Rails pod on the Topology view.</p>
 <p><img alt="external-link.png" src="../images/external-link.png" /></p>
 </details>
@@ -2876,7 +2901,7 @@ mongodb   <span class="m">1</span>          <span class="m">3</span>         <sp
 </li>
 <li>
 <p><strong>Enter the following command again to see your three pods</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc get dc
+<div class="highlight"><pre><span></span><code>oc get pods
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ oc get pods
 NAME             READY   STATUS      RESTARTS   AGE
@@ -2924,7 +2949,7 @@ Labels:             <span class="nv">app</span><span class="o">=</span>mongodb
                     <span class="nv">deploymentconfig</span><span class="o">=</span>mongodb
 </code></pre></div>
 </details>
-<p>Notice that this pod has been placed on a <em>different</em> compute node than the first pod you described. The reason for this is that you have three compute nodes in this OpenShift cluster, and Kubernetes has balanced the load for this application across multiple nodes.</p>
+<p>It is likely (but not guaranteed) that this pod has been placed on a <em>different</em> compute node than the first pod you described. The reason for this is that you have three compute nodes in this OpenShift cluster, and Kubernetes balances the load for this application across multiple nodes.</p>
 </li>
 </ol></section><section class="print-page" id="lab002-lab002-7"><h1 id="lab002-lab002-7-administrative-cli-commands">Administrative CLI Commands<a class="headerlink" href="#lab002-lab002-7-administrative-cli-commands" title="Permanent link">&para;</a></h1>
 <p>If you’ve already completed <a href="#lab001-lab001-1">Lab 001 – Exploring the OpenShift Console</a>, you’ll remember that there are both developer and administrator perspectives. The same is true in the OpenShift CLI. </p>
@@ -3047,7 +3072,7 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
                             Lab 003 - Using the z/OS Cloud Broker <a class='headerlink' href='#section-lab-003-using-the-z-os-cloud-broker' title='Permanent link'>↵</a>
                         </h2>
                         <section class="print-page" id="lab003-lab003-1"><h1 id="lab003-lab003-1-lab-003-the-zos-cloud-broker">Lab 003 - The z/OS Cloud Broker<a class="headerlink" href="#lab003-lab003-1-lab-003-the-zos-cloud-broker" title="Permanent link">&para;</a></h1>
-<p>The <em>IBM z/OS Cloud Broker</em> is an offering that connects z/OS services running on an IBM Z backend to a frontend private cloud platform providing self-service access and consumption of these services to developers. This allows developers to provision their own z/OS resources directly from the OpenShift console – without the need for z/OS skills or direct access.</p>
+<p>The <em>IBM z/OS Cloud Broker</em> is an IBM offering that connects z/OS services running on an IBM Z backend to a frontend container platform providing self-service access and consumption of these services to developers. This allows developers to provision their own z/OS resources directly from the OpenShift console – without the need for z/OS skills or direct access.</p>
 <p><img alt="zoscb-arch.png" src="../images/zoscb-arch.png" /></p>
 <p>The services available for the z/OS Cloud Broker to expose into OpenShift are:</p>
 <table>
@@ -3078,11 +3103,7 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 <p>In your virtual machine desktop, <strong>open a Firefox web browser</strong>.</p>
 </li>
 <li>
-<p>In the browser, <strong>navigate to the OpenShift on IBM Z console</strong> at the following address: <a href="https://console-openshift-console.apps.atsocpd1.dmz/">https://console-openshift-console.apps.atsocpd1.dmz/</a>.</p>
-<div class="admonition important">
-<p class="admonition-title"><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Important <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></p>
-<p><strong><em>This is a different OpenShift cluster than the one used in other labs</em></strong>. Make sure you follow this correct link (atsocpd1) or you will not be able to find the z/OS Cloud Broker.</p>
-</div>
+<p>In the browser, <strong>navigate to the OpenShift on IBM Z console</strong> at the following address: <a href="https://console-openshift-console.apps.atsocppa.dmz/">https://console-openshift-console.apps.atsocppa.dmz/</a>.</p>
 <details class="note" open="open"><summary>Note</summary><p>You will receive a security challenge if the cluster has not yet been accessed from your browser. This is due to the default SSL certificate being “self-signed” and not yet recognized.</p>
 <p>Accept the challenge to continue by <strong>clicking Advanced</strong> and then <strong>clicking Proceed to console-openshift-console.apps.atsocppa.dmz (unsafe)</strong>.</p>
 <p>You will likely need to do this twice due to how OpenShift reroutes Oauth requests. </p>
@@ -3126,7 +3147,7 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 <p><strong>Click the +Add button in the left-side menu</strong>.</p>
 </li>
 <li>
-<p><strong>Click the From Catalog tile</strong>.</p>
+<p><strong>Click the All Services option under the Developer Catalog section</strong>.</p>
 <p><img alt="from-catalog" src="../images/from-catalog.png" /></p>
 </li>
 <li>
@@ -3296,7 +3317,9 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 <p>As much of the Information Technology world moves toward cloud technology as the consumption model for enterprise computing, developers are required to make a shift in the tools they use to perform their work. At the heart of almost every cloud platform there are two of these new, core technologies – <em>containers</em> and <em>container orchestrators</em>.</p>
 <details class="note" open="open"><summary>Note</summary><p>We won’t be specifically covering these technologies in this lab, but you’ve probably heard of them. Docker is the most popular container runtime, and Kubernetes is the most popular container orchestrator. For the curious, OpenShift replaced Docker containers with CRI-O containers when moving from v3.11 to v4.1 (although Docker containers will still work in OpenShift 4.x).</p>
 </details>
-<p>However, not every developer wants (or needs) to learn these new technologies in order to take advantage of them. In fact, OpenShift enables developers with no container experience at all to simply provide their source code (written in Javascript, Python, Go, etc.) and let OpenShift build the container for them using its <strong><em>Source-to-Image (S2I) capability</em></strong>.</p></section><section class="print-page" id="lab004-lab004-2"><h1 id="lab004-lab004-2-exploring-github-and-the-example-health-source-code">Exploring GitHub and the Example Health Source Code<a class="headerlink" href="#lab004-lab004-2-exploring-github-and-the-example-health-source-code" title="Permanent link">&para;</a></h1>
+<p>However, not every developer wants (or needs) to learn these new technologies in order to take advantage of them. In fact, OpenShift enables developers with no container experience at all to simply provide their source code (written in Javascript, Python, Go, etc.) and let OpenShift build the container for them using its <strong><em>Source-to-Image (S2I) capability</em></strong>.</p>
+<p><img alt="s2i-diagram" src="../images/s2i-diagram.png" /></p>
+<p>OpenShift's S2I capability allows developers to focus on developing their application and leaves the containerization process to OpenShift. Using the S2I tooling and Builder Images loaded into the OpenShift image registry, the developer does not need to create a Dockerfile, use any podman or docker commands, or do anything else that is usually required to make a container image out of application source code.</p></section><section class="print-page" id="lab004-lab004-2"><h1 id="lab004-lab004-2-exploring-github-and-the-example-health-source-code">Exploring GitHub and the Example Health Source Code<a class="headerlink" href="#lab004-lab004-2-exploring-github-and-the-example-health-source-code" title="Permanent link">&para;</a></h1>
 <p>In this lab, you will be deploying a sample healthcare application called <em>Example Health</em>. The application is written in JavaScript, and it’s loaded into IBM’s GitHub repository.</p>
 <ol>
 <li>
@@ -3386,7 +3409,7 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 <p><img alt="add-workload" src="../images/add-workload.png" /></p>
 </li>
 <li>
-<p><strong>Click the From Git tile</strong>.</p>
+<p><strong>Click the From Git option in the Git Repository section</strong> of the +Add page.</p>
 <p><img alt="from-git" src="../images/from-git.png" /></p>
 </li>
 <li>
@@ -3404,7 +3427,7 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 </details>
 </li>
 <li>
-<p><strong>For Builder Image, select the Node.js tile</strong>.</p>
+<p><strong>For Builder Image, select the Node.js tile</strong>. It is likely that OpenShift will detect the programming language in the GitHub repository and automatically select the Node.js builder image.</p>
 <p><img alt="node-tile" src="../images/node-tile.png" /></p>
 </li>
 <li>
@@ -3603,9 +3626,8 @@ route.route.openshift.io <span class="s2">&quot;rails-postgresql-example&quot;</
 </ol></section><section class="print-page" id="lab005-lab005-5"><h1 id="lab005-lab005-5-connect-to-grafana">Connect to Grafana<a class="headerlink" href="#lab005-lab005-5-connect-to-grafana" title="Permanent link">&para;</a></h1>
 <ol>
 <li>
-<p>To utilize further Grafana functions, <strong>click the Grafana UI external link at the top of the page</strong>.</p>
-<p><img alt="grafana-ui-link" src="../images/grafana-ui-link.png" /></p>
-<p>This takes you to the Grafana User Interface at <a href="https://grafana-openshift-monitoring.apps.atsocppa.dmz/">https://grafana-openshift-monitoring.apps.atsocppa.dmz/</a></p>
+<p>To utilize further Grafana functions, <strong>navigate to the Grafana UI at the following address</strong>.</p>
+<p><a href="https://grafana-openshift-monitoring.apps.atsocppa.dmz/">https://grafana-openshift-monitoring.apps.atsocppa.dmz/</a></p>
 <details class="information"><summary>Expand for More Information</summary><p>Where is this URL coming from? It is exposed service (or route) for the Grafana service. You could open a terminal and run the following command to find the URLs to Prometheus, Grafana, and Alertmanager:</p>
 <div class="highlight"><pre><span></span><code>root <span class="c1"># ===&gt; oc -n openshift-monitoring get routes</span>
 NAME                HOST/PORT                              
@@ -3800,11 +3822,11 @@ prometheus-k8s      prometheus-k8s-openshift-monitoring.apps.atsocppa.dmz
 <p><strong>Click Add+ from the left-hand menu</strong>.</p>
 </li>
 <li>
-<p><strong>Click the Container Image tile</strong>.</p>
+<p><strong>Click the Container Images option</strong>.</p>
 <p>This brings up a new page which prompts you for an image name and further configurable parameters further down the page. Only the image name is required, and the rest will automatically populate for you.</p>
 </li>
 <li>
-<p><strong>In the search bar for Image Name from external registry, type <code>quay.io/mmondics/mongo</code> and press enter</strong>.</p>
+<p><strong>In the search bar for Image Name from external registry, type <code>quay.io/mmondics/mongo</code></strong>.</p>
 <p><img alt="mongo-search" src="../images/mongo-search.png" /></p>
 <p>A green check mark and a “validated” message will appear in the search bar, indicating that the MongoDB image has been found and validated in Quay.</p>
 <details class="important" open="open"><summary><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Important <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></summary><p>The fields below will automatically populate, but <strong><em>it is imperative that you change the Name field for your MongoDB service</em></strong>, or else the Node.js app will not be able to find and connect to the database.</p>
@@ -3992,6 +4014,7 @@ prometheus-k8s      prometheus-k8s-openshift-monitoring.apps.atsocppa.dmz
                             Lab 007 - Deploying an Application with the Open Liberty Operator <a class='headerlink' href='#section-lab-007-deploying-an-application-with-the-open-liberty-operator' title='Permanent link'>↵</a>
                         </h2>
                         <section class="print-page" id="lab007-lab007-1"><h1 id="lab007-lab007-1-lab-007-deploying-an-application-with-the-open-liberty-operator">Lab 007 - Deploying an Application with the Open Liberty Operator<a class="headerlink" href="#lab007-lab007-1-lab-007-deploying-an-application-with-the-open-liberty-operator" title="Permanent link">&para;</a></h1>
+<p><img alt="open-liberty-logo" src="../images/open-liberty-logo.png" /></p>
 <p>Note: this lab is a modified version of the GitHub repository here:</p>
 <p><a href="https://github.com/OpenShift-Z/openliberty-operator-ocpz">https://github.com/OpenShift-Z/openliberty-operator-ocpz</a></p>
 <p>Open Liberty:</p>
@@ -4465,6 +4488,7 @@ imagestream.image.openshift.io <span class="s2">&quot;app-modernization&quot;</s
 <p class="admonition-title">Note</p>
 <p>For more Quarkus guides, see the official site here: <a href="https://quarkus.io/guides/">https://quarkus.io/guides/</a></p>
 </div>
+<p><img alt="quarkus-logo" src="../images/quarkus-logo.png" /></p>
 <p><strong><em>Quarkus</em></strong> is a full-stack, Kubernetes-native Java framework optimized specifically for containers and Kubernetes environments. It is designed to work with popular Java standards, frameworks, and libraries like Eclipse MicroProfile, Spring Apache Kafka, RESTEasy, and many more.</p>
 <p>Quarkus was designed for developers with the intent to be <em>easy to use</em> with features that work well with <em>little to no configuration</em>. It includes many features for developers, such as live coding so you can immediately check the effect of code changes and quickly troubleshoot them.</p>
 <p>Quarkus was built around a <em>container-first</em> philosophy, meaning it’s optimized for lower memory usage and faster startup times. Quarkus builds applications to consume 1/10<sup>th</sup> the memory when compared to traditional Java, and has a much faster startup time (as much as 300 times faster), both of which greatly reduce the cost of cloud resources.</p>
@@ -4986,7 +5010,21 @@ user00@lab061:~$
                         <h2 class='nav-section-title' id='section-lab-009-openshift-pipelines'>
                             Lab 009 - OpenShift Pipelines <a class='headerlink' href='#section-lab-009-openshift-pipelines' title='Permanent link'>↵</a>
                         </h2>
-                        <section class="print-page" id="lab009-lab009-1"><h1 id="lab009-lab009-1-lab-009-using-openshift-pipelines">Lab 009 - Using OpenShift Pipelines<a class="headerlink" href="#lab009-lab009-1-lab-009-using-openshift-pipelines" title="Permanent link">&para;</a></h1>
+                        <section class="print-page" id="lab009-lab009-0"><h1 id="lab009-lab009-0-lab-009-using-openshift-pipelines">Lab 009 - Using OpenShift Pipelines<a class="headerlink" href="#lab009-lab009-0-lab-009-using-openshift-pipelines" title="Permanent link">&para;</a></h1>
+<p><img alt="openshift-pipelines-graphic.svg" src="../images/openshift-pipelines-graphic.svg" /></p>
+<p><strong>Red Hat OpenShift Pipelines</strong> is a cloud-native, continuous integration and continuous delivery (CI/CD) solution based on Kubernetes resources. It uses Tekton building blocks to automate deployments across multiple platforms by abstracting away the underlying implementation details. Tekton introduces a number of standard custom resource definitions (CRDs) for defining CI/CD pipelines that are portable across Kubernetes distributions.</p>
+<h2 id="lab009-lab009-0-key-features">Key features<a class="headerlink" href="#lab009-lab009-0-key-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Red Hat OpenShift Pipelines is a <em>serverless</em> CI/CD system that runs pipelines with all the required dependencies in <em>isolated containers</em>.</li>
+<li>Red Hat OpenShift Pipelines are designed for <em>decentralized</em> teams that work on microservice-based architecture.</li>
+<li>Red Hat OpenShift Pipelines use <em>standard CI/CD pipeline definitions</em> that are easy to extend and integrate with the existing Kubernetes tools, enabling you to scale on-demand.</li>
+<li>You can use Red Hat OpenShift Pipelines to build images with Kubernetes tools such as Source-to-Image (S2I), Buildah, Buildpacks, and Kaniko that are portable across any Kubernetes platform.</li>
+<li>You can use the OpenShift Container Platform Developer console to create Tekton resources, view logs of pipeline runs, and manage pipelines in your OpenShift Container Platform namespaces.</li>
+</ul>
+<h2 id="lab009-lab009-0-what-is-tekton">What is Tekton?<a class="headerlink" href="#lab009-lab009-0-what-is-tekton" title="Permanent link">&para;</a></h2>
+<p><img alt="Logo-tekton.svg" src="../images/Logo-tekton.svg" /></p>
+<p><strong>Tekton</strong> is an <em>open source</em> project that provides a framework to create <em>cloud-native CI/CD pipelines</em> quickly. As a <em>Kubernetes-native</em> framework, Tekton makes it easier to deploy across multiple cloud providers or hybrid environments. By leveraging the Custom Resource Definitions (CRDs) in Kubernetes, Tekton uses the Kubernetes control plane to run pipeline tasks. By using standard industry specifications, Tekton will work well with existing CI/CD tools such as Jenkins, Jenkins X, Skaffold, Knative, and now OpenShift.</p>
+<p>Source of images and information on this page: <a href="https://cloud.redhat.com/learn/topics/ci-cd">https://cloud.redhat.com/learn/topics/ci-cd</a></p></section><section class="print-page" id="lab009-lab009-1"><h1 id="lab009-lab009-1-lab-009-using-openshift-pipelines">Lab 009 - Using OpenShift Pipelines<a class="headerlink" href="#lab009-lab009-1-lab-009-using-openshift-pipelines" title="Permanent link">&para;</a></h1>
 <p>In this section, you will be connecting to a “Linux Guest” server which has a few things set up to make your life a little easier. Most notably, it has the OpenShift command line <code>oc</code> installed, so you don’t have to install it on your RHEL VM terminal.</p>
 <ol>
 <li>

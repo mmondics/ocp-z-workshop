@@ -1376,6 +1376,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../lab009/lab009-0/" class="md-nav__link">
+        Introduction to OpenShift Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../lab009/lab009-1/" class="md-nav__link">
         Log into OpenShift Using the CLI
       </a>
@@ -1706,9 +1720,8 @@
                 <h1 id="connect-to-grafana">Connect to Grafana<a class="headerlink" href="#connect-to-grafana" title="Permanent link">&para;</a></h1>
 <ol>
 <li>
-<p>To utilize further Grafana functions, <strong>click the Grafana UI external link at the top of the page</strong>.</p>
-<p><img alt="grafana-ui-link" src="../../images/grafana-ui-link.png" /></p>
-<p>This takes you to the Grafana User Interface at <a href="https://grafana-openshift-monitoring.apps.atsocppa.dmz/">https://grafana-openshift-monitoring.apps.atsocppa.dmz/</a></p>
+<p>To utilize further Grafana functions, <strong>navigate to the Grafana UI at the following address</strong>.</p>
+<p><a href="https://grafana-openshift-monitoring.apps.atsocppa.dmz/">https://grafana-openshift-monitoring.apps.atsocppa.dmz/</a></p>
 <details class="information"><summary>Expand for More Information</summary><p>Where is this URL coming from? It is exposed service (or route) for the Grafana service. You could open a terminal and run the following command to find the URLs to Prometheus, Grafana, and Alertmanager:</p>
 <div class="highlight"><pre><span></span><code>root <span class="c1"># ===&gt; oc -n openshift-monitoring get routes</span>
 NAME                HOST/PORT                              
