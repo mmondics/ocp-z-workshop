@@ -72,6 +72,7 @@ nav:
         - Deploy the Application onto OpenShift: 'lab008/lab008-5.md'
         - Cleaning Up: 'lab008/lab008-6.md'
       - Lab 009 - OpenShift Pipelines:
+        - Introduction to OpenShift Pipelines: 'lab009/lab009-0.md'
         - Log into OpenShift Using the CLI: 'lab009/lab009-1.md'
         - Cloning the GitHub Repository and Viewing its Contents: 'lab009/lab009-2.md'
         - Understanding and Deploying Tasks: 'lab009/lab009-3.md'
