@@ -9,8 +9,8 @@ nav:
     - Lab Assignments: 'lab-assignments.md'
     - Lab Architecture: 'workshop-architecture.md'
     - Presentations:
-      - Presentation 1: presentations/presentation1.pdf
-      - Presentation 2: presentations/presentation2.pdf
+      - Presentation 1 - Overview: presentations/presentation1.pdf
+      - Presentation 2 - Technical Deep Dive: presentations/presentation2.pdf
     - Labs: 
       - Exploring the OpenShift Console: 
         - Introduction: 'lab001/lab001-1.md'
@@ -95,9 +95,18 @@ nav:
 theme: 
   name: material
   palette:
-    scheme: preference
+    scheme: default
+    primary: black
+    font:
+      text: IBM Plex Sans
+      code: IBM Plex Mono
   favicon: images/openshift-logo.png
   logo: images/openshift-logo.png
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright © 2021 IBM Z Washington Systems Center
 
 plugins:
   - search

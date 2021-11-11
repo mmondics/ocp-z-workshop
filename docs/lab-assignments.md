@@ -6,36 +6,36 @@
 
 | Name  | Virtual Machine Password | User Number | OpenShift Username | OpenShift Password |
 |---|---|---|---|---|
-| [TBD](https://google.com){ .md-button } | `TBD`  | 01 | user01 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  02 | user02 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  03 | user03 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  04 | user04 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  05 | user05 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  06 | user06 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  07 | user07 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } |`TBD`  |  08 | user08 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  09 | user09 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  10 | user10 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } |`TBD`|  11 | user11 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  12 | user12 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } |  `TBD`|  13 | user13 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  14 | user14 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  15 | user15 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  16 | user16 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  17 | user17 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  18 | user18 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  19 | user19 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  20 | user20 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  21 | user21 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  22 | user22 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  23 | user23 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  24 | user24 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  25 | user25 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  26 | user26 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  27 | user27 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  28 | user28 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | `TBD` |  29 | user29 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | `TBD` |  30 | user30 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD**  | 01 | user01 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  02 | user02 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  03 | user03 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  04 | user04 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  05 | user05 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  06 | user06 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  07 | user07 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } |**TBD**  |  08 | user08 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  09 | user09 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  10 | user10 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } |**TBD**|  11 | user11 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  12 | user12 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } |  **TBD**|  13 | user13 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  14 | user14 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  15 | user15 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  16 | user16 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  17 | user17 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  18 | user18 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  19 | user19 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  20 | user20 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  21 | user21 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  22 | user22 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  23 | user23 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  24 | user24 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  25 | user25 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  26 | user26 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  27 | user27 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  28 | user28 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** |  29 | user29 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  30 | user30 | p@ssw0rd |
 
 ## Connecting to your RHEL Virtual Desktop
 
