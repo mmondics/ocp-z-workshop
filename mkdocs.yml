@@ -6,7 +6,7 @@ edit_uri: edit/main/docs
 nav:
     - Home: 'index.md'
     - Prerequisites: 'prerequisites.md'
-    - Lab Assignments: 'lab-assignments.md'
+#    - Lab Assignments: 'lab-assignments.md'
     - Lab Architecture: 'workshop-architecture.md'
     - Presentations:
       - Presentation 1 - Overview: presentations/presentation1.pdf
