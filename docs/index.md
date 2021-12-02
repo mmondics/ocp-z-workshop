@@ -43,7 +43,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 ### Extended Capability Labs
 
-<!---* [Using the z/OS Cloud Broker](lab003/lab003-1.md)--->
+* [Using the z/OS Cloud Broker](lab003/lab003-1.md)
 * [Deploying an Application with the Open Liberty Operator](lab007/lab007-1.md)
 * [Deploying an Application with Quarkus Red Hat Runtime](lab008/lab008-1.md)
 
