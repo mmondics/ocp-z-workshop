@@ -71,12 +71,12 @@ nav:
         - Deploy Node.js Application from Dockerfile: 'lab006/lab006-5.md'
         - Interacting with MongoDB from Node.js Application: 'lab006/lab006-6.md'
         - Cleaning Up: 'lab006/lab006-7.md'
-      - Using the z/OS Cloud Broker: 
-        - Introduction: 'lab003/lab003-1.md'
-        - Connect to OCP: 'lab003/lab003-2.md'
-        - Deploy Liberty for z/OS Using the z/OS Cloud Broker: 'lab003/lab003-3.md'
-        - Stop and Restart Liberty for z/OS from OCP: 'lab003/lab003-4.md'
-        - Cleaning Up: 'lab003/lab003-5.md'
+ #     - Using the z/OS Cloud Broker: 
+ #       - Introduction: 'lab003/lab003-1.md'
+ #       - Connect to OCP: 'lab003/lab003-2.md'
+ #       - Deploy Liberty for z/OS Using the z/OS Cloud Broker: 'lab003/lab003-3.md'
+ #       - Stop and Restart Liberty for z/OS from OCP: 'lab003/lab003-4.md'
+ #       - Cleaning Up: 'lab003/lab003-5.md'
       - Deploying an Application with the Open Liberty Operator:
         - Overview of the Open Liberty Operator and Sample Application: 'lab007/lab007-1.md'
         - Log into OpenShift Using the CLI: 'lab007/lab007-2.md'
