@@ -37,7 +37,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 * [Deploying an Application from Source Code](lab004/lab004-1.md)
 * [OpenShift Pipelines](lab009/lab009-0.md)
-* [OpenShift Service Mesh](lab010/lab010-1.md)
+<!---* [OpenShift Service Mesh](lab010/lab010-1.md)--->
 * [Monitoring, Metering, and Metrics](lab005/lab005-1.md)
 * [Using Persistent Storage - MongoDB and NodeJS](lab006/lab006-1.md)
 
