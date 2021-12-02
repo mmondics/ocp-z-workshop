@@ -25,6 +25,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
+          
+          
+          <meta name="theme-color" content="#000000">
+        
       
     
     
@@ -42,6 +46,8 @@
     
       <link rel="stylesheet" href="../../css/print-site-material.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
 
@@ -56,7 +62,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -297,7 +303,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation1.pdf" class="md-nav__link">
-        Presentation 1
+        Presentation 1 - Overview
       </a>
     </li>
   
@@ -311,7 +317,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation2.pdf" class="md-nav__link">
-        Presentation 2
+        Presentation 2 - Technical Deep Dive
       </a>
     </li>
   
@@ -330,14 +336,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -882,259 +886,23 @@
               
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          OpenShift Service Mesh
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="OpenShift Service Mesh" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          OpenShift Service Mesh
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-1/" class="md-nav__link">
-        Overview of the OpenShift Service Mesh
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-2/" class="md-nav__link">
-        OpenShift Service Mesh Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-3/" class="md-nav__link">
-        Log into OpenShift Using the CLI
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-4/" class="md-nav__link">
-        Cloning the GitHub Repository and Reviewing its Contents
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-5/" class="md-nav__link">
-        Deploying an Application on the Service Mesh
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-6/" class="md-nav__link">
-        Understanding and Deploying a Service Mesh Gateway and Virtual Service
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-7/" class="md-nav__link">
-        Traffic Management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Application Observability with Kiali
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Application Observability with Kiali
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#validating-istio-configuration-with-kiali" class="md-nav__link">
-    Validating Istio Configuration with Kiali
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#validating-service-mesh-application-configuration-with-kiali" class="md-nav__link">
-    Validating Service Mesh Application Configuration with Kiali
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-your-service-mesh-applications-with-kiali" class="md-nav__link">
-    Viewing Your Service Mesh Applications with Kiali
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-service-mesh-applications-with-kiali" class="md-nav__link">
-    Managing Service Mesh Applications with Kiali
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-9/" class="md-nav__link">
-        Distributed Tracing with Jaeger
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-10/" class="md-nav__link">
-        Wrap Up & Clean Up
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_6">
+        <label class="md-nav__link" for="__nav_6_5">
           Monitoring, Metering, and Metrics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Monitoring, Metering, and Metrics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
+        <label class="md-nav__title" for="__nav_6_5">
           <span class="md-nav__icon md-icon"></span>
           Monitoring, Metering, and Metrics
         </label>
@@ -1254,18 +1022,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_7">
+        <label class="md-nav__link" for="__nav_6_6">
           Using Persistent Storage with MongoDB and NodeJS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using Persistent Storage with MongoDB and NodeJS" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_7">
+        <label class="md-nav__title" for="__nav_6_6">
           <span class="md-nav__icon md-icon"></span>
           Using Persistent Storage with MongoDB and NodeJS
         </label>
@@ -1385,18 +1153,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_8">
+        <label class="md-nav__link" for="__nav_6_7">
           Using the z/OS Cloud Broker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using the z/OS Cloud Broker" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_8">
+        <label class="md-nav__title" for="__nav_6_7">
           <span class="md-nav__icon md-icon"></span>
           Using the z/OS Cloud Broker
         </label>
@@ -1488,18 +1256,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_9">
+        <label class="md-nav__link" for="__nav_6_8">
           Deploying an Application with the Open Liberty Operator
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with the Open Liberty Operator" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
+        <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with the Open Liberty Operator
         </label>
@@ -1605,18 +1373,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_10">
+        <label class="md-nav__link" for="__nav_6_9">
           Deploying an Application with Quarkus Red Hat Runtime
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with Quarkus Red Hat Runtime" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_10">
+        <label class="md-nav__title" for="__nav_6_9">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with Quarkus Red Hat Runtime
         </label>
@@ -1809,7 +1577,7 @@
 <p>Kiali provides an interactive graph view of your namespace in real time that provides visibility into features like circuit breakers, request rates, latency, and even graphs of traffic flows. Kiali offers insights about components at different levels, from Applications to Services and Workloads, and can display the interactions with contextual information and charts on the selected graph node or edge. Kiali also provides the ability to validate your Istio configurations, such as gateways, destination rules, virtual services, mesh policies, and more.</p>
 <ol>
 <li>
-<p><strong>Navigate to the Kiali console located at: <a href="https://kiali-istio-system.apps.atsocpd2.dmz">https://kiali-istio-system.apps.atsocpd2.dmz</a></strong></p>
+<p><strong>Navigate to the Kiali console located at: <a href="https://kiali-istio-system.apps.atsocppa.dmz">https://kiali-istio-system.apps.atsocppa.dmz</a></strong></p>
 </li>
 <li>
 <p><strong>Log in with your OpenShift credentials</strong>.</p>
@@ -1856,11 +1624,11 @@
 <ol>
 <li>
 <p><strong>In your terminal session, introduce an invalid configuration of a service port name with the following command</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc patch service details --type json -p <span class="se">\</span>
-<span class="s1">&#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;foo&quot;}]&#39;</span>
+<div class="highlight"><pre><span></span><code>oc patch service details --type json -p \
+&#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;foo&quot;}]&#39;
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc patch service details --type json -p <span class="se">\</span>
-&gt; <span class="s1">&#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;foo&quot;}]&#39;</span>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc patch service details --type json -p \
+&gt; &#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;foo&quot;}]&#39;
 service/details patched
 </code></pre></div>
 </details>
@@ -1882,11 +1650,11 @@ service/details patched
 </li>
 <li>
 <p><strong>Back in your terminal session, run the following command to correct the port name</strong>:</p>
-<div class="highlight"><pre><span></span><code>    oc patch service details--type json -p <span class="se">\</span>
-    <span class="s1">&#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;http&quot;}]&#39;</span>
+<div class="highlight"><pre><span></span><code>    oc patch service details--type json -p \
+    &#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;http&quot;}]&#39;
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc patch service details --type json -p <span class="se">\</span>
-&gt; <span class="s1">&#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;http&quot;}]&#39;</span>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc patch service details --type json -p \
+&gt; &#39;[{&quot;op&quot;:&quot;replace&quot;,&quot;path&quot;:&quot;/spec/ports/0/name&quot;, &quot;value&quot;:&quot;http&quot;}]&#39;
 service/details patched
 </code></pre></div>
 </details>
@@ -1906,12 +1674,12 @@ service/details patched
 </li>
 <li>
 <p>Let’s generate some traffic into our Bookinfo application. <strong>In your terminal session, run the following command to continually send http request to the productpage</strong>:</p>
-<div class="highlight"><pre><span></span><code>watch -n <span class="m">1</span> curl -o /dev/null -s -w %<span class="o">{</span>http_code<span class="o">}</span> <span class="nv">$GATEWAY_URL</span>/productpage
+<div class="highlight"><pre><span></span><code>watch -n 1 curl -o /dev/null -s -w %{http_code} $GATEWAY_URL/productpage
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ watch -n <span class="m">1</span> curl -o /dev/null -s -w %<span class="o">{</span>http_code<span class="o">}</span> <span class="nv">$GATEWAY_URL</span>/productpage
-Every <span class="m">1</span>.0s: curl -o /dev/null -s -w %<span class="o">{</span>http_code<span class="o">}</span> user01-project.istio.apps.atsocpd2.dmz/productpage
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ watch -n 1 curl -o /dev/null -s -w %{http_code} $GATEWAY_URL/productpage
+Every 1.0s: curl -o /dev/null -s -w %{http_code} user01-project.istio.apps.atsocppa.dmz/productpage
 
-<span class="m">200</span>
+200
 </code></pre></div>
 </details>
 <p>If you see a 200 return code as in the image above, you’re now sending requests to the productpage every second.</p>
@@ -1989,44 +1757,13 @@ Every <span class="m">1</span>.0s: curl -o /dev/null -s -w %<span class="o">{</s
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../lab010-7/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Traffic Management" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Traffic Management
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../lab010-9/" class="md-footer__link md-footer__link--next" aria-label="Next: Distributed Tracing with Jaeger" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Distributed Tracing with Jaeger
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2021 IBM Z Washington Systems Center
+          </div>
         
         
           Made with

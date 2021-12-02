@@ -25,6 +25,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
+          
+          
+          <meta name="theme-color" content="#000000">
+        
       
     
     
@@ -42,6 +46,8 @@
     
       <link rel="stylesheet" href="../../css/print-site-material.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
 
@@ -56,7 +62,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -297,7 +303,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation1.pdf" class="md-nav__link">
-        Presentation 1
+        Presentation 1 - Overview
       </a>
     </li>
   
@@ -311,7 +317,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation2.pdf" class="md-nav__link">
-        Presentation 2
+        Presentation 2 - Technical Deep Dive
       </a>
     </li>
   
@@ -330,14 +336,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -882,208 +886,23 @@
               
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          OpenShift Service Mesh
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="OpenShift Service Mesh" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          OpenShift Service Mesh
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-1/" class="md-nav__link">
-        Overview of the OpenShift Service Mesh
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-2/" class="md-nav__link">
-        OpenShift Service Mesh Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-3/" class="md-nav__link">
-        Log into OpenShift Using the CLI
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Cloning the GitHub Repository and Reviewing its Contents
-      </a>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-5/" class="md-nav__link">
-        Deploying an Application on the Service Mesh
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-6/" class="md-nav__link">
-        Understanding and Deploying a Service Mesh Gateway and Virtual Service
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-7/" class="md-nav__link">
-        Traffic Management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-8/" class="md-nav__link">
-        Application Observability with Kiali
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-9/" class="md-nav__link">
-        Distributed Tracing with Jaeger
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-10/" class="md-nav__link">
-        Wrap Up & Clean Up
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_6">
+        <label class="md-nav__link" for="__nav_6_5">
           Monitoring, Metering, and Metrics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Monitoring, Metering, and Metrics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
+        <label class="md-nav__title" for="__nav_6_5">
           <span class="md-nav__icon md-icon"></span>
           Monitoring, Metering, and Metrics
         </label>
@@ -1203,18 +1022,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_7">
+        <label class="md-nav__link" for="__nav_6_6">
           Using Persistent Storage with MongoDB and NodeJS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using Persistent Storage with MongoDB and NodeJS" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_7">
+        <label class="md-nav__title" for="__nav_6_6">
           <span class="md-nav__icon md-icon"></span>
           Using Persistent Storage with MongoDB and NodeJS
         </label>
@@ -1334,18 +1153,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_8">
+        <label class="md-nav__link" for="__nav_6_7">
           Using the z/OS Cloud Broker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using the z/OS Cloud Broker" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_8">
+        <label class="md-nav__title" for="__nav_6_7">
           <span class="md-nav__icon md-icon"></span>
           Using the z/OS Cloud Broker
         </label>
@@ -1437,18 +1256,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_9">
+        <label class="md-nav__link" for="__nav_6_8">
           Deploying an Application with the Open Liberty Operator
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with the Open Liberty Operator" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
+        <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with the Open Liberty Operator
         </label>
@@ -1554,18 +1373,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_10">
+        <label class="md-nav__link" for="__nav_6_9">
           Deploying an Application with Quarkus Red Hat Runtime
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with Quarkus Red Hat Runtime" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_10">
+        <label class="md-nav__title" for="__nav_6_9">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with Quarkus Red Hat Runtime
         </label>
@@ -1721,19 +1540,19 @@
 <p>In the terminal session, you should have been automatically placed in your home directory <code>/home/userNN</code> (where NN is your user number).</p>
 <ol>
 <li>
-<p><strong>Run the command <code>pwd</code> to check your current working directory</strong>.</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">pwd</span>
+<p><strong>Run the command</strong> <code>pwd</code> <strong>to check your current working directory</strong>.</p>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ pwd
 /home/user01
 </code></pre></div>
 </details>
 </li>
 <li>
 <p>If you are in any other directory, <strong>change into the correct home directory using the command</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /home/userNN
+<div class="highlight"><pre><span></span><code>cd /home/userNN
 </code></pre></div>
 <p>Where NN is your user number.</p>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">cd</span> /home/user01
-user01@lab061:~$ <span class="nb">pwd</span>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ cd /home/user01
+user01@lab061:~$ pwd
 /home/user01
 </code></pre></div>
 </details>
@@ -1743,35 +1562,35 @@ user01@lab061:~$ <span class="nb">pwd</span>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/mmondics/istio-s390x -b ocp-wildfire
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ git clone https://github.com/mmondics/istio-s390x -b ocp-wildfire
-Cloning into <span class="s1">&#39;istio-s390x&#39;</span>...
-remote: Enumerating objects: <span class="m">171</span>, <span class="k">done</span>.
-remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">171</span>/171<span class="o">)</span>, <span class="k">done</span>.
-remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">98</span>/98<span class="o">)</span>, <span class="k">done</span>.
-remote: Total <span class="m">171</span> <span class="o">(</span>delta <span class="m">61</span><span class="o">)</span>, reused <span class="m">159</span> <span class="o">(</span>delta <span class="m">52</span><span class="o">)</span>, pack-reused <span class="m">0</span>
-Receiving objects: <span class="m">100</span>% <span class="o">(</span><span class="m">171</span>/171<span class="o">)</span>, <span class="m">332</span>.76 KiB <span class="p">|</span> <span class="m">0</span> bytes/s, <span class="k">done</span>.
-Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">61</span>/61<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
+Cloning into &#39;istio-s390x&#39;...
+remote: Enumerating objects: 171, done.
+remote: Counting objects: 100% (171/171), done.
+remote: Compressing objects: 100% (98/98), done.
+remote: Total 171 (delta 61), reused 159 (delta 52), pack-reused 0
+Receiving objects: 100% (171/171), 332.76 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (61/61), done.
+Checking connectivity... done.
 </code></pre></div>
 </details>
 </li>
 <li>
 <p>This will create a new directory called istio-s390x. <strong>Change into this directory using the command</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> istio-s390x 
+<div class="highlight"><pre><span></span><code>cd istio-s390x 
 </code></pre></div>
 </li>
 <li>
 <p><strong>Then list its contents using the command</strong>:</p>
 <div class="highlight"><pre><span></span><code>ls -l
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ <span class="nb">cd</span> Istio-s390x
-user01@lab061:~/istio-s390x$ total <span class="m">32</span>
--rw-r--r-- <span class="m">1</span> user01 users <span class="m">1306</span> Jun <span class="m">24</span> <span class="m">12</span>:54 README.md
--rwxr-xr-x <span class="m">1</span> user01 users <span class="m">4029</span> Jun <span class="m">24</span> <span class="m">12</span>:54 build_push_update_images.sh
-drwxr-xr-x <span class="m">2</span> user01 users <span class="m">4096</span> Jun <span class="m">24</span> <span class="m">12</span>:54 networking
-drwxr-xr-x <span class="m">3</span> user01 users <span class="m">4096</span> Jun <span class="m">24</span> <span class="m">12</span>:54 platform
-drwxr-xr-x <span class="m">2</span> user01 users <span class="m">4096</span> Jun <span class="m">24</span> <span class="m">12</span>:54 policy
-drwxr-xr-x <span class="m">8</span> user01 users <span class="m">4096</span> Jun <span class="m">24</span> <span class="m">12</span>:54 src
--rw-r--r-- <span class="m">1</span> user01 users <span class="m">6329</span> Jun <span class="m">24</span> <span class="m">12</span>:54 swagger.yaml
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~$ cd Istio-s390x
+user01@lab061:~/istio-s390x$ total 32
+-rw-r--r-- 1 user01 users 1306 Jun 24 12:54 README.md
+-rwxr-xr-x 1 user01 users 4029 Jun 24 12:54 build_push_update_images.sh
+drwxr-xr-x 2 user01 users 4096 Jun 24 12:54 networking
+drwxr-xr-x 3 user01 users 4096 Jun 24 12:54 platform
+drwxr-xr-x 2 user01 users 4096 Jun 24 12:54 policy
+drwxr-xr-x 8 user01 users 4096 Jun 24 12:54 src
+-rw-r--r-- 1 user01 users 6329 Jun 24 12:54 swagger.yaml
 </code></pre></div>
 </details>
 <p>If you navigate to the GitHub in a web browser <a href="https://github.com/mmondics/istio-s390x/tree/ocp-wildfire">https://github.com/mmondics/istio-s390x/tree/ocp-wildfire</a>, you will notice that the sub-directories in your Linux session reflect the folders contained in the repository.</p>
@@ -1784,31 +1603,31 @@ drwxr-xr-x <span class="m">8</span> user01 users <span class="m">4096</span> Jun
 </thead>
 <tbody>
 <tr>
-<td><code>README.md</code></td>
+<td><strong>README.md</strong></td>
 <td>Contains   the content displayed on the GitHub page for this repository. You can read   through this README file if you want to get more information about this lab.</td>
 </tr>
 <tr>
-<td><code>build_push_update_images.sh</code></td>
+<td><strong>build_push_update_images.sh</strong></td>
 <td>Directory   containing a shell script that was used to create the container images used   in this lab. You will not be using this script, but it is here for anyone who   wishes to update images to newer versions in the future.</td>
 </tr>
 <tr>
-<td><code>networking</code></td>
+<td><strong>networking</strong></td>
 <td>Directory   container various YAML files for networking components such as gateways,   virtualservices, destinationrules, and more.</td>
 </tr>
 <tr>
-<td><code>platform</code></td>
+<td><strong>platform</strong></td>
 <td>Directory   containing various YAML files that will create the application deployments,   services, serviceaccounts, and more.</td>
 </tr>
 <tr>
-<td><code>policy</code></td>
+<td><strong>policy</strong></td>
 <td>Directory   containing a YAML file that will create envoyfilters in order to dynamically   rate-limit the traffic to the service mesh application.</td>
 </tr>
 <tr>
-<td><code>src</code></td>
+<td><strong>src</strong></td>
 <td>Directory   containing the source files used to build each container image used in this   lab. These source files will not be used in this lab.</td>
 </tr>
 <tr>
-<td><code>swagger.yaml</code></td>
+<td><strong>swagger.yaml</strong></td>
 <td>A   YAML file that defines and documents the structure of the APIs used in this   lab. You will not be interacting with this file directly.</td>
 </tr>
 </tbody>
@@ -1831,44 +1650,13 @@ drwxr-xr-x <span class="m">8</span> user01 users <span class="m">4096</span> Jun
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../lab010-3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log into OpenShift Using the CLI" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Log into OpenShift Using the CLI
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../lab010-5/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploying an Application on the Service Mesh" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Deploying an Application on the Service Mesh
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2021 IBM Z Washington Systems Center
+          </div>
         
         
           Made with

@@ -25,6 +25,10 @@
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
+          
+          
+          <meta name="theme-color" content="#000000">
+        
       
     
     
@@ -42,6 +46,8 @@
     
       <link rel="stylesheet" href="../../css/print-site-material.css">
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
 
@@ -56,7 +62,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
@@ -297,7 +303,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation1.pdf" class="md-nav__link">
-        Presentation 1
+        Presentation 1 - Overview
       </a>
     </li>
   
@@ -311,7 +317,7 @@
   
     <li class="md-nav__item">
       <a href="../../presentations/presentation2.pdf" class="md-nav__link">
-        Presentation 2
+        Presentation 2 - Technical Deep Dive
       </a>
     </li>
   
@@ -330,14 +336,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -882,208 +886,23 @@
               
   
   
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          OpenShift Service Mesh
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="OpenShift Service Mesh" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          OpenShift Service Mesh
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-1/" class="md-nav__link">
-        Overview of the OpenShift Service Mesh
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-2/" class="md-nav__link">
-        OpenShift Service Mesh Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-3/" class="md-nav__link">
-        Log into OpenShift Using the CLI
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-4/" class="md-nav__link">
-        Cloning the GitHub Repository and Reviewing its Contents
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Deploying an Application on the Service Mesh
-      </a>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-6/" class="md-nav__link">
-        Understanding and Deploying a Service Mesh Gateway and Virtual Service
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-7/" class="md-nav__link">
-        Traffic Management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-8/" class="md-nav__link">
-        Application Observability with Kiali
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-9/" class="md-nav__link">
-        Distributed Tracing with Jaeger
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab010-10/" class="md-nav__link">
-        Wrap Up & Clean Up
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_6">
+        <label class="md-nav__link" for="__nav_6_5">
           Monitoring, Metering, and Metrics
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Monitoring, Metering, and Metrics" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
+        <label class="md-nav__title" for="__nav_6_5">
           <span class="md-nav__icon md-icon"></span>
           Monitoring, Metering, and Metrics
         </label>
@@ -1203,18 +1022,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_7">
+        <label class="md-nav__link" for="__nav_6_6">
           Using Persistent Storage with MongoDB and NodeJS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using Persistent Storage with MongoDB and NodeJS" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_7">
+        <label class="md-nav__title" for="__nav_6_6">
           <span class="md-nav__icon md-icon"></span>
           Using Persistent Storage with MongoDB and NodeJS
         </label>
@@ -1334,18 +1153,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_8">
+        <label class="md-nav__link" for="__nav_6_7">
           Using the z/OS Cloud Broker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Using the z/OS Cloud Broker" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_8">
+        <label class="md-nav__title" for="__nav_6_7">
           <span class="md-nav__icon md-icon"></span>
           Using the z/OS Cloud Broker
         </label>
@@ -1437,18 +1256,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_9">
+        <label class="md-nav__link" for="__nav_6_8">
           Deploying an Application with the Open Liberty Operator
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with the Open Liberty Operator" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
+        <label class="md-nav__title" for="__nav_6_8">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with the Open Liberty Operator
         </label>
@@ -1554,18 +1373,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_6_10">
+        <label class="md-nav__link" for="__nav_6_9">
           Deploying an Application with Quarkus Red Hat Runtime
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Deploying an Application with Quarkus Red Hat Runtime" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_10">
+        <label class="md-nav__title" for="__nav_6_9">
           <span class="md-nav__icon md-icon"></span>
           Deploying an Application with Quarkus Red Hat Runtime
         </label>
@@ -1757,9 +1576,9 @@ Members:
     user05-project
 Status:
 Annotations:
-    Configured Member Count:  <span class="m">5</span>/5
+    Configured Member Count:  5/5
 Conditions:
-    Last Transition Time:  <span class="m">2021</span>-06-28T19:04:47Z
+    Last Transition Time:  2021-06-28T19:04:47Z
     Message:               All namespaces have been configured successfully
     Reason:                Configured
     Status:                True
@@ -1770,9 +1589,9 @@ Configured Members:
     user03-project
     user04-project
     user05-project
-Mesh Generation:          <span class="m">1</span>
-Mesh Reconciled Version:  <span class="m">2</span>.0.6-2.el8-1
-Observed Generation:      <span class="m">6</span>
+Mesh Generation:          1
+Mesh Reconciled Version:  2.0.6-2.el8-1
+Observed Generation:      6
 Pending Members:
 Events:  &lt;none&gt;
 </code></pre></div>
@@ -1795,7 +1614,7 @@ Events:  &lt;none&gt;
         app: details
         version: v1
     spec:
-    replicas: <span class="m">1</span>
+    replicas: 1
     selector:
         matchLabels:
         app: details
@@ -1803,7 +1622,7 @@ Events:  &lt;none&gt;
     template:
         metadata:
         annotations:
-            sidecar.istio.io/inject: <span class="s2">&quot;true&quot;</span>
+            sidecar.istio.io/inject: &quot;true&quot;
         labels:
             app: details
             version: v1
@@ -1814,7 +1633,7 @@ Events:  &lt;none&gt;
             image: quay.io/mmondics/examples-bookinfo-details-v1:1.16.2
             imagePullPolicy: IfNotPresent
             ports:
-            - containerPort: <span class="m">9080</span>
+            - containerPort: 9080
 </code></pre></div>
 </details>
 <p>Once created, this YAML file will set up the entire Bookinfo application for you and the Envoy proxy sidecars will be automatically injected for the Istio control plane to interact with.</p>
@@ -1848,11 +1667,11 @@ Events:  &lt;none&gt;
 <div class="highlight"><pre><span></span><code>oc get services
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc get services
-    NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT<span class="o">(</span>S<span class="o">)</span>    AGE
-    details       ClusterIP   <span class="m">172</span>.30.237.245   &lt;none&gt;        <span class="m">9080</span>/TCP   10s
-    productpage   ClusterIP   <span class="m">172</span>.30.73.57     &lt;none&gt;        <span class="m">9080</span>/TCP   10s
-    ratings       ClusterIP   <span class="m">172</span>.30.241.30    &lt;none&gt;        <span class="m">9080</span>/TCP   10s
-    reviews       ClusterIP   <span class="m">172</span>.30.34.195    &lt;none&gt;        <span class="m">9080</span>/TCP   10s
+    NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+    details       ClusterIP   172.30.237.245   &lt;none&gt;        9080/TCP   10s
+    productpage   ClusterIP   172.30.73.57     &lt;none&gt;        9080/TCP   10s
+    ratings       ClusterIP   172.30.241.30    &lt;none&gt;        9080/TCP   10s
+    reviews       ClusterIP   172.30.34.195    &lt;none&gt;        9080/TCP   10s
 </code></pre></div>
 </details>
 </li>
@@ -1862,20 +1681,20 @@ Events:  &lt;none&gt;
 </code></pre></div>
 <details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc get services
     NAME                              READY   STATUS    RESTARTS   AGE
-    details-v1-78cb8b797f-ndqdz       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
-    productpage-v1-568ddd75bf-rmqtf   <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
-    ratings-v1-768dc65999-q5dft       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
-    reviews-v1-6cf69f46c9-wbtqm       <span class="m">2</span>/2     Running   <span class="m">0</span>          45s
-    reviews-v2-64fd74bbd7-hx4rd       <span class="m">2</span>/2     Running   <span class="m">0</span>          46s
-    reviews-v3-8cb65c475-wr22r        <span class="m">2</span>/2     Running   <span class="m">0</span>          46s
+    details-v1-78cb8b797f-ndqdz       2/2     Running   0          45s
+    productpage-v1-568ddd75bf-rmqtf   2/2     Running   0          45s
+    ratings-v1-768dc65999-q5dft       2/2     Running   0          45s
+    reviews-v1-6cf69f46c9-wbtqm       2/2     Running   0          45s
+    reviews-v2-64fd74bbd7-hx4rd       2/2     Running   0          46s
+    reviews-v3-8cb65c475-wr22r        2/2     Running   0          46s
 </code></pre></div>
 </details>
 <p>Each pod should have a <em>STATUS</em>: Running and should show <em>Ready</em>: 2/2. The 2/2 indicates that the pod includes two containers, and both are ready. In our case, each pod has one container for its application, and one container for the Envoy proxy, or sidecar.</p>
 <details class="note"><summary>Optional</summary><p>You can list the containers in your productpage pod with the command:</p>
-<div class="highlight"><pre><span></span><code>oc get pod productpage-v1-xxxxx -o <span class="nv">jsonpath</span><span class="o">={</span>.spec.containers<span class="o">[</span>*<span class="o">]</span>.name<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>oc get pod productpage-v1-xxxxx -o jsonpath={.spec.containers[*].name}
 </code></pre></div>
 <p>(where xxxxx is your randomly generated string of characters returned by oc get pods)</p>
-<div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc get pod productpage-v1-78797f -o <span class="nv">jsonpath</span><span class="o">={</span>.spec.containers<span class="o">[</span>*<span class="o">]</span>.name<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>user01@lab061:~/istio-s390x$ oc get pod productpage-v1-78797f -o jsonpath={.spec.containers[*].name}
 productpage istio-proxyuser01@lab061:~/istio-s390x$
 </code></pre></div>
 <p>Your two container names will be printed at the beginning of the next line - productpage, and Istio-proxy.</p>
@@ -1884,9 +1703,9 @@ productpage istio-proxyuser01@lab061:~/istio-s390x$
 </li>
 <li>
 <p><strong>Check that the productpage microservice is running correctly by issuing the command</strong>:</p>
-<div class="highlight"><pre><span></span><code>oc <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>oc get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
+<div class="highlight"><pre><span></span><code>oc exec &quot;$(oc get pod -l app=ratings -o jsonpath=&#39;{.items[0].metadata.name}&#39;)&quot; -c ratings -- curl -sS productpage:9080/productpage | grep -o &quot;&lt;title&gt;.*&lt;/title&gt;&quot;
 </code></pre></div>
-<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc <span class="nb">exec</span> <span class="s2">&quot;</span><span class="k">$(</span>oc get pod -l <span class="nv">app</span><span class="o">=</span>ratings -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span><span class="s2">&quot;</span> -c ratings -- curl -sS productpage:9080/productpage <span class="p">|</span> grep -o <span class="s2">&quot;&lt;title&gt;.*&lt;/title&gt;&quot;</span>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>    user01@lab061:~/istio-s390x$ oc exec &quot;$(oc get pod -l app=ratings -o jsonpath=&#39;{.items[0].metadata.name}&#39;)&quot; -c ratings -- curl -sS productpage:9080/productpage | grep -o &quot;&lt;title&gt;.*&lt;/title&gt;&quot;
     &lt;title&gt;Simple Bookstore App&lt;/title&gt;
 </code></pre></div>
 </details>
@@ -1910,44 +1729,13 @@ productpage istio-proxyuser01@lab061:~/istio-s390x$
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../lab010-4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cloning the GitHub Repository and Reviewing its Contents" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Cloning the GitHub Repository and Reviewing its Contents
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../lab010-6/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding and Deploying a Service Mesh Gateway and Virtual Service" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Understanding and Deploying a Service Mesh Gateway and Virtual Service
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2021 IBM Z Washington Systems Center
+          </div>
         
         
           Made with
