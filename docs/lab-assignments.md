@@ -22,7 +22,7 @@
 | [Pfann](https://cloud.skytap.com/vms/866934a09b0e854d284bcb6325485c0d/desktops){ .md-button .md-button--primary } | **o1ei8vlo** |  14 | user14 | p@ssw0rd |
 | [Srikakolapu](https://cloud.skytap.com/vms/d26d8d91ed398e32c1c77576d41600e5/desktops){ .md-button } | **upngpwvy** |  15 | user15 | p@ssw0rd |
 | [Stadelman](https://cloud.skytap.com/vms/d5757c47914c5f0b6270bbc5d1e7c397/desktops){ .md-button .md-button--primary } | **xpnqpw8r** |  16 | user16 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | **TBD** |  17 | user17 | p@ssw0rd |
+| [Zhang-Cohen](https://cloud.skytap.com/vms/b7d15623f03ace57cfd91e9bbd4dd5a9/desktops){ .md-button } | **x40e6p2l** |  17 | user17 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  18 | user18 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button } | **TBD** |  19 | user19 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** |  20 | user20 | p@ssw0rd |
