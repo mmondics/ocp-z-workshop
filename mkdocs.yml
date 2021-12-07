@@ -106,8 +106,8 @@ theme:
 extra_css:
   - stylesheets/extra.css
   
-extra_javascript: # for Instana testing
-  myscript.js
+extra_javascript:
+  - myscript.js
 
 copyright: Copyright © 2021 IBM Z Washington Systems Center
 
