@@ -94,7 +94,7 @@ nav:
 
 theme: 
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   palette:
     scheme: default
     primary: black
