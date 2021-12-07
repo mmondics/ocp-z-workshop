@@ -1,4 +1,88 @@
-<script>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://mmondics.github.io/ocp-cloudpak-workshop/lab007/lab007-4/">
+      
+      <link rel="icon" href="../../images/openshift-logo.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>Using the Open Liberty Operator to Install an Application - Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-the-open-liberty-operator-to-install-an-application" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <script>
     (function(s,t,a,n){s[t]||(s[t]=a,n=s[a]=function(){n.q.push(arguments)},
     n.q=[],n.v=2,n.l=1*new Date)})(window,"InstanaEumObject","ineum");
   
@@ -6,3 +90,1860 @@
     ineum('key', '5TTGOP2NTWKuA4a5VujUxA');
   </script>
   <script defer crossorigin="anonymous" src="https://eum.instana.io/eum.min.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" class="md-nav__button md-logo" aria-label="Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop" data-md-component="logo">
+      
+  <img src="../../images/openshift-logo.png" alt="logo">
+
+    </a>
+    Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/mmondics/ocp-cloudpak-workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        Prerequisites
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab-assignments/" class="md-nav__link">
+        Lab Assignments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workshop-architecture/" class="md-nav__link">
+        Lab Architecture
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Presentations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Presentations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Presentations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentations/presentation1.pdf" class="md-nav__link">
+        Presentation 1 - Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentations/presentation2.pdf" class="md-nav__link">
+        Presentation 2 - Technical Deep Dive
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Labs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Labs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Labs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Exploring the OpenShift Console
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exploring the OpenShift Console" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Exploring the OpenShift Console
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-3/" class="md-nav__link">
+        The Administrator Persepctive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-4/" class="md-nav__link">
+        The Developer Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-5/" class="md-nav__link">
+        Deploy from the Developer Catalog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-6/" class="md-nav__link">
+        View Workload from the Administrator Perspective
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab001/lab001-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Using the OpenShift Command Line (oc)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using the OpenShift Command Line (oc)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Using the OpenShift Command Line (oc)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-2/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-3/" class="md-nav__link">
+        Overview of the OpenShift CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-4/" class="md-nav__link">
+        Deploy Container Image from the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-5/" class="md-nav__link">
+        Open a Remote Shell Session into the MongoDB Pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-6/" class="md-nav__link">
+        Working with Pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-7/" class="md-nav__link">
+        Administrative CLI Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab002/lab002-8/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Deploying an Application from Source Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying an Application from Source Code" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying an Application from Source Code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab004/lab004-1/" class="md-nav__link">
+        Source-to-Image (S2I) Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab004/lab004-2/" class="md-nav__link">
+        Exploring GitHub and the Example Health Source Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab004/lab004-3/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab004/lab004-4/" class="md-nav__link">
+        Edit the Source Code and Push an Update
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab004/lab004-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4">
+          OpenShift Pipelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OpenShift Pipelines" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          OpenShift Pipelines
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-0/" class="md-nav__link">
+        Introduction to OpenShift Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-1/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-2/" class="md-nav__link">
+        Cloning the GitHub Repository and Viewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-3/" class="md-nav__link">
+        Understanding and Deploying Tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-4/" class="md-nav__link">
+        Understanding and Deploying Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-5/" class="md-nav__link">
+        Running the Pipeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-6/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab009/lab009-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5">
+          OpenShift Service Mesh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OpenShift Service Mesh" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          OpenShift Service Mesh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-1/" class="md-nav__link">
+        Overview of the OpenShift Service Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-2/" class="md-nav__link">
+        OpenShift Service Mesh Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-3/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-4/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-5/" class="md-nav__link">
+        Deploying an Application on the Service Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-6/" class="md-nav__link">
+        Understanding and Deploying a Service Mesh Gateway and Virtual Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-7/" class="md-nav__link">
+        Traffic Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-8/" class="md-nav__link">
+        Application Observability with Kiali
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-9/" class="md-nav__link">
+        Distributed Tracing with Jaeger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab010/lab010-10/" class="md-nav__link">
+        Wrap Up & Clean Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          Monitoring, Metering, and Metrics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monitoring, Metering, and Metrics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring, Metering, and Metrics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-1/" class="md-nav__link">
+        Overview of OpenShift Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-3/" class="md-nav__link">
+        Using OpenShift Metrics (Prometheus)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-4/" class="md-nav__link">
+        Using the In-Browser Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-5/" class="md-nav__link">
+        Connect to Grafana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-6/" class="md-nav__link">
+        Using Grafana Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab005/lab005-7/" class="md-nav__link">
+        Using OpenShift Alerts (Alertmanager)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7">
+          Using Persistent Storage with MongoDB and NodeJS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using Persistent Storage with MongoDB and NodeJS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Using Persistent Storage with MongoDB and NodeJS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-1/" class="md-nav__link">
+        Overview of Persistent Storage and Application Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-2/" class="md-nav__link">
+        Connect to OCP and Authenticate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-3/" class="md-nav__link">
+        Create a PersistentVolumeClaim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-4/" class="md-nav__link">
+        Deploy MongoDB from Container Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-5/" class="md-nav__link">
+        Deploy Node.js Application from Dockerfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-6/" class="md-nav__link">
+        Interacting with MongoDB from Node.js Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab006/lab006-7/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          Using the z/OS Cloud Broker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using the z/OS Cloud Broker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          Using the z/OS Cloud Broker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab003/lab003-1/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab003/lab003-2/" class="md-nav__link">
+        Connect to OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab003/lab003-3/" class="md-nav__link">
+        Deploy Liberty for z/OS Using the z/OS Cloud Broker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab003/lab003-4/" class="md-nav__link">
+        Stop and Restart Liberty for z/OS from OCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab003/lab003-5/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_9">
+          Deploying an Application with the Open Liberty Operator
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying an Application with the Open Liberty Operator" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_9">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying an Application with the Open Liberty Operator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-1/" class="md-nav__link">
+        Overview of the Open Liberty Operator and Sample Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-2/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-3/" class="md-nav__link">
+        Cloning the GitHub Repository and Reviewing its Contents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Using the Open Liberty Operator to Install an Application
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-5/" class="md-nav__link">
+        Access the Application in a Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab007-6/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_10">
+          Deploying an Application with Quarkus Red Hat Runtime
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying an Application with Quarkus Red Hat Runtime" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_10">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying an Application with Quarkus Red Hat Runtime
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-1/" class="md-nav__link">
+        Overview of the Quarkus Red Hat Runtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-2/" class="md-nav__link">
+        Log into OpenShift Using the CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-3/" class="md-nav__link">
+        Creating and Reviewing the Quarkus Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-4/" class="md-nav__link">
+        Configure the Application for OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-5/" class="md-nav__link">
+        Deploy the Application onto OpenShift
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lab008/lab008-6/" class="md-nav__link">
+        Cleaning Up
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        Print Site
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mmondics/ocp-cloudpak-workshop/edit/main/docs/lab007/lab007-4.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="using-the-open-liberty-operator-to-install-an-application">Using the Open Liberty Operator to Install an Application<a class="headerlink" href="#using-the-open-liberty-operator-to-install-an-application" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p><strong>Edit the environment variables file to match your user number (NN)</strong>.</p>
+<div class="highlight"><pre><span></span><code>sed -i &#39;s/NN/YOUR_USER_NUMBER/g&#39; env
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure that you replace YOUR_USER_NUMBER in the command above.</p>
+</div>
+</li>
+<li>
+<p><strong>Run the command</strong> <code>cat env</code> <strong>to check that the two instances of</strong> <code>NN</code> <strong>were properly replaced with your user number</strong>.</p>
+<p>With your modified environment variables file env, you’re ready to run the shell script <code>1-build.sh</code> that will use <em>Buildah</em> to build a container image from the Dockerfile, and <em>Podman</em> to push the image into OpenShift’s internal registry.</p>
+<p>Before running this script, take a look at the steps it will go through.</p>
+</li>
+<li>
+<p><strong>View the script contents using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat 1-build.sh
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>#!/bin/text
+
+unset KUBECONFIG
+
+. ./env
+
+echo &quot;Logging into OpenShift&quot;
+oc login $OPENSHIFT_API_URL \
+    --username=$OPENSHIFT_USERNAME \
+    --password=$OPENSHIFT_PASSWORD \
+    --insecure-skip-tls-verify=true
+
+echo &quot;Logging into OpenShift image registry&quot;
+podman login \
+    --username $OPENSHIFT_USERNAME \
+    --password $(oc whoami -t) \
+    --tls-verify=false \
+    $OPENSHIFT_REGISTRY_URL
+
+echo &quot;Switch to $OPENSHIFT_PROJECT&quot;
+oc project $OPENSHIFT_PROJECT
+
+echo &quot;Building the container image&quot;
+buildah build-using-dockerfile \
+-t ${OPENSHIFT_REGISTRY_URL}/$OPENSHIFT_PROJECT/app-modernization:v1.0.0 \
+    .
+
+echo &quot;Pushing the container image to the OpenShift image registry&quot;
+podman push --tls-verify=false \
+${OPENSHIFT_REGISTRY_URL}/${OPENSHIFT_PROJECT}/app-modernization:v1.0.0
+</code></pre></div>
+</details>
+<p>This shell script:</p>
+<ul>
+<li>Logs you into the OpenShift cluster.</li>
+<li>Logs you into the OpenShift cluster’s internal image registry.</li>
+<li>Switches to your project, if not currently working in it.</li>
+<li>Builds the container image using the Dockerfile contained in your working directory.</li>
+<li>Pushes the new container image from step 4 to the cluster’s internal image registry.</li>
+</ul>
+<details class="note" open="open"><summary>Note</summary><p>Note that you are welcome to enter each command manually and individually, but the scripting is there to minimize the opportunity for typos and other errors. If you do enter each command manually, make sure to replace each variable in BLUE with the actual value itself. Also, notice that the forward slash  simply breaks a single command into multiple lines.</p>
+</details>
+</li>
+<li>
+<p>You might notice that the <code>Dockerfile</code> is doing the brunt of the work in this script to build the container image itself. <strong>Take a look at this too, using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat Dockerfile
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">quay.io/mmondics/open-liberty:latest</span>
+<span class="k">COPY</span> --chown<span class="o">=</span><span class="m">1001</span>:0 modresorts-1.0.war /config/dropins
+<span class="k">COPY</span> --chown<span class="o">=</span><span class="m">1001</span>:0 server.xml /config/
+</code></pre></div>
+</details>
+<p>This <code>Dockerfile</code> pulls the Open Liberty Java EE 8 image from Quay.io then adds the <code>modresorts-1.0.war</code> binary and <code>server.xml</code> configuration file to the base image.</p>
+<p>Back in the <code>ol-app-install</code> working directory, you can now run the script that brings all of these pieces together.</p>
+</li>
+<li>
+<p><strong>Run the script using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>./1-build.sh
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ ./1-build.sh
+Logging into Openshift
+Login successful.
+
+You have access to 170 projects, the list has been suppressed. You can list all projects with &#39;oc projects&#39;
+
+Using project &quot;user01-project&quot;.
+Logging into Openshift image registry
+Login Succeeded!
+Switch to user01-project
+Already on project &quot;user01-project&quot; on server &quot;https://api.atsocppa.dmz:6443&quot;.
+Building the container image
+STEP 1: FROM quay.io/mmondics/open-liberty:javaee8-ubi-min
+STEP 2: COPY --chown=1001:0 modresorts-1.0.war /config/dropins
+STEP 3: COPY --chown=1001:0 server.xml /config/
+STEP 4: COMMIT default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-modernization:v1.0.0
+Getting image source signatures
+Copying blob d20db2e30c33 skipped: already exists
+Copying blob 4ec5f0a55d74 skipped: already exists
+
+... cut from screenshot ...
+
+Copying config c6e6f3bf6b done
+Writing manifest to image destination
+Copying config c6e6f3bf6b done
+Writing manifest to image destination
+Storing signatures
+user01@lab061:~/openliberty-operator-ocpz/ol-app-install$
+</code></pre></div>
+</details>
+<p>Your container image is now built and pushed into OpenShift’s internal registry.</p>
+</li>
+<li>
+<p><strong>View your new image in the registry using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>podman images
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ podman images
+REPOSITORY                                                                                 TAG     IMAGE ID       CREATED          SIZE
+default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-modernization  v1.0.0  5970fc63cb46   16 seconds ago   472 MB
+</code></pre></div>
+</details>
+<p>With the app-modernization image in the OpenShift internal registry, it can now be used to deploy an application into the cluster.</p>
+<p>You have one more file to edit before deploying the Mod Resorts sample application.</p>
+</li>
+<li>
+<p><strong>Edit the custom resource file using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>sed -i &#39;s/NN/YOUR_USER_NUMBER/g&#39; app-mod-withroute_cr.yaml
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure that you replace YOUR_USER_NUMBER in the command above.</p>
+</div>
+</li>
+<li>
+<p><strong>Run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat app-mod-withroute_cr.yaml
+</code></pre></div>
+<p>And make sure that the two instances of <code>NN</code> were properly replaced with your user number.</p>
+<details class="information"><summary>Expand for More Information</summary><p>What exactly is this YAML file?</p>
+<p>A <em>Custom Resource Definition (CRD)</em> object defines a new, unique object in the cluster and lets the Kubernetes API server handle its entire lifecycle. <em>Custom Resource (CR)</em> objects are created from CRDs that have been added to the cluster by a cluster administrator, allowing all cluster users to add the new resource type into projects.</p>
+<p>So in this case, a CRD was created ahead of time of the kind: OpenLibertyApplication, and you are creating a CR from that CRD. </p>
+</details>
+<p>With the modified app-mod-withroute_cr.yaml file, you’re ready to run the second script, <code>2-deploy.sh</code>. Before running it, take a look at what all it will do.</p>
+</li>
+<li>
+<p><strong>Run the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>cat 2-deploy.sh
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>#!/bin/text
+
+unset KUBECONFIG
+
+. ./env
+
+echo &quot;Logging into OpenShift&quot;
+oc login $OPENSHIFT_API_URL \
+    --username=$OPENSHIFT_USERNAME \
+    --password=$OPENSHIFT_PASSWORD \
+    --insecure-skip-tls-verify=true
+
+echo &quot;Creating OpenLiberty Custom Resource&quot;
+oc -n $OPENSHIFT_PROJECT create -f app-mod-withroute_cr.yaml
+</code></pre></div>
+</details>
+<p>This shell script:</p>
+<ul>
+<li>Logs you into the OpenShift cluster.</li>
+<li>Creates an object from the Custom Resource (CR) YAML file you just edited.</li>
+</ul>
+</li>
+<li>
+<p><strong>Run this shell script with the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>./2-deploy.sh
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ ./2-deploy.sh
+Logging into Openshift
+Login successful.
+
+You have access to 170 projects, the list has been suppressed. You can list all projects with &#39;oc projects&#39;
+
+Using project &quot;user01-project&quot;.
+Creating Openliberty Custom Resource Definition
+openlibertyapplication.openliberty.io/appmod created
+</code></pre></div>
+</details>
+<p>Your Custom Resource named <code>appmod</code> of kind <code>OpenLibertyApplication</code> has been <code>created</code> in your project, <code>userNN-project</code>.  The creation of this CR resulted in the Open Liberty Operator deploying a pod, deployment, replicaset, and a service that is exposed as a route.</p>
+</li>
+<li>
+<p><strong>View all of the created objects using the command</strong>:</p>
+<div class="highlight"><pre><span></span><code>oc get all
+</code></pre></div>
+<details class="example" open="open"><summary>Example Output</summary><div class="highlight"><pre><span></span><code>user01@lab061:~/openliberty-operator-ocpz/ol-app-install$ oc get all
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/appmod-5959fb64b5-fqkvg   1/1     Running   0          16s
+
+NAME             TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+service/appmod   ClusterIP   172.30.26.44   &lt;none&gt;        9080/TCP   17s
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/appmod   1/1     1            1           16s
+
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/appmod-5959fb64b5   1         1         1       16s
+
+NAME                                           IMAGE REPOSITORY                    TAGS     UPDATED
+imagestream.image.openshift.io/app-modernization   default-route-openshift-image-registry.apps.atsocppa.dmz/user01-project/app-modernization   v1.0.0   29 seconds ago
+
+NAME                              HOST/PORT                 PATH  SERVICES   PORT  TERMINATION WILDCARD
+route.route.openshift.io/appmod   modresort-user01.apps.atsocppa.dmz   /resorts   appmod     9080-tcp     None
+</code></pre></div>
+</details>
+</li>
+</ol>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../lab007-3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cloning the GitHub Repository and Reviewing its Contents" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Cloning the GitHub Repository and Reviewing its Contents
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lab007-5/" class="md-footer__link md-footer__link--next" aria-label="Next: Access the Application in a Browser" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Access the Application in a Browser
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2021 IBM Z Washington Systems Center
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
