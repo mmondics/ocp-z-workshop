@@ -1,0 +1,33 @@
+.md-typeset p > code {
+    color: black; /* background inside `code` */
+    background-color: whitesmoke; /* text inside `code` */
+}
+
+.md-typeset code {
+    color: whitesmoke; /* text inside ```code blocks``` */
+    background-color: black; /* background inside ```code blocks``` */
+}
+
+/* font size for leftside nav */
+/*
+ .md-nav {
+    font-size: .75rem;
+    line-height: 1.3;
+}
+*/ 
+
+/* aligns leftside nav to left edge of page*/
+.md-grid {
+    max-width: initial;
+}
+
+/* background color of active nav item  */
+li .md-nav__item--active {
+    background-color: #e0e0e0;
+}
+
+/* font color and weight of active nav item */
+.md-nav__item .md-nav__link--active {
+    color: #161616;
+    font-weight: 600;
+}
