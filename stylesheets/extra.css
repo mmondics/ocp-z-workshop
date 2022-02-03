@@ -1,12 +1,12 @@
-.md-typeset p > code {
-    color: black; /* background inside `code` */
-    background-color: whitesmoke; /* text inside `code` */
+/* .md-typeset p > code {
+    color: black;
+    background-color: whitesmoke;
 }
-
 .md-typeset code {
-    color: whitesmoke; /* text inside ```code blocks``` */
-    background-color: black; /* background inside ```code blocks``` */
+    color: whitesmoke;
+    background-color: black;
 }
+*/
 
 /* font size for leftside nav */
 /*
