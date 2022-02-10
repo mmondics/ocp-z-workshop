@@ -6,23 +6,23 @@
 
 | Name  | Virtual Machine Password | workshop-user Password | User Number | OpenShift Username | OpenShift Password |
 |---|---|---|---|---|---|
-| [Andrews](https://cloud.skytap.com/vms/d54ffbb2cfe58f5640a0f77eaf947043/desktops){ .md-button } | **fdt39vua** | p@ssw0rd | 01 | user01 | p@ssw0rd |
-| [Archambault](https://cloud.skytap.com/vms/2ad95a9d5184975f133f4c51d4e14cb9/desktops){ .md-button .md-button--primary } | **ymsp2ung** | p@ssw0rd | 02 | user02 | p@ssw0rd |
-| [Balasubramanian](https://cloud.skytap.com/vms/833ec8e8eac15ca2f957fa5cded2c33a/desktops){ .md-button } | **j8gfteho** | p@ssw0rd | 03 | user03 | p@ssw0rd |
-| [Batta](https://cloud.skytap.com/vms/471f459d17cfa08b451d89349162572e/desktops){ .md-button .md-button--primary } | **d2wr771r** | p@ssw0rd | 04 | user04 | p@ssw0rd |
-| [Craven](https://cloud.skytap.com/vms/f728e7092ad79711ab07ef09f143b31b/desktops){ .md-button } | **ja8kpjv9** | p@ssw0rd | 05 | user05 | p@ssw0rd |
-| [Deodhar](https://cloud.skytap.com/vms/0b86d5d9a86be00f0229ee458eb4569f/desktops){ .md-button .md-button--primary } | **wv08oels** | p@ssw0rd | 06 | user06 | p@ssw0rd |
-| [Higgins](https://cloud.skytap.com/vms/0b212273b0ac10f7a68ef642a3ba9c55/desktops){ .md-button } | **rtd2z62t** | p@ssw0rd | 07 | user07 | p@ssw0rd |
-| [Michalik](https://cloud.skytap.com/vms/8c8fcf6a596ab867f76fc2231b98c840/desktops){ .md-button .md-button--primary } | **4hvg03wm**  | p@ssw0rd | 08 | user08 | p@ssw0rd |
-| [Regan](https://cloud.skytap.com/vms/fa85f5fed0a881057b3c0a2b975611f4/desktops){ .md-button } | **2ryxzqjt** | p@ssw0rd | 09 | user09 | p@ssw0rd |
-| [Srikakolapu](https://cloud.skytap.com/vms/bdac7a99040d0777c444bf015890c4ec/desktops){ .md-button .md-button--primary } | **91qrjq88** | p@ssw0rd | 10 | user10 | p@ssw0rd |
-| [Subbanna](https://cloud.skytap.com/vms/2f0eda821b3f458a621dc3f0d1ae2fcd/desktops){ .md-button } |**w3893bo3**| p@ssw0rd | 11 | user11 | p@ssw0rd |
-| [Johnson](https://cloud.skytap.com/vms/44419fb67057ce0db2a6c52a6175384d/desktops){ .md-button .md-button--primary } | **jdlbdhk8** | p@ssw0rd | 12 | user12 | p@ssw0rd |
-<!---| [TBD](https://google.com){ .md-button } |  **TBD**| p@ssw0rd | 13 | user13 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 14 | user14 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 15 | user15 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 16 | user16 | p@ssw0rd |
-| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 17 | user17 | p@ssw0rd |
+| [Bodie](https://cloud.skytap.com/vms/376d8f4eb6214260ba1d6eaebdc0a41a/desktops){ .md-button } | **zyt1wvld** | p@ssw0rd | 01 | user01 | p@ssw0rd |
+| [Compton](https://cloud.skytap.com/vms/d513e544d88a282985620f4e11595019/desktops){ .md-button .md-button--primary } | **p4z4shdw** | p@ssw0rd | 02 | user02 | p@ssw0rd |
+| [Emery](https://cloud.skytap.com/vms/16123f7525129d28b71ed7994ac53b34/desktops){ .md-button } | **9to5o0rp** | p@ssw0rd | 03 | user03 | p@ssw0rd |
+| [Fortin](https://cloud.skytap.com/vms/7144dfbce2d663a816ddf093256182b9/desktops){ .md-button .md-button--primary } | **gllu1tom** | p@ssw0rd | 04 | user04 | p@ssw0rd |
+| [Fowlkes](https://cloud.skytap.com/vms/0487ccdc3af59b6942ff20ae6de61cc3/desktops){ .md-button } | **t08c7yma** | p@ssw0rd | 05 | user05 | p@ssw0rd |
+| [Frawley](https://cloud.skytap.com/vms/71fe300ca75ff575d37766b5e825d380/desktops){ .md-button .md-button--primary } | **mw04xicr** | p@ssw0rd | 06 | user06 | p@ssw0rd |
+| [Gailey](https://cloud.skytap.com/vms/072a12f91ea1ca8c6fca2cb61649b04c/desktops){ .md-button } | **i4tr4f86** | p@ssw0rd | 07 | user07 | p@ssw0rd |
+| [Harris](https://cloud.skytap.com/vms/c1ab8bed85d610bda78ce550b37f5623/desktops){ .md-button .md-button--primary } | **m9fvfmsk**  | p@ssw0rd | 08 | user08 | p@ssw0rd |
+| [Higgins](https://cloud.skytap.com/vms/ac2c7c90eba6a392d82fec415b5fded4/desktops){ .md-button } | **dbdpoxu4** | p@ssw0rd | 09 | user09 | p@ssw0rd |
+| [Johnson](https://cloud.skytap.com/vms/7c934bd42b9c15daa08e5f43a7354734/desktops){ .md-button .md-button--primary } | **39wrj896** | p@ssw0rd | 10 | user10 | p@ssw0rd |
+| [Keller](https://cloud.skytap.com/vms/e545465536fdda4c559460936d793f0b/desktops){ .md-button } |**2hzda34e**| p@ssw0rd | 11 | user11 | p@ssw0rd |
+| [Le](https://cloud.skytap.com/vms/04a0e3b8a1f60f36e1a8eb6ed8b711de/desktops){ .md-button .md-button--primary } | **5j0cwpb8** | p@ssw0rd | 12 | user12 | p@ssw0rd |
+| [McNeil](https://cloud.skytap.com/vms/fa9c8600d6e7c2e1509d4ac30ebcb901/desktops){ .md-button } |  **szo7w7uo**| p@ssw0rd | 13 | user13 | p@ssw0rd |
+| [Sapp](https://cloud.skytap.com/vms/e633401977129c72d4fb5a9be64a5427/desktops){ .md-button .md-button--primary } | **2u0g64ra** | p@ssw0rd | 14 | user14 | p@ssw0rd |
+| [Smith](https://cloud.skytap.com/vms/03463dc70782316087671e5693fff042/desktops){ .md-button } | **pbmn9lej** | p@ssw0rd | 15 | user15 | p@ssw0rd |
+| [Thacker](https://cloud.skytap.com/vms/6acc1fb2919d815f1a5363131ad8aa9b/desktops){ .md-button .md-button--primary } | **oo3uzexr** | p@ssw0rd | 16 | user16 | p@ssw0rd |
+<!---| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 17 | user17 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 18 | user18 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 19 | user19 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 20 | user20 | p@ssw0rd |
