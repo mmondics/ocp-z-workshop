@@ -21,6 +21,7 @@
 | [tyler.stanczak](https://cloud.skytap.com/vms/a2e3994dafb95e31d64eb361d2393527/desktops){ .md-button } | **cbpfym79**| p@ssw0rd | 13 | user13 | p@ssw0rd |
 | [wellington.guerrero](https://cloud.skytap.com/vms/f32e986b8b90b7a9fb36d2104dbd5450/desktops){ .md-button .md-button--primary } | **6mfigvb9** | p@ssw0rd | 14 | user14 | p@ssw0rd |
 | [zazulak](https://cloud.skytap.com/vms/c0a7580c7881a47d4c2fab7e01aa7a7b/desktops){ .md-button } | **gr5ncqfz** | p@ssw0rd | 15 | user15 | p@ssw0rd |
+<!---
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 16 | user16 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 17 | user17 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 18 | user18 | p@ssw0rd |
@@ -36,7 +37,7 @@
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 28 | user28 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 29 | user29 | p@ssw0rd |
 | [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 30 | user30 | p@ssw0rd |
-
+--->
 ## Connecting to your RHEL Virtual Desktop
 
 1. **Click the link to your personal virtual machine** and **enter the Virtual Machine Password provided on the table**.
