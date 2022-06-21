@@ -6,8 +6,11 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 | Activity       | Duration     | 
 | ---                  | ---           |
-| [**Presentation 1 - High level overview of OpenShift, Cloud Paks, and running them on IBM Z**](presentations/presentation1.pdf)              | 30-45 minutes   |
-| [**Presentation 2 - Technical Deep Dive**](presentations/presentation2.pdf)           | ~ 1 hour      |
+| [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
+| Break           | ~ 10 minutes      |
+| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf)           | ~ 1 hour      |
+| Break           | ~ 10 minutes      |
+| [**Presentation 3 - Installation, Requirements, and Configuration**](presentations/combined-presentations.pdf)           | ~ 1 hour      |
 | Connect to environment as a group           | 5-10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
 
@@ -18,8 +21,9 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 ## Presentations
 
-* [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentations/presentation1.pdf)
-* [Presentation 2 - Technical Deep Dive, Installation & Configuration, Lessons Learned](presentations/presentation2.pdf)
+* [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentations/combined-presentations.pdf)
+* [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf)
+* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf)
 
 ## Labs
 
