@@ -1,6 +1,6 @@
-# Red Hat OpenShift and IBM Cloud Paks on IBM zSystems and LinuxONE Workshop
+# Red Hat OpenShift on IBM zSystems and LinuxONE Workshop
 
-Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
+Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
 ## Agenda
 
@@ -21,7 +21,7 @@ Welcome to the Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE worksh
 
 ## Presentations
 
-* [Presentation 1 - High Level Overview of Red Hat OpenShift & IBM Cloud Paks on IBM Z](presentations/combined-presentations.pdf)
+* [Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z](presentations/combined-presentations.pdf)
 * [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf)
 * [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf)
 
