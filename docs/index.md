@@ -43,10 +43,12 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 * [OpenShift Pipelines](lab009/lab009-0.md)
 * [Monitoring, Metering, and Metrics](lab005/lab005-1.md)
 * [Using Persistent Storage - MongoDB and NodeJS](lab006/lab006-1.md)
+<!--- 
 * [Deploying an Application with Quarkus Red Hat Runtime](lab008/lab008-1.md)
 * [Deploying an Application with the Open Liberty Operator](lab007/lab007-1.md)
 * [OpenShift Service Mesh](lab010/lab010-1.md)
 * [Using the z/OS Cloud Broker](lab003/lab003-1.md)
+--->
 
 ## Workshop Environment Architecture
 
@@ -56,3 +58,4 @@ Please visit [this page](workshop-architecture.md) to see the architecture of th
 
 * [Matt Mondics](mailto:matt.mondics@ibm.com)
 * [Paul Novak](mailto:pwnovak@us.ibm.com)
+* [Jacob Emery](mailto:jacob.emery@ibm.com)
