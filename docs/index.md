@@ -8,29 +8,28 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 | ---                  | ---           |
 | [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
 | Break           | ~ 10 minutes      |
-| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf)           | ~ 1 hour      |
+| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=37)           | ~ 1 hour      |
 | Break           | ~ 10 minutes      |
-| [**Presentation 3 - Installation, Requirements, and Configuration**](presentations/combined-presentations.pdf)           | ~ 1 hour      |
+| [**Presentation 3 - Installation, Requirements, and Configuration**](presentations/combined-presentations.pdf#page=108)           | ~ 1 hour      |
 | Connect to environment as a group           | 5-10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
 
-!!! note
-    The lab environments will be available the day following the workshop.
 
-    For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.
+The lab environments will be available the day following the workshop.
+
+For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.
 
 ## Presentations
 
 * [Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z](presentations/combined-presentations.pdf)
-* [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf)
-* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf)
+* [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=37)
+* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)
 
 ## Labs
 
-!!! Note
-    The labs are designed so that you can pick and choose which you would like to complete. The labs *are not* designed for you to get through them all in one day.
+The labs are designed so that you can pick and choose which you would like to complete. The labs *are not* designed for you to get through them all in one day.
 
-    Labs are non-sequential and have no dependencies on one another.
+Labs are non-sequential and have no dependencies on one another.
 
 ### Introductory Labs
 
@@ -59,3 +58,5 @@ Please visit [this page](workshop-architecture.md) to see the architecture of th
 * [Matt Mondics](mailto:matt.mondics@ibm.com)
 * [Paul Novak](mailto:pwnovak@us.ibm.com)
 * [Jacob Emery](mailto:jacob.emery@ibm.com)
+
+* [Email All Workshop Owners](mailto:matt.mondics@ibm.com,pwnovak@us.ibm.com,jacob.emery@ibm.com)

@@ -9,7 +9,11 @@ nav:
     - Lab Assignments: 'lab-assignments.md'
     - Lab Architecture: 'workshop-architecture.md'
     - Presentations:
-      - Combined Presentation PDF: presentations/combined-presentations.pdf
+      - Presentation 1: presentations/combined-presentations.pdf
+      - Presentation 2: presentations/combined-presentations.pdf#page=37
+      - Presentation 3: presentations/combined-presentations.pdf#page=108
+
+
     - Labs: 
       - Exploring the OpenShift Console: 
         - Introduction: 'lab001/lab001-1.md'
