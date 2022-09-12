@@ -17,7 +17,7 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 !!! note
     The lab environments will be available the day following the workshop.
 
-    For example, If the workshop is on a Thursday, the environments will be available until 5PM EST Friday.
+    For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.
 
 ## Presentations
 
