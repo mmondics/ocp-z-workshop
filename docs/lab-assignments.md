@@ -6,11 +6,10 @@
 
 | Name  | Virtual Machine Password | workshop-user Password | User Number | OpenShift Username | OpenShift Password |
 |---|---|---|---|---|---|
-| [Anderson](https://cloud.skytap.com/vms/ccc108142ee3598c93f568cf06c7df52/desktops){ .md-button } | **ziykkax8** | p@ssw0rd | 01 | user01 | p@ssw0rd |
+| [Green](https://cloud.skytap.com/vms/ccc108142ee3598c93f568cf06c7df52/desktops){ .md-button } | **ziykkax8** | p@ssw0rd | 01 | user01 | p@ssw0rd |
 | [Coleman](https://cloud.skytap.com/vms/cfbc65b9b5a393add31884563e3b2c0d/desktops){ .md-button .md-button--primary } | **w6uh31zm** | p@ssw0rd | 02 | user02 | p@ssw0rd |
 | [Duke](https://cloud.skytap.com/vms/18ffbe920cbb46a4884ad685f68328df/desktops){ .md-button } | **waloduxk** | p@ssw0rd | 03 | user03 | p@ssw0rd |
 | [Gilbert](https://cloud.skytap.com/vms/4cab152813ce702bb73e83c8bd7552db/desktops){ .md-button .md-button--primary } | **vsfmswzt** | p@ssw0rd | 04 | user04 | p@ssw0rd |
-| [Green](https://cloud.skytap.com/vms/f767e3a631505aeb02499ebee1843f31/desktops){ .md-button } | **1ve63ave** | p@ssw0rd | 05 | user05 | p@ssw0rd |
 | [Humphries](https://cloud.skytap.com/vms/350d020c2cff069828aa839fc95695fa/desktops){ .md-button .md-button--primary } | **o1fu0yne** | p@ssw0rd | 06 | user06 | p@ssw0rd |
 | [Kuklin](https://cloud.skytap.com/vms/7eb29a1fe90ace8dcf742c0378d4fc36/desktops){ .md-button } | **z80aqqae** | p@ssw0rd | 07 | user07 | p@ssw0rd |
 | [Lauder](https://cloud.skytap.com/vms/9a3e1b72fc8b9e3c5e23ce76e296050f/desktops){ .md-button .md-button--primary } | **g85pipns**  | p@ssw0rd | 08 | user08 | p@ssw0rd |
