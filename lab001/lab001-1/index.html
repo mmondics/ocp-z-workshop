@@ -1356,12 +1356,13 @@
 
 <h1 id="exploring-the-openshift-console">Exploring the OpenShift Console<a class="headerlink" href="#exploring-the-openshift-console" title="Permanent link">&para;</a></h1>
 <p>The OpenShift Container Platform web console is a user interface accessible from a web browser.</p>
-<p>Developers can use the web console to <a href="https://docs.openshift.com/container-platform/4.10/web_console/odc-about-developer-perspective.html">visualize, browse, and manage the contents of projects</a>.</p>
+<p>Developers can use the web console to <a href="https://docs.openshift.com/container-platform/4.12/web_console/odc-about-developer-perspective.html">visualize, browse, and manage the contents of projects</a>.</p>
 <p><img alt="openshift-console" src="../../images/openshift-console.png" /></p>
-<p>Administrators can use the web console to monitor the status of the applications running on the cluster, <a href="https://docs.openshift.com/container-platform/4.10/web_console/using-dashboard-to-get-cluster-information.html">along with the cluster itself</a>.</p>
+<p>Administrators can use the web console to manage and monitor applications running on the cluster, <a href="https://docs.openshift.com/container-platform/4.12/web_console/using-dashboard-to-get-cluster-information.html">along with the cluster itself</a>.</p>
 <p><img alt="openshift-console-admin" src="../../images/openshift-console-admin.png" /></p>
-<p><a href="https://docs.openshift.com/container-platform/4.10/web_console/configuring-web-console.html">The web console can be customized</a> to suit an organization's needs, and when you log into the web console, you will only see the cluster resources that are available to you as allowed by the OpenShift Role Based Access Control (RBAC).</p>
-<p>The web console runs as a group of pods on the control plane nodes in the <code>openshift-console</code> project, along with a service exposed as a route. The service is an internal load balancer that directs traffic to one of the OpenShift console pods. The route is what allows traffic into the service, and it is the address you connect to when accessing the OpenShift web console.</p>
+<p><a href="https://docs.openshift.com/container-platform/4.12/web_console/configuring-web-console.html">The web console can be customized</a> to suit an organization's needs, and when you log into the web console, you will only see the cluster resources that are available to you as allowed by the OpenShift Role Based Access Control (RBAC).</p>
+<p>The web console runs as a group of pods on the control plane nodes in the <code>openshift-console</code> project, along with a service exposed as a route. Like any other OpenShift applicationm the service is an internal load balancer that directs traffic to one of the OpenShift console pods. The route is what allows external access into the service, and it is the address you connect to when accessing the OpenShift web console.</p>
+<p>The OpenShift web console is a great example of how OpenShift itself is managed the same way as any other application running on the cluster.</p>
 
               
             </article>
