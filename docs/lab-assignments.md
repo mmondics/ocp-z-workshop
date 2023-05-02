@@ -1,5 +1,7 @@
 # Lab Assignments
 
+Please follow the connection instructions that are included in the [OpenShift Overview Lab](https://github.com/mmondics/openshift-intro#accessing-openshift).
+<!---
 **There are connection instructions below the table on this page.**
 
 ## Virtual Machine & OpenShift Logins
@@ -52,3 +54,4 @@
 :warning: **Important** :warning:
 
 Each virtual machine has an inactivity timeout. If you exceed this timeout, you can restart the virtual machine, but this may log you off of the VPN and you will not be able to reach the OpenShift cluster through the console or command line. If this happens, reach out to an instructor and they will log back into the VPN for you.
+--->
