@@ -35,31 +35,27 @@ For example, If the workshop is on a Thursday, the environments will be availabl
 <!---* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)--->
 
 ## Labs
+### Required Lab
 
 The following lab should be completed by all workshop attendees: 
 
 * [OpenShift Overview Lab](https://github.com/mmondics/openshift-intro)
 
+### Optional Labs
 The following labs are optional in case you want more information about specific topics. They are designed so that you can pick and choose which you would like to complete. The labs *are not* designed for you to get through them all in one day.
 
 Labs are non-sequential and have no dependencies on one another.
 
-### Introductory Labs
-
-* [Exploring the OpenShift Console](lab001/lab001-1.md)
-* [Using the OpenShift Command Line (oc)](lab002/lab002-1.md)
-
-### "Intermediate" Labs
-
 * [Deploying an Application from Source Code](lab004/lab004-1.md)
 * [OpenShift Pipelines](lab009/lab009-0.md)
-* [Monitoring, Metering, and Metrics](lab005/lab005-1.md)
 * [Persistent Storage](lab006/lab006-1.md)
+
 <!--- 
 * [Deploying an Application with Quarkus Red Hat Runtime](lab008/lab008-1.md)
 * [Deploying an Application with the Open Liberty Operator](lab007/lab007-1.md)
 * [OpenShift Service Mesh](lab010/lab010-1.md)
 * [Using the z/OS Cloud Broker](lab003/lab003-1.md)
+* [Monitoring, Metering, and Metrics](lab005/lab005-1.md)
 --->
 
 ## Workshop Environment Architecture
