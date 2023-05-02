@@ -1497,6 +1497,18 @@
         <section class="print-page" id="index"><h1 id="index-red-hat-openshift-on-ibm-zsystems-and-linuxone-workshop">Red Hat OpenShift on IBM zSystems and LinuxONE Workshop<a class="headerlink" href="#index-red-hat-openshift-on-ibm-zsystems-and-linuxone-workshop" title="Permanent link">&para;</a></h1>
 <p>Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.</p>
 <h2 id="index-agenda">Agenda<a class="headerlink" href="#index-agenda" title="Permanent link">&para;</a></h2>
+<!---
+| Activity       | Duration     | 
+| ---                  | ---           |
+| [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
+| Break           | ~ 10 minutes      |
+| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=37)           | ~ 1 hour      |
+| Break           | ~ 10 minutes      |
+| [**Presentation 3 - Installation, Requirements, and Configuration**](presentations/combined-presentations.pdf#page=108)           | ~ 1 hour      |
+| Connect to environment as a group           | 5-10 minutes      |
+| [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
+--->
+
 <table>
 <thead>
 <tr>
@@ -1518,16 +1530,8 @@
 <td>~ 1 hour</td>
 </tr>
 <tr>
-<td>Break</td>
-<td>~ 10 minutes</td>
-</tr>
-<tr>
-<td><a href="../presentations/combined-presentations.pdf#page=108"><strong>Presentation 3 - Installation, Requirements, and Configuration</strong></a></td>
-<td>~ 1 hour</td>
-</tr>
-<tr>
 <td>Connect to environment as a group</td>
-<td>5-10 minutes</td>
+<td>~ 10 minutes</td>
 </tr>
 <tr>
 <td><a href="#index-labs"><strong>Hands-on, self-paced labs</strong></a></td>
@@ -1535,16 +1539,24 @@
 </tr>
 </tbody>
 </table>
-<p>The lab environments will be available the day following the workshop.</p>
-<p>For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.</p>
+<!---
+The lab environments will be available the day following the workshop.
+
+For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.
+--->
 <h2 id="index-presentations">Presentations<a class="headerlink" href="#index-presentations" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../presentations/combined-presentations.pdf">Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z</a></li>
 <li><a href="../presentations/combined-presentations.pdf#page=37">Presentation 2 - Technical Deep Dive, Lessons Learned</a></li>
-<li><a href="../presentations/combined-presentations.pdf#page=108">Presentation 3 - Installation, Requirements, Configuration</a></li>
 </ul>
+<!---* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)--->
+
 <h2 id="index-labs">Labs<a class="headerlink" href="#index-labs" title="Permanent link">&para;</a></h2>
-<p>The labs are designed so that you can pick and choose which you would like to complete. The labs <em>are not</em> designed for you to get through them all in one day.</p>
+<p>The following lab should be completed by all workshop attendees: </p>
+<ul>
+<li><a href="https://github.com/mmondics/openshift-intro">OpenShift Overview Lab</a></li>
+</ul>
+<p>The following labs are optional in case you want more information about specific topics. They are designed so that you can pick and choose which you would like to complete. The labs <em>are not</em> designed for you to get through them all in one day.</p>
 <p>Labs are non-sequential and have no dependencies on one another.</p>
 <h3 id="index-introductory-labs">Introductory Labs<a class="headerlink" href="#index-introductory-labs" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1556,7 +1568,7 @@
 <li><a href="#lab004-lab004-1">Deploying an Application from Source Code</a></li>
 <li><a href="#lab009-lab009-0">OpenShift Pipelines</a></li>
 <li><a href="#lab005-lab005-1">Monitoring, Metering, and Metrics</a></li>
-<li><a href="#lab006-lab006-1">Using Persistent Storage - MongoDB and NodeJS</a></li>
+<li><a href="#lab006-lab006-1">Persistent Storage</a></li>
 </ul>
 <!--- 
 * [Deploying an Application with Quarkus Red Hat Runtime](lab008/lab008-1.md)
@@ -1580,278 +1592,61 @@
 </ul></section><section class="print-page" id="prerequisites"><h1 id="prerequisites-prerequisites">Prerequisites<a class="headerlink" href="#prerequisites-prerequisites" title="Permanent link">&para;</a></h1>
 <h2 id="prerequisites-github-account">GitHub Account<a class="headerlink" href="#prerequisites-github-account" title="Permanent link">&para;</a></h2>
 <p>If you wish to complete <a href="#lab004-lab004-1">Deploying an Application from Source Code</a>, you must have your own GitHub account. You can create one create one by clicking the <em>Sign Up</em> button on the <a href="https://github.com/">GitHub homepage</a>.</p></section><section class="print-page" id="lab-assignments"><h1 id="lab-assignments-lab-assignments">Lab Assignments<a class="headerlink" href="#lab-assignments-lab-assignments" title="Permanent link">&para;</a></h1>
-<p><strong>There are connection instructions below the table on this page.</strong></p>
-<h2 id="lab-assignments-virtual-machine-openshift-logins">Virtual Machine &amp; OpenShift Logins<a class="headerlink" href="#lab-assignments-virtual-machine-openshift-logins" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Virtual Machine Password</th>
-<th>workshop-user Password</th>
-<th>User Number</th>
-<th>OpenShift Username</th>
-<th>OpenShift Password</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>01</td>
-<td>user01</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>02</td>
-<td>user02</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>03</td>
-<td>user03</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>04</td>
-<td>user04</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>05</td>
-<td>user05</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>06</td>
-<td>user06</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>07</td>
-<td>user07</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>08</td>
-<td>user08</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>09</td>
-<td>user09</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>10</td>
-<td>user10</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>11</td>
-<td>user11</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>12</td>
-<td>user12</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>13</td>
-<td>user13</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>14</td>
-<td>user14</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>15</td>
-<td>user15</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>16</td>
-<td>user16</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>17</td>
-<td>user17</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>18</td>
-<td>user18</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>19</td>
-<td>user19</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>20</td>
-<td>user20</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>21</td>
-<td>user21</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>22</td>
-<td>user22</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>23</td>
-<td>user23</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>24</td>
-<td>user24</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>25</td>
-<td>user25</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>26</td>
-<td>user26</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>27</td>
-<td>user27</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>28</td>
-<td>user28</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>29</td>
-<td>user29</td>
-<td>p@ssw0rd</td>
-</tr>
-<tr>
-<td><a class="md-button md-button--primary" href="https://google.com">TBD</a></td>
-<td><strong>TBD</strong></td>
-<td>p@ssw0rd</td>
-<td>30</td>
-<td>user30</td>
-<td>p@ssw0rd</td>
-</tr>
-</tbody>
-</table>
-<h2 id="lab-assignments-connecting-to-your-rhel-virtual-desktop">Connecting to your RHEL Virtual Desktop<a class="headerlink" href="#lab-assignments-connecting-to-your-rhel-virtual-desktop" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p><strong>Click the link to your personal virtual machine</strong> and <strong>enter the Virtual Machine Password provided on the table</strong>.</p>
-</li>
-<li>
-<p><strong>Click the box for the RHEL desktop</strong> that should be green and running.</p>
-<p><img alt="rhel-running" src="../images/rhel-running.png" /></p>
-</li>
-<li>
-<p><strong>Log into the RHEL desktop</strong> with the password: <code>p@ssw0rd</code>.</p>
-<p><img alt="rhel-login" src="../images/rhel-login.png" /></p>
-</li>
-</ol>
-<p><img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> <strong>Important</strong> <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /></p>
-<p>Each virtual machine has an inactivity timeout. If you exceed this timeout, you can restart the virtual machine, but this may log you off of the VPN and you will not be able to reach the OpenShift cluster through the console or command line. If this happens, reach out to an instructor and they will log back into the VPN for you.</p></section><section class="print-page" id="workshop-architecture"><h1 id="workshop-architecture-workshop-architecture-diagram">Workshop Architecture Diagram<a class="headerlink" href="#workshop-architecture-workshop-architecture-diagram" title="Permanent link">&para;</a></h1>
+<p>Please follow the connection instructions that are included in the <a href="https://github.com/mmondics/openshift-intro#accessing-openshift">OpenShift Overview Lab</a>.</p>
+<!---
+**There are connection instructions below the table on this page.**
+
+## Virtual Machine & OpenShift Logins
+
+| Name  | Virtual Machine Password | workshop-user Password | User Number | OpenShift Username | OpenShift Password |
+|---|---|---|---|---|---|
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 01 | user01 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 02 | user02 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 03 | user03 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 04 | user04 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 05 | user05 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 06 | user06 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 07 | user07 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD**  | p@ssw0rd | 08 | user08 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 09 | user09 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 10 | user10 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } |**TBD**| p@ssw0rd | 11 | user11 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 12 | user12 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD**| p@ssw0rd | 13 | user13 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 14 | user14 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 15 | user15 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 16 | user16 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 17 | user17 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 18 | user18 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 19 | user19 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 20 | user20 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 21 | user21 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 22 | user22 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 23 | user23 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 24 | user24 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 25 | user25 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 26 | user26 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 27 | user27 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 28 | user28 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button } | **TBD** | p@ssw0rd | 29 | user29 | p@ssw0rd |
+| [TBD](https://google.com){ .md-button .md-button--primary } | **TBD** | p@ssw0rd | 30 | user30 | p@ssw0rd |
+
+## Connecting to your RHEL Virtual Desktop
+
+1. **Click the link to your personal virtual machine** and **enter the Virtual Machine Password provided on the table**.
+
+1. **Click the box for the RHEL desktop** that should be green and running.
+
+    ![rhel-running](images/rhel-running.png)
+
+1. **Log into the RHEL desktop** with the password: `p@ssw0rd`.
+
+    ![rhel-login](images/rhel-login.png)
+
+:warning: **Important** :warning:
+
+Each virtual machine has an inactivity timeout. If you exceed this timeout, you can restart the virtual machine, but this may log you off of the VPN and you will not be able to reach the OpenShift cluster through the console or command line. If this happens, reach out to an instructor and they will log back into the VPN for you.
+---></section><section class="print-page" id="workshop-architecture"><h1 id="workshop-architecture-workshop-architecture-diagram">Workshop Architecture Diagram<a class="headerlink" href="#workshop-architecture-workshop-architecture-diagram" title="Permanent link">&para;</a></h1>
 <p><img alt="workshop-arch" src="../ocpz-workshop-arch.drawio.svg" /></p>
 <p>The OpenShift (OCP) on IBM Z environment used in this workshop is detailed in the diagram above.</p>
 <p>Note that this <em>is not</em> the recommended OpenShift architecture for high availablity or production. For OCP on Z reference architectures <a href="https://www.ibm.com/docs/en/linux-on-systems?topic=openshift-reference-architecture">navigate to this link</a>.</p>
