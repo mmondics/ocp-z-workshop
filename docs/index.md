@@ -32,8 +32,8 @@ For example, If the workshop is on a Thursday, the environments will be availabl
 ## Presentations
 
 * [Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z](presentations/combined-presentations.pdf)
-* [Presentation 2 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=44)
-* [Presentation 3 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=32)
+* [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=44)
+* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=32)
 
 ## Labs
 ### Required Lab
