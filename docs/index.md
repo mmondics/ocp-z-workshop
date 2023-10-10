@@ -1,6 +1,6 @@
-# Red Hat OpenShift on IBM Z and LinuxONE Workshop
+# Red Hat OpenShift on IBM zSystems and LinuxONE Workshop
 
-Welcome to the Red Hat OpenShift on IBM Z and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
+Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
 ## Agenda
 
@@ -19,7 +19,7 @@ Welcome to the Red Hat OpenShift on IBM Z and LinuxONE workshop. Below you can f
 | ---                  | ---           |
 | [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
 | Break           | ~ 10 minutes      |
-| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=37)           | ~ 1 hour      |
+| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=32)           | ~ 1 hour      |
 | Connect to environment as a group           | ~ 10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
 --->
@@ -28,13 +28,13 @@ The lab environments will be available the day following the workshop.
 
 For example, If the workshop is on a Thursday, the environments will be available until 7PM ET Friday.
 
-<!---
+
 ## Presentations
 
 * [Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z](presentations/combined-presentations.pdf)
 * [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=37)
-* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)
---->
+* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=44)
+
 
 ## Labs
 ### Required Lab

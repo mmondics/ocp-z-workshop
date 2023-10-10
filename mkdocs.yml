@@ -8,10 +8,10 @@ nav:
     - Prerequisites: 'prerequisites.md'
     - Lab Assignments: 'lab-assignments.md'
     - Lab Architecture: 'workshop-architecture.md'
-#    - Presentations:
-#      - Presentation 1: presentations/combined-presentations.pdf
-#      - Presentation 2: presentations/combined-presentations.pdf#page=37
-#      - Presentation 3: presentations/combined-presentations.pdf#page=108
+    - Presentations:
+      - Presentation 1: presentations/combined-presentations.pdf
+      - Presentation 2: presentations/combined-presentations.pdf#page=32
+      - Presentation 3: presentations/combined-presentations.pdf#page=44
 
 
     - Labs: 
