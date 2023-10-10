@@ -1,6 +1,6 @@
-# Red Hat OpenShift on IBM zSystems and LinuxONE Workshop
+# Red Hat OpenShift on IBM Z and LinuxONE Workshop
 
-Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
+Welcome to the Red Hat OpenShift on IBM Z and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
 ## Agenda
 
