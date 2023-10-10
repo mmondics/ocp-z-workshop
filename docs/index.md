@@ -3,18 +3,18 @@
 Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
 ## Agenda
-<!---
+
 | Activity       | Duration     | 
 | ---                  | ---           |
-| [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
+| **Presentation 1 - Overview**             | ~ 45 minutes   |
 | Break           | ~ 10 minutes      |
-| [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=37)           | ~ 1 hour      |
+| **Presentation 2 - Installation, Requirements, and Configuration**           | ~ 1 hour      |
 | Break           | ~ 10 minutes      |
-| [**Presentation 3 - Installation, Requirements, and Configuration**](presentations/combined-presentations.pdf#page=108)           | ~ 1 hour      |
+| **Presentation 3 - Technical Deep Dive**           | ~ 30 minutes      |
 | Connect to environment as a group           | 5-10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
---->
 
+<!---
 | Activity       | Duration     | 
 | ---                  | ---           |
 | [**Presentation 1 - Overview**](presentations/combined-presentations.pdf)              | ~ 45 minutes   |
@@ -22,17 +22,19 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 | [**Presentation 2 - Technical Deep Dive**](presentations/combined-presentations.pdf#page=37)           | ~ 1 hour      |
 | Connect to environment as a group           | ~ 10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
+--->
 
-<!---
 The lab environments will be available the day following the workshop.
 
-For example, If the workshop is on a Thursday, the environments will be available until 5PM ET Friday.
---->
+For example, If the workshop is on a Thursday, the environments will be available until 7PM ET Friday.
+
+<!---
 ## Presentations
 
 * [Presentation 1 - High Level Overview of Red Hat OpenShift on IBM Z](presentations/combined-presentations.pdf)
 * [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=37)
-<!---* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)--->
+* [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=108)
+--->
 
 ## Labs
 ### Required Lab

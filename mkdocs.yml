@@ -8,10 +8,10 @@ nav:
     - Prerequisites: 'prerequisites.md'
     - Lab Assignments: 'lab-assignments.md'
     - Lab Architecture: 'workshop-architecture.md'
-    - Presentations:
-      - Presentation 1: presentations/combined-presentations.pdf
-      - Presentation 2: presentations/combined-presentations.pdf#page=37
-      - Presentation 3: presentations/combined-presentations.pdf#page=108
+#    - Presentations:
+#      - Presentation 1: presentations/combined-presentations.pdf
+#      - Presentation 2: presentations/combined-presentations.pdf#page=37
+#      - Presentation 3: presentations/combined-presentations.pdf#page=108
 
 
     - Labs: 
@@ -80,13 +80,13 @@ nav:
 #        - Deploy Liberty for z/OS Using the z/OS Cloud Broker: 'lab003/lab003-3.md'
 #        - Stop and Restart Liberty for z/OS from OCP: 'lab003/lab003-4.md'
 #        - Cleaning Up: 'lab003/lab003-5.md'
-      - Deploying an Application with the Open Liberty Operator:
-        - Overview of the Open Liberty Operator and Sample Application: 'lab007/lab007-1.md'
-        - Log into OpenShift Using the CLI: 'lab007/lab007-2.md'
-        - Cloning the GitHub Repository and Reviewing its Contents: 'lab007/lab007-3.md'
-        - Using the Open Liberty Operator to Install an Application: 'lab007/lab007-4.md'
-        - Access the Application in a Browser: 'lab007/lab007-5.md'
-        - Cleaning Up: 'lab007/lab007-6.md'
+#      - Deploying an Application with the Open Liberty Operator:
+#        - Overview of the Open Liberty Operator and Sample Application: 'lab007/lab007-1.md'
+#        - Log into OpenShift Using the CLI: 'lab007/lab007-2.md'
+#        - Cloning the GitHub Repository and Reviewing its Contents: 'lab007/lab007-3.md'
+#        - Using the Open Liberty Operator to Install an Application: 'lab007/lab007-4.md'
+#        - Access the Application in a Browser: 'lab007/lab007-5.md'
+#        - Cleaning Up: 'lab007/lab007-6.md'
 #      - Deploying an Application with Quarkus Red Hat Runtime:
 #        - Overview of the Quarkus Red Hat Runtime: 'lab008/lab008-1.md'
 #        - Log into OpenShift Using the CLI: 'lab008/lab008-2.md'
