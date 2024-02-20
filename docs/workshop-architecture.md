@@ -6,7 +6,7 @@ The OpenShift (OCP) on IBM Z environment used in this workshop is detailed in th
 
 Note that this *is not* the recommended OpenShift architecture for high availablity or production. For OCP on Z reference architectures [navigate to this link](https://www.ibm.com/docs/en/linux-on-systems?topic=openshift-reference-architecture).
 
-The entire lab environment is behind the Washington Systems Center VPN. You are given a RHEL virtual machine with the Cisco AnyConnect VPN client installed and running which provides access to the WSC environment.
+The entire lab environment is behind the Washington Systems Center VPN. You are given a Windows virtual machine with the Cisco AnyConnect VPN client installed and running which provides access to the WSC environment.
 
 There are 3 OpenShift clusters sharing running on this z14 sharing z/VM, IFLs, and other underlying infrastructure. Because of the wide variety of lab material that requires different [operators](https://cloud.redhat.com/learn/topics/operators), each with their own resource and version requirements, you may be accessing multiple OpenShift clusters through the workshop.
 
