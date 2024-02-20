@@ -1,6 +1,6 @@
-# Red Hat OpenShift on IBM zSystems and LinuxONE Workshop
+# Red Hat OpenShift on IBM Z and LinuxONE Workshop
 
-Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
+Welcome to the Red Hat OpenShift on IBM Z and LinuxONE workshop. Below you can find the workshop agenda, presentations, and lab documentation.
 
 ## Agenda
 
@@ -8,7 +8,7 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 | ---                  | ---           |
 | **Presentation 1 - Overview**             | ~ 45 minutes   |
 | Break           | ~ 10 minutes      |
-| **Presentation 2 - Technical Deep Dive**           | ~ 1 hour      |
+| **Presentation 2 - Technical Deep Dive**           | ~ 15 minutes      |
 | Break           | ~ 10 minutes      |
 | **Presentation 3 - Installation, Requirements, and Configuration**           | ~ 30 minutes      |
 | Connect to environment as a group           | 5-10 minutes      |
@@ -26,7 +26,7 @@ Welcome to the Red Hat OpenShift on IBM zSystems and LinuxONE workshop. Below yo
 
 The lab environments will be available the day following the workshop.
 
-For example, If the workshop is on a Thursday, the environments will be available until 7PM ET Friday.
+For example, If the workshop is on a Thursday, the environments will be available until 9PM ET Friday.
 
 
 ## Presentations
