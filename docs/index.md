@@ -42,7 +42,7 @@ The following lab should be completed by all workshop attendees:
 
 * [OpenShift Overview Lab](https://github.com/mmondics/openshift-intro)
 
-### Optional Labs
+<!--- ### Optional Labs
 The following labs are optional in case you want more information about specific topics. They are designed so that you can pick and choose which you would like to complete. The labs *are not* designed for you to get through them all in one day.
 
 Labs are non-sequential and have no dependencies on one another.
@@ -50,8 +50,6 @@ Labs are non-sequential and have no dependencies on one another.
 * [Deploying an Application from Source Code](lab004/lab004-1.md)
 * [OpenShift Pipelines](lab009/lab009-0.md)
 * [Persistent Storage](lab006/lab006-1.md)
-
-<!--- 
 * [Deploying an Application with Quarkus Red Hat Runtime](lab008/lab008-1.md)
 * [Deploying an Application with the Open Liberty Operator](lab007/lab007-1.md)
 * [OpenShift Service Mesh](lab010/lab010-1.md)

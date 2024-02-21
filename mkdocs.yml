@@ -12,41 +12,42 @@ nav:
       - Presentation 1: presentations/combined-presentations.pdf
       - Presentation 2: presentations/combined-presentations.pdf#page=44
       - Presentation 3: presentations/combined-presentations.pdf#page=32
+    - Hands-on Lab: 'lab.md'
 
 
-    - Labs: 
-      - Exploring the OpenShift Console: 
-        - Introduction: 'lab001/lab001-1.md'
-        - Connect to OCP: 'lab001/lab001-2.md'
-        - The Administrator Persepctive: 'lab001/lab001-3.md'
-        - The Developer Perspective: 'lab001/lab001-4.md'
-        - Deploy from the Developer Catalog: 'lab001/lab001-5.md'
-        - View Workload from the Administrator Perspective: 'lab001/lab001-6.md'
-        - Cleaning Up: 'lab001/lab001-7.md'
-      - Using the OpenShift Command Line (oc):
-        - Introduction: 'lab002/lab002-1.md'
-        - Log into OpenShift Using the CLI: 'lab002/lab002-2.md'
-        - Overview of the OpenShift CLI: 'lab002/lab002-3.md'
-        - Deploy Container Image from the CLI: 'lab002/lab002-4.md'
-        - Open a Remote Shell Session into the MongoDB Pod: 'lab002/lab002-5.md'
-        - Working with Pods: 'lab002/lab002-6.md'
-        - Administrative CLI Commands: 'lab002/lab002-7.md'
-        - Cleaning Up: 'lab002/lab002-8.md'
-      - Deploying an Application from Source Code:
-        - Source-to-Image (S2I) Overview: 'lab004/lab004-1.md'
-        - Exploring GitHub and the Example Health Source Code: 'lab004/lab004-2.md'
-        - Connect to OCP and Authenticate: 'lab004/lab004-3.md'
-        - Edit the Source Code and Push an Update: 'lab004/lab004-4.md'
-        - Cleaning Up: 'lab004/lab004-5.md'
-      - OpenShift Pipelines:
-        - Introduction to OpenShift Pipelines: 'lab009/lab009-0.md'
-        - Log into OpenShift Using the CLI: 'lab009/lab009-1.md'
-        - Cloning the GitHub Repository and Viewing its Contents: 'lab009/lab009-2.md'
-        - Understanding and Deploying Tasks: 'lab009/lab009-3.md'
-        - Understanding and Deploying Pipelines: 'lab009/lab009-4.md'
-        - Running the Pipeline: 'lab009/lab009-5.md'
-        - Access the Application in a Browser: 'lab009/lab009-6.md'
-        - Cleaning Up: 'lab009/lab009-7.md'
+    # - Labs: 
+    #   - Exploring the OpenShift Console: 
+    #     - Introduction: 'lab001/lab001-1.md'
+    #     - Connect to OCP: 'lab001/lab001-2.md'
+    #     - The Administrator Persepctive: 'lab001/lab001-3.md'
+    #     - The Developer Perspective: 'lab001/lab001-4.md'
+    #     - Deploy from the Developer Catalog: 'lab001/lab001-5.md'
+    #     - View Workload from the Administrator Perspective: 'lab001/lab001-6.md'
+    #     - Cleaning Up: 'lab001/lab001-7.md'
+    #   - Using the OpenShift Command Line (oc):
+    #     - Introduction: 'lab002/lab002-1.md'
+    #     - Log into OpenShift Using the CLI: 'lab002/lab002-2.md'
+    #     - Overview of the OpenShift CLI: 'lab002/lab002-3.md'
+    #     - Deploy Container Image from the CLI: 'lab002/lab002-4.md'
+    #     - Open a Remote Shell Session into the MongoDB Pod: 'lab002/lab002-5.md'
+    #     - Working with Pods: 'lab002/lab002-6.md'
+    #     - Administrative CLI Commands: 'lab002/lab002-7.md'
+    #     - Cleaning Up: 'lab002/lab002-8.md'
+    #   - Deploying an Application from Source Code:
+    #     - Source-to-Image (S2I) Overview: 'lab004/lab004-1.md'
+    #     - Exploring GitHub and the Example Health Source Code: 'lab004/lab004-2.md'
+    #     - Connect to OCP and Authenticate: 'lab004/lab004-3.md'
+    #     - Edit the Source Code and Push an Update: 'lab004/lab004-4.md'
+    #     - Cleaning Up: 'lab004/lab004-5.md'
+    #   - OpenShift Pipelines:
+    #     - Introduction to OpenShift Pipelines: 'lab009/lab009-0.md'
+    #     - Log into OpenShift Using the CLI: 'lab009/lab009-1.md'
+    #     - Cloning the GitHub Repository and Viewing its Contents: 'lab009/lab009-2.md'
+    #     - Understanding and Deploying Tasks: 'lab009/lab009-3.md'
+    #     - Understanding and Deploying Pipelines: 'lab009/lab009-4.md'
+    #     - Running the Pipeline: 'lab009/lab009-5.md'
+    #     - Access the Application in a Browser: 'lab009/lab009-6.md'
+    #     - Cleaning Up: 'lab009/lab009-7.md'
 #      - OpenShift Service Mesh:
 #        - Overview of the OpenShift Service Mesh: 'lab010/lab010-1.md'
 #        - OpenShift Service Mesh Architecture: 'lab010/lab010-2.md'
@@ -58,22 +59,22 @@ nav:
 #        - Application Observability with Kiali: 'lab010/lab010-8.md'
 #        - Distributed Tracing with Jaeger: 'lab010/lab010-9.md'
 #        - Wrap Up & Clean Up: 'lab010/lab010-10.md'
-      - Monitoring, Metering, and Metrics:
-        - Overview of OpenShift Monitoring: 'lab005/lab005-1.md'
-        - Connect to OCP and Authenticate: 'lab005/lab005-2.md'
-        - Using OpenShift Metrics (Prometheus): 'lab005/lab005-3.md'
-        - Using the In-Browser Grafana Dashboards: 'lab005/lab005-4.md'
-        - Connect to Grafana: 'lab005/lab005-5.md'
-        - Using Grafana Dashboards: 'lab005/lab005-6.md'
-        - Using OpenShift Alerts (Alertmanager): 'lab005/lab005-7.md' 
-      - Using Persistent Storage with MongoDB and NodeJS:
-        - Overview of Persistent Storage and Application Architecture: 'lab006/lab006-1.md'
-        - Connect to OCP and Authenticate: 'lab006/lab006-2.md'
-        - Create a PersistentVolumeClaim: 'lab006/lab006-3.md'
-        - Deploy MongoDB from Container Image: 'lab006/lab006-4.md'
-        - Deploy Node.js Application from Dockerfile: 'lab006/lab006-5.md'
-        - Interacting with MongoDB from Node.js Application: 'lab006/lab006-6.md'
-        - Cleaning Up: 'lab006/lab006-7.md'
+      # - Monitoring, Metering, and Metrics:
+      #   - Overview of OpenShift Monitoring: 'lab005/lab005-1.md'
+      #   - Connect to OCP and Authenticate: 'lab005/lab005-2.md'
+      #   - Using OpenShift Metrics (Prometheus): 'lab005/lab005-3.md'
+      #   - Using the In-Browser Grafana Dashboards: 'lab005/lab005-4.md'
+      #   - Connect to Grafana: 'lab005/lab005-5.md'
+      #   - Using Grafana Dashboards: 'lab005/lab005-6.md'
+      #   - Using OpenShift Alerts (Alertmanager): 'lab005/lab005-7.md' 
+      # - Using Persistent Storage with MongoDB and NodeJS:
+      #   - Overview of Persistent Storage and Application Architecture: 'lab006/lab006-1.md'
+      #   - Connect to OCP and Authenticate: 'lab006/lab006-2.md'
+      #   - Create a PersistentVolumeClaim: 'lab006/lab006-3.md'
+      #   - Deploy MongoDB from Container Image: 'lab006/lab006-4.md'
+      #   - Deploy Node.js Application from Dockerfile: 'lab006/lab006-5.md'
+      #   - Interacting with MongoDB from Node.js Application: 'lab006/lab006-6.md'
+      #   - Cleaning Up: 'lab006/lab006-7.md'
 #      - Using the z/OS Cloud Broker: 
 #        - Introduction: 'lab003/lab003-1.md'
 #        - Connect to OCP: 'lab003/lab003-2.md'
@@ -109,7 +110,7 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright © 2021 IBM Z Washington Systems Center
+copyright: Copyright © 2024 IBM Z Washington Systems Center
 
 plugins:
   - search

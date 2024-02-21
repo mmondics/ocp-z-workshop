@@ -1,4 +1,4 @@
-# Red Hat OpenShift and IBM Cloud Paks on IBM Z and LinuxONE Workshop
+# Red Hat OpenShift on IBM Z and LinuxONE Workshop
 
 This repository is rendered as a GitHub pages website [here](https://mmondics.github.io/ocp-cloudpak-workshop/).
 
