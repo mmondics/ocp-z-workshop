@@ -35,10 +35,9 @@ For example, If the workshop is on a Thursday, the environments will be availabl
 * [Presentation 2 - Technical Deep Dive, Lessons Learned](presentations/combined-presentations.pdf#page=44)
 * [Presentation 3 - Installation, Requirements, Configuration](presentations/combined-presentations.pdf#page=32)
 
-## Labs
-### Required Lab
+## Lab
 
-The following lab should be completed by all workshop attendees: 
+The lab can be found at the following GitHub link. This is a public repository, so feel free to come back to it at any time. 
 
 * [OpenShift Overview Lab](https://github.com/mmondics/openshift-intro)
 
