@@ -8,9 +8,9 @@ Welcome to the Red Hat OpenShift on IBM Z and LinuxONE workshop. Below you can f
 | ---                  | ---           |
 | **Presentation 1 - Overview**             | ~ 45 minutes   |
 | Break           | ~ 10 minutes      |
-| **Presentation 2 - Technical Deep Dive**           | ~ 15 minutes      |
+| **Presentation 2 - Lifecycle, Installation, Upgrades, and Options**           | ~ 15 minutes      |
 | Break           | ~ 10 minutes      |
-| **Presentation 3 - Installation, Requirements, and Configuration**           | ~ 30 minutes      |
+| **Presentation 3 - Technical Overview**           | ~ 45 minutes      |
 | Connect to environment as a group           | 5-10 minutes      |
 | [**Hands-on, self-paced labs**](#labs)           | Remainder of day      |
 
