@@ -1,6 +1,6 @@
 site_name: Red Hat OpenShift on IBM Z and LinuxONE Workshop
-repo_url: https://github.com/mmondics/ocp-cloudpak-workshop/
-site_url: https://mmondics.github.io/ocp-cloudpak-workshop/
+repo_url: https://github.com/mmondics/ocp-z-workshop/
+site_url: https://mmondics.github.io/ocp-z-workshop/
 edit_uri: edit/main/docs
 
 nav:
